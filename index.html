@@ -1159,11 +1159,310 @@
   .mt-32 { margin-top: 32px; }
   .mt-48 { margin-top: 48px; }
 
+  /* This Week section */
+  .week-section {
+    padding: 100px 0;
+    border-top: 1px solid var(--border);
+    position: relative;
+  }
+
+  .week-accent-border {
+    background: linear-gradient(135deg, rgba(201,168,76,0.10) 0%, rgba(28,78,90,0.08) 100%);
+    border: 2px solid rgba(201,168,76,0.45);
+    border-left: 4px solid var(--gold);
+    padding: 40px 44px;
+    margin-bottom: 36px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .week-accent-border::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .week-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: inline-block;
+    background: rgba(201,168,76,0.12);
+    padding: 6px 16px;
+    margin-bottom: 16px;
+  }
+
+  .week-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .week-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .week-subtitle {
+    font-family: 'Crimson Text', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--cream-muted);
+    margin-bottom: 24px;
+  }
+
+  .stellium-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .stellium-item {
+    background: var(--bg-card-2);
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    text-align: center;
+  }
+
+  .stellium-item.fire {
+    border-color: rgba(201,100,60,0.4);
+    background: linear-gradient(135deg, rgba(201,100,60,0.08) 0%, var(--bg-card-2) 100%);
+  }
+
+  .stellium-planet {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .stellium-sign {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 2px;
+  }
+
+  .stellium-detail {
+    font-family: 'Crimson Text', serif;
+    font-size: 13px;
+    color: var(--cream-muted);
+    font-style: italic;
+  }
+
+  .week-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+
+  @media (max-width: 700px) {
+    .week-columns {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .week-column {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 28px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .week-column::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+  }
+
+  .week-column.merle::before {
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  .week-column.erik::before {
+    background: linear-gradient(90deg, var(--teal-light), transparent);
+  }
+
+  .week-column-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .week-column.erik .week-column-title {
+    color: var(--teal-light);
+  }
+
+  .week-transit {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(201,168,76,0.07);
+  }
+
+  .week-transit:last-child {
+    border-bottom: none;
+  }
+
+  .week-transit-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .week-transit-label.exact {
+    color: #E8906A;
+  }
+
+  .week-transit-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 6px;
+  }
+
+  .week-transit-desc {
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    color: var(--cream-dim);
+    line-height: 1.7;
+  }
+
+  .week-story {
+    background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, rgba(28,78,90,0.08) 100%);
+    border: 1px solid var(--border-strong);
+    padding: 32px 36px;
+    margin-bottom: 36px;
+  }
+
+  .week-story-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .week-story-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .week-story p {
+    color: var(--cream-dim);
+    font-size: 17px;
+    line-height: 1.85;
+    margin-bottom: 12px;
+  }
+
+  .week-story p:last-child { margin-bottom: 0; }
+
+  .week-story strong {
+    color: var(--cream);
+    font-weight: 600;
+  }
+
+  .week-dates {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border: 1px solid var(--border);
+    background: var(--bg-card-2);
+    margin-bottom: 16px;
+  }
+
+  .week-date-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 0;
+    padding: 14px 24px;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+    align-items: start;
+  }
+
+  .week-date-row:last-child { border-bottom: none; }
+
+  .week-date-row.peak {
+    background: linear-gradient(135deg, rgba(201,168,76,0.08) 0%, transparent 100%);
+    border-left: 3px solid var(--gold);
+    padding-left: 21px;
+  }
+
+  .week-date-row.kelly-note {
+    background: linear-gradient(135deg, rgba(201,122,122,0.06) 0%, transparent 100%);
+    border-left: 3px solid var(--rose);
+    padding-left: 21px;
+  }
+
+  .week-date-day {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding-top: 2px;
+  }
+
+  .week-date-row.kelly-note .week-date-day {
+    color: var(--rose);
+  }
+
+  .week-date-desc {
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    color: var(--cream-dim);
+    line-height: 1.7;
+  }
+
+  .week-date-desc strong {
+    color: var(--cream);
+    font-weight: 600;
+  }
+
+  @media (max-width: 600px) {
+    .week-accent-border { padding: 24px 20px; }
+    .week-column { padding: 20px 20px; }
+    .week-story { padding: 24px 20px; }
+    .stellium-grid { grid-template-columns: 1fr 1fr; }
+    .week-date-row { grid-template-columns: 1fr; gap: 4px; padding: 12px 16px; }
+  }
+
   @media print {
     .pdf-btn { display: none !important; }
     body::before, body::after { display: none; }
     .section { page-break-inside: avoid; }
     .month-card { page-break-inside: avoid; }
+    .week-section { page-break-inside: avoid; }
   }
 
   @media (max-width: 600px) {
@@ -1223,22 +1522,218 @@
   <div class="container">
     <div class="toc">
       <div class="toc-title">What's Inside</div>
-      <a href="#merle-natal"><span>01</span> Merle's Natal Blueprint</a>
-      <a href="#erik-natal"><span>02</span> Erik's Natal Blueprint</a>
-      <a href="#synastry"><span>03</span> Synastry - How Their Charts Speak to Each Other</a>
-      <a href="#merle-forecast"><span>04</span> Merle's Month-by-Month Forecast (April - December 2026)</a>
-      <a href="#erik-forecast"><span>05</span> Erik's Month-by-Month Forecast (April - December 2026)</a>
-      <a href="#their-story"><span>06</span> Their Story - What the Cosmos Is Doing to Them</a>
-      <a href="#key-dates"><span>07</span> Key Dates Calendar</a>
+      <a href="#this-week"><span>01</span> This Week - The Aries Fire (April 13 - 20)</a>
+      <a href="#merle-natal"><span>02</span> Merle's Natal Blueprint</a>
+      <a href="#erik-natal"><span>03</span> Erik's Natal Blueprint</a>
+      <a href="#synastry"><span>04</span> Synastry - How Their Charts Speak to Each Other</a>
+      <a href="#merle-forecast"><span>05</span> Merle's Month-by-Month Forecast (April - December 2026)</a>
+      <a href="#erik-forecast"><span>06</span> Erik's Month-by-Month Forecast (April - December 2026)</a>
+      <a href="#their-story"><span>07</span> Their Story - What the Cosmos Is Doing to Them</a>
+      <a href="#key-dates"><span>08</span> Key Dates Calendar</a>
     </div>
   </div>
 </section>
 
-<!-- SECTION 1: MERLE'S NATAL CHART -->
-<section class="section" id="merle-natal">
+<!-- SECTION 1: THIS WEEK - THE ARIES FIRE -->
+<section class="week-section" id="this-week">
   <div class="container">
     <div class="section-header">
       <span class="section-number">Section One</span>
+      <h2 class="section-title">This Week: <em>The Aries Fire</em></h2>
+      <p class="section-tagline">April 13 - 20, 2026 - The Aries Stellium</p>
+      <div class="section-ornament"></div>
+    </div>
+
+    <!-- Stellium Overview -->
+    <div class="week-accent-border">
+      <div class="week-label">Live Transits - Right Now</div>
+      <h3 class="week-title">Five Planets in <em>Aries</em></h3>
+      <p class="week-subtitle">This is the shitfuckery. Half the solar system is in the warrior sign, and it is activating everything.</p>
+
+      <div class="stellium-grid">
+        <div class="stellium-item fire">
+          <div class="stellium-planet">Sun</div>
+          <div class="stellium-sign">Aries 23 - 29&deg;</div>
+          <div class="stellium-detail">Enters Taurus Apr 20</div>
+        </div>
+        <div class="stellium-item fire">
+          <div class="stellium-planet">Mars</div>
+          <div class="stellium-sign">Aries 2 - 8&deg;</div>
+          <div class="stellium-detail">Domicile - pure unfiltered action</div>
+        </div>
+        <div class="stellium-item fire">
+          <div class="stellium-planet">Saturn</div>
+          <div class="stellium-sign">Aries 7 - 8&deg;</div>
+          <div class="stellium-detail">Structure meets raw fire</div>
+        </div>
+        <div class="stellium-item fire">
+          <div class="stellium-planet">Neptune</div>
+          <div class="stellium-sign">Aries 2 - 3&deg;</div>
+          <div class="stellium-detail">Spiritual fog meets warrior energy</div>
+        </div>
+        <div class="stellium-item fire">
+          <div class="stellium-planet">Mercury</div>
+          <div class="stellium-sign">Enters Aries Apr 16</div>
+          <div class="stellium-detail">Communication gets DIRECT</div>
+        </div>
+        <div class="stellium-item">
+          <div class="stellium-planet">Uranus</div>
+          <div class="stellium-sign">29&deg; Taurus</div>
+          <div class="stellium-detail">About to enter Gemini</div>
+        </div>
+        <div class="stellium-item">
+          <div class="stellium-planet">Pluto</div>
+          <div class="stellium-sign">5&deg; Aquarius</div>
+          <div class="stellium-detail">Generational pressure</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Two columns: Merle + Erik -->
+    <div class="week-columns">
+
+      <!-- MERLE THIS WEEK -->
+      <div class="week-column merle">
+        <div class="week-column-title">Merle This Week</div>
+
+        <div class="week-transit">
+          <div class="week-transit-label exact">The Transit of Her Life</div>
+          <div class="week-transit-title">Uranus conjunct natal Mars</div>
+          <div class="week-transit-desc">
+            Uranus at 29.32&deg; Taurus sitting on her Mars at 29.76&deg; Taurus - a <strong>0.4 degree orb RIGHT NOW</strong>. Electric liberation. Doing something she has never done before, breaking free from old patterns of action. In her 7th house - partnerships and relationships. She may act impulsively and it will be exactly right.
+          </div>
+        </div>
+
+        <div class="week-transit">
+          <div class="week-transit-label exact">Exact April 17 - 18</div>
+          <div class="week-transit-title">Sun trine natal Moon</div>
+          <div class="week-transit-desc">
+            Sun at 27 - 28&deg; Aries trining her Moon at 28.66&deg; Sagittarius. Fire trine fire. Emotional clarity, feeling seen, confident in her feelings. <strong>Great day for her.</strong>
+          </div>
+        </div>
+
+        <div class="week-transit">
+          <div class="week-transit-label">Awkward Adjustment</div>
+          <div class="week-transit-title">Mars + Neptune quincunx Jupiter/Neptune</div>
+          <div class="week-transit-desc">
+            Mars and Neptune at 2 - 3&deg; Aries quincunx her natal Jupiter/Neptune at 2 - 3&deg; Scorpio. The 150&deg; angle that says: you cannot do things the old way. Spiritual discomfort pushing her to evolve. She might not know WHAT to do - just that she cannot stay still.
+          </div>
+        </div>
+
+        <div class="week-transit">
+          <div class="week-transit-label">Daily Life Reshuffled</div>
+          <div class="week-transit-title">Aries activates her 6th house</div>
+          <div class="week-transit-desc">
+            Routines, health, service - all getting hit with fire. The mundane is not mundane this week.
+          </div>
+        </div>
+
+        <div class="week-transit">
+          <div class="week-transit-label">Background Pressure</div>
+          <div class="week-transit-title">Pluto 5&deg; Aquarius square natal Pluto 2&deg; Virgo</div>
+          <div class="week-transit-desc">
+            3 degree orb. Generational transformation. Deep structural change in how she uses her power.
+          </div>
+        </div>
+      </div>
+
+      <!-- ERIK THIS WEEK -->
+      <div class="week-column erik">
+        <div class="week-column-title">Erik This Week</div>
+
+        <div class="week-transit">
+          <div class="week-transit-label exact">Building - Exact Soon</div>
+          <div class="week-transit-title">Jupiter conjunct natal Moon</div>
+          <div class="week-transit-desc">
+            Jupiter at 16.77&deg; Cancer on his Moon at 15.26&deg; Cancer - <strong>1.5 degrees and CLOSING</strong>. Emotional flood building. Jupiter on the Moon means feelings that cannot be contained. His Cancer Moon - the most emotionally sensitive placement - is getting expanded. He is FEELING everything right now.
+          </div>
+        </div>
+
+        <div class="week-transit">
+          <div class="week-transit-label">Grand Water Trine Energy</div>
+          <div class="week-transit-title">Jupiter trine natal Sun/Mercury</div>
+          <div class="week-transit-desc">
+            Jupiter at 16.77&deg; Cancer to his Sun at 15.39&deg; and Mercury at 15.24&deg; Pisces - 1.4 degree orb. Expansion of identity, communication unlocked, optimism. Good news coming.
+          </div>
+        </div>
+
+        <div class="week-transit">
+          <div class="week-transit-label">Mid-Week Exact</div>
+          <div class="week-transit-title">Venus conjunct natal Saturn</div>
+          <div class="week-transit-desc">
+            Venus in Taurus 16 - 23&deg; approaching his Saturn at 17.77&deg; Taurus in his 10th house. Serious love meets public life. <strong>"Is this real? What am I willing to change for this?"</strong>
+          </div>
+        </div>
+
+        <div class="week-transit">
+          <div class="week-transit-label exact">Exact April 17</div>
+          <div class="week-transit-title">Sun trine natal Mars</div>
+          <div class="week-transit-desc">
+            Sun at 27&deg; Aries to his Mars at 26.47&deg; Sagittarius. Fire trine fire. Energy, initiative, the push to ACT. Combined with Jupiter on his Moon, he may reach out to Merle this week.
+          </div>
+        </div>
+
+        <div class="week-transit">
+          <div class="week-transit-label exact">1&deg; Orb - Exact</div>
+          <div class="week-transit-title">Saturn trine natal Jupiter</div>
+          <div class="week-transit-desc">
+            Saturn at 7&deg; Aries to his Jupiter at 6&deg; Sagittarius. Structure supporting expansion. Plans becoming real. This is the "yes, this IS happening" transit.
+          </div>
+        </div>
+
+        <div class="week-transit">
+          <div class="week-transit-label">9th House Activation</div>
+          <div class="week-transit-title">Aries lights up foreign travel + beliefs</div>
+          <div class="week-transit-desc">
+            Travel, foreign connections, beliefs shifting. Very relevant for the Israel - Australia dynamic with Merle.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Story This Week -->
+    <div class="week-story">
+      <div class="week-story-title">The Story This Week</div>
+      <p>The cosmos is doing two things simultaneously this week - and they are pointed directly at these two people.</p>
+      <p><strong>For Merle:</strong> Uranus on her Mars is the detonator. She is being liberated from old patterns of action, specifically in relationships (7th house). With the Sun trining her Moon on April 17 - 18, she will have a moment of absolute emotional clarity. She KNOWS what she wants. The Aries fire is fuel.</p>
+      <p><strong>For Erik:</strong> Jupiter is sitting on his emotional core (Moon) and expanding everything he feels. Venus is asking his Saturn serious questions about love and commitment. Saturn is trining his Jupiter - giving structure to expansion. He is in the "I can't pretend anymore" zone. If he calls or reaches out this week, it is because the dam is about to break.</p>
+      <p><strong>Together:</strong> April 17 - 18 is the peak day. The Sun trines her Moon AND his Mars simultaneously. Both of them activated by the same transit at the same time. If something is going to happen between them this week, that is when.</p>
+    </div>
+
+    <!-- Key Dates Table -->
+    <h4 class="minor-heading">Key Dates This Week</h4>
+
+    <div class="week-dates">
+      <div class="week-date-row">
+        <div class="week-date-day">Apr 13</div>
+        <div class="week-date-desc">Uranus <strong>0.4 degrees</strong> from Merle's Mars. Tension building. The detonator is armed.</div>
+      </div>
+      <div class="week-date-row">
+        <div class="week-date-day">Apr 16</div>
+        <div class="week-date-desc">Mercury enters Aries. Communication gets bold and direct. <strong>5 planets in Aries.</strong> Words stop being polite.</div>
+      </div>
+      <div class="week-date-row peak">
+        <div class="week-date-day">Apr 17 - 18</div>
+        <div class="week-date-desc"><strong>PEAK ENERGY.</strong> Sun trine Merle's Moon + Erik's Mars EXACT. Both of them lit up by the same fire at the same time. If something happens between them - this is when.</div>
+      </div>
+      <div class="week-date-row">
+        <div class="week-date-day">Apr 19</div>
+        <div class="week-date-desc">Sun at 29&deg; Aries - last degree energy. Urgency. <strong>Now or never feeling.</strong></div>
+      </div>
+      <div class="week-date-row kelly-note">
+        <div class="week-date-day">Apr 20</div>
+        <div class="week-date-desc">Sun enters Taurus. Neptune square Venus EXACT. <strong>Kelly - no big decisions today.</strong></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 2: MERLE'S NATAL CHART -->
+<section class="section" id="merle-natal">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">Section Two</span>
       <h2 class="section-title">Merle's <em>Natal Blueprint</em></h2>
       <p class="section-tagline">The earth. The anchor. The one who makes things real.</p>
       <div class="section-ornament"></div>
@@ -1318,11 +1813,11 @@
   </div>
 </section>
 
-<!-- SECTION 2: ERIK'S NATAL CHART -->
+<!-- SECTION 3: ERIK'S NATAL CHART -->
 <section class="section" id="erik-natal">
   <div class="container">
     <div class="section-header">
-      <span class="section-number">Section Two</span>
+      <span class="section-number">Section Three</span>
       <h2 class="section-title">Erik's <em>Natal Blueprint</em></h2>
       <p class="section-tagline">The water. The depth. The one who feels everything.</p>
       <div class="section-ornament"></div>
@@ -1402,11 +1897,11 @@
   </div>
 </section>
 
-<!-- SECTION 3: SYNASTRY -->
+<!-- SECTION 4: SYNASTRY -->
 <section class="section" id="synastry">
   <div class="container">
     <div class="section-header">
-      <span class="section-number">Section Three</span>
+      <span class="section-number">Section Four</span>
       <h2 class="section-title">Synastry - <em>How Their Charts Speak</em></h2>
       <p class="section-tagline">The invisible architecture between two people - where his planets land in her chart, and hers in his.</p>
       <div class="section-ornament"></div>
@@ -1650,11 +2145,11 @@
   </div>
 </section>
 
-<!-- SECTION 4: MERLE'S MONTHLY FORECAST -->
+<!-- SECTION 5: MERLE'S MONTHLY FORECAST -->
 <section class="section" id="merle-forecast">
   <div class="container">
     <div class="section-header">
-      <span class="section-number">Section Four</span>
+      <span class="section-number">Section Five</span>
       <h2 class="section-title">Merle's <em>2026 Forecast</em></h2>
       <p class="section-tagline">April through December - month by month, transit by transit</p>
       <div class="section-ornament"></div>
@@ -1902,11 +2397,11 @@
   </div>
 </section>
 
-<!-- SECTION 5: ERIK'S MONTHLY FORECAST -->
+<!-- SECTION 6: ERIK'S MONTHLY FORECAST -->
 <section class="section" id="erik-forecast">
   <div class="container">
     <div class="section-header">
-      <span class="section-number">Section Five</span>
+      <span class="section-number">Section Six</span>
       <h2 class="section-title">Erik's <em>2026 Forecast</em></h2>
       <p class="section-tagline">April through December - the year love dismantles everything</p>
       <div class="section-ornament"></div>
@@ -2134,11 +2629,11 @@
   </div>
 </section>
 
-<!-- SECTION 6: THEIR STORY -->
+<!-- SECTION 7: THEIR STORY -->
 <section class="section" id="their-story">
   <div class="container">
     <div class="section-header">
-      <span class="section-number">Section Six</span>
+      <span class="section-number">Section Seven</span>
       <h2 class="section-title">Their <em>Story</em></h2>
       <p class="section-tagline">What the cosmos is doing to them - together - through the rest of 2026</p>
       <div class="section-ornament"></div>
@@ -2196,11 +2691,11 @@
   </div>
 </section>
 
-<!-- SECTION 7: KEY DATES CALENDAR -->
+<!-- SECTION 8: KEY DATES CALENDAR -->
 <section class="section" id="key-dates">
   <div class="container">
     <div class="section-header">
-      <span class="section-number">Section Seven</span>
+      <span class="section-number">Section Eight</span>
       <h2 class="section-title">Key <em>Dates</em></h2>
       <p class="section-tagline">The moments that matter most - April through December 2026</p>
       <div class="section-ornament"></div>
