@@ -572,6 +572,60 @@
     font-weight: 600;
   }
 
+  .exact-date {
+    display: inline-block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #E8906A;
+    background: rgba(232, 144, 106, 0.1);
+    border: 1px solid rgba(232, 144, 106, 0.3);
+    padding: 2px 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .exact-date.zero-orb {
+    color: #FF6B35;
+    background: rgba(255, 107, 53, 0.15);
+    border-color: rgba(255, 107, 53, 0.5);
+    animation: pulseGlow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulseGlow {
+    0% { box-shadow: 0 0 4px rgba(255, 107, 53, 0.2); }
+    100% { box-shadow: 0 0 12px rgba(255, 107, 53, 0.5); }
+  }
+
+  .zero-orb-callout {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.08) 0%, rgba(201, 168, 76, 0.04) 100%);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    border-left: 3px solid #FF6B35;
+    padding: 20px 24px;
+    margin: 16px 0;
+    position: relative;
+  }
+
+  .zero-orb-callout .callout-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #FF6B35;
+    margin-bottom: 8px;
+  }
+
+  .zero-orb-callout p {
+    color: var(--cream);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
   /* Transit card */
   .transit-card {
     background: var(--bg-card-2);
@@ -2211,7 +2265,7 @@
 
       <div class="transit-hit">
         <div class="transit-hit-planet">Uranus</div>
-        <div class="transit-hit-detail"><strong>Conjunct natal Mars at 28-29 Taurus</strong> - within 1 degree all month. This is THE headline transit. Uranus hits her Mars (action, body, drive, sexuality) and electrifies everything she's been sitting on. Sudden impulse. Physical restlessness. The urge to break free from whatever has been holding her body in place. This has been building since March and is LIVE right now.</div>
+        <div class="transit-hit-detail"><strong>Conjunct natal Mars at 28-29 Taurus</strong> <span class="exact-date zero-orb">EXACT Apr 21 - 0.03&deg; orb</span> - within 1 degree all month, tightest on April 21 (0.03 degree orb) and April 23 (0.08 degree orb). This is THE headline transit. Uranus hits her Mars (action, body, drive, sexuality) and electrifies everything she's been sitting on. Sudden impulse. Physical restlessness. The urge to break free from whatever has been holding her body in place. This has been building since March and is LIVE right now.</div>
       </div>
       <div class="transit-hit">
         <div class="transit-hit-planet">Pluto</div>
@@ -2249,6 +2303,10 @@
         <div class="transit-hit-planet">Jupiter</div>
         <div class="transit-hit-detail"><strong>At 21 Cancer - moving through her 9th house.</strong> Still building toward the Israel trip. Each degree Jupiter covers is another step toward the expansion waiting for her overseas.</div>
       </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Saturn</div>
+        <div class="transit-hit-detail"><strong>Trine natal Uranus</strong> <span class="exact-date">EXACT May 5 - 0.31&deg; orb</span> - the first pass of a recurring trine that runs through the year. Saturn grounding her Uranus gives structure to the liberation. The changes aren't chaotic - they're being anchored into something sustainable. The body's revolution (Uranus on Mars) gets a framework.</div>
+      </div>
 
       <p class="mt-32"><strong>The story this month:</strong> Uranus perfects its conjunction with her Mars - the lightning bolt lands. Whatever has been building physically, sexually, energetically - it crests. Pluto stations and holds her 12th house in a vice grip. She is simultaneously being freed (Uranus) and stripped bare (Pluto). This is not comfortable. It's necessary.</p>
     </div>
@@ -2277,8 +2335,21 @@
         <div class="transit-hit-planet">Saturn</div>
         <div class="transit-hit-detail"><strong>At 3 Aries - entering her 6th house.</strong> New structures around health, daily routines, and service. This is background energy but it sets the tone - she's building a new life rhythm. The old routine won't survive this trip.</div>
       </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>Sextile natal Sun</strong> <span class="exact-date zero-orb">EXACT Jun 15 - 0.02&deg; orb</span> - Jupiter flows to her Sun with near-perfect precision on June 15. Expansion meets identity. She feels like MORE of herself, not less. In Israel, this transit says: you are exactly where you are supposed to be. Confidence, generosity, and being SEEN for who she really is.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>Sextile natal Mars</strong> <span class="exact-date zero-orb">EXACT Jun 29 - 0.01&deg; orb</span> - two weeks after the Sun sextile, Jupiter perfects on her Mars. Energy, initiative, and the physical drive to act on what she's feeling. This is the body saying YES to the expansion. Combined with the lingering Uranus-Mars energy, late June is when she moves with total conviction.</div>
+      </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> She goes to Israel carrying the energy of Uranus conjunct Mars (liberation), Pluto square Neptune (spiritual depth), and Jupiter in the 9th (expansion through travel). Every transit is pointed at this trip. The cosmos packed her bags months ago.</p>
+      <div class="zero-orb-callout">
+        <div class="callout-label">Zero-Orb Alert - June 15</div>
+        <p><strong>Uranus square natal Pluto - EXACT 0.00 degree orb.</strong> This is as precise as it gets. Uranus (liberation, shock, breakthrough) in exact square to her natal Pluto (transformation, power, the underground). On the same day Jupiter sextiles her Sun. June 15 is the day something breaks open that cannot be put back together. Not trauma - TRANSFORMATION. The kind that rewires the power structure of her life. In her 7th house (partnerships) squaring Pluto in the 10th/11th - this is a power shift in how she relates, who she allows in, and what she's willing to claim publicly.</p>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> She goes to Israel carrying the energy of Uranus conjunct Mars (liberation), Pluto square Neptune (spiritual depth), and Jupiter in the 9th (expansion through travel). June 15 is the cosmic detonation point - Uranus exactly squares her Pluto at 0.00 degree orb while Jupiter sextiles her Sun at 0.02 degrees. Every transit is pointed at this trip. The cosmos packed her bags months ago.</p>
     </div>
 
     <!-- JULY -->
@@ -2299,14 +2370,14 @@
       </div>
       <div class="transit-hit">
         <div class="transit-hit-planet">Saturn</div>
-        <div class="transit-hit-detail"><strong>At 4 Aries - squaring Pluto transit.</strong> Saturn in her 6th house is asking for new discipline around health and daily life. Especially relevant if she's renovating - the body needs structure even while the soul is in flux.</div>
+        <div class="transit-hit-detail"><strong>Trine natal Uranus</strong> <span class="exact-date zero-orb">EXACT Jul 17 - 0.01&deg; orb</span> - Saturn perfects the trine to her natal Uranus on July 17, with a secondary near-exact pass on July 15 (0.03 degrees). This is the second pass of a transit that started in May. The new structures are holding. The revolution has a container. Whatever she dismantled in June is being rebuilt with intention and staying power.</div>
       </div>
       <div class="transit-hit">
         <div class="transit-hit-planet">Jupiter</div>
-        <div class="transit-hit-detail"><strong>At 27 Cancer - approaching her MC.</strong> Professional or public recognition is building. Something from the trip or the emotional expansion feeds into how the world sees her.</div>
+        <div class="transit-hit-detail"><strong>Square natal Jupiter and Neptune</strong> <span class="exact-date">EXACT Jul 15 - Neptune 0.05&deg;</span> - Jupiter at 27 Cancer squares her natal Neptune (3 Scorpio) with near-perfect precision on July 15, and squares natal Jupiter (2 Scorpio) on July 13 at 0.34 degrees. Growth meeting faith. The beliefs she carried into Israel are being challenged and expanded. What she FELT there now meets what she KNOWS. This is productive friction - the kind that produces wisdom.</div>
       </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> The fireworks of May-June give way to deeper processing. Pluto is now exact on her Jupiter - the hidden blessings of her 12th house are being pressure-tested. What does she truly believe? What faith has survived the fire? July is for integration, renovation (literal and metaphorical), and letting the body catch up to the soul.</p>
+      <p class="mt-32"><strong>The story this month:</strong> The fireworks of May-June give way to deeper processing. Pluto is now exact on her Jupiter - the hidden blessings of her 12th house are being pressure-tested. Saturn trines her natal Uranus with near-zero orb on July 17 - anchoring the revolution. What does she truly believe? What faith has survived the fire? July is for integration, renovation (literal and metaphorical), and letting the body catch up to the soul.</p>
     </div>
 
     <!-- AUGUST -->
@@ -2329,8 +2400,12 @@
         <div class="transit-hit-planet">Jupiter</div>
         <div class="transit-hit-detail"><strong>At 29 Cancer</strong> - the final degree before crossing into Leo and her 10th house. The last push of 9th house expansion. If there's one more trip, one more learning experience, one more "aha" - it happens now.</div>
       </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Saturn</div>
+        <div class="transit-hit-detail"><strong>Trine natal Uranus (retrograde pass)</strong> <span class="exact-date">Aug 1-5 - 0.02-0.07&deg; orb</span> - Saturn continues its retrograde trine to her natal Uranus, hovering at near-zero orb during the first week of August. The third pass of this stabilising transit. The structures she's building around her new life are being stress-tested by the retrograde - anything that isn't solid gets flagged. What survives this pass is permanent.</div>
+      </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> Heavy but productive. Pluto is doing deep surgery on her 12th house - the unconscious, the spiritual, the hidden. This is not surface-level astrology. This is the kind of transit where people emerge genuinely different on the other side. She's being asked to release old spiritual identities that no longer serve her.</p>
+      <p class="mt-32"><strong>The story this month:</strong> Heavy but productive. Pluto is doing deep surgery on her 12th house - the unconscious, the spiritual, the hidden. Saturn maintains its retrograde trine to her Uranus at near-zero orb in early August - the liberation has structure. This is not surface-level astrology. This is the kind of transit where people emerge genuinely different on the other side. She's being asked to release old spiritual identities that no longer serve her.</p>
     </div>
 
     <!-- SEPTEMBER -->
@@ -2353,8 +2428,17 @@
         <div class="transit-hit-planet">Jupiter</div>
         <div class="transit-hit-detail"><strong>Enters Leo - 0 degrees.</strong> Jupiter crosses into her 10th house of career, public life, and legacy. This is the beginning of a year-long expansion in how the world sees her. Something she did in the first half of 2026 - the trip, the relationship, the inner work - starts to become visible.</div>
       </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>Conjunct natal Uranus</strong> <span class="exact-date">EXACT Sep 5 - 0.11&deg; orb</span> - the first exact pass. Jupiter meets her natal Uranus - sudden expansion, lucky breaks, unexpected opportunities arriving from nowhere. In her 10th house, this is the "out of the blue recognition" transit. Something she didn't plan for puts her in the spotlight.</div>
+      </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> Her birthday season and it's massive. Pluto stations direct on her Jupiter, Jupiter enters her 10th house, and Neptune gives her one last dream before re-entering Aries. September is the pivot point of her year. Everything before this was preparation. Everything after this is the result.</p>
+      <div class="zero-orb-callout">
+        <div class="callout-label">Zero-Orb Alert - September 25</div>
+        <p><strong>Pluto square natal Neptune - EXACT 0.00 degree orb.</strong> The most precise hit of the entire Pluto-Neptune cycle this year. September 23 at 0.02 degrees, September 25 at absolute zero. Pluto (transformation, death and rebirth) in exact square to her natal Neptune (spirituality, intuition, the unseen). This is the moment the spiritual transformation completes its deepest pass. The old way of connecting to the divine is gone. What replaces it is raw, unmediated, and entirely her own. Not inherited. Not performed. REAL. This transit has been building since April - September 25 is when it perfects.</p>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Her birthday season and it's massive. Pluto stations direct on her Jupiter, then squares her Neptune at absolute zero orb on September 25 - the spiritual transformation reaches its most precise point. Jupiter enters her 10th house and conjuncts her natal Uranus on September 5. Neptune gives her one last dream before re-entering Aries. September is the pivot point of her year. Everything before this was preparation. Everything after this is the result.</p>
     </div>
 
     <!-- OCTOBER -->
@@ -2381,8 +2465,16 @@
         <div class="transit-hit-planet">Saturn</div>
         <div class="transit-hit-detail"><strong>Retrograde at 2 Aries.</strong> Saturn backs off the pressure on her 6th house. A breather in health and routine matters. Old habits she tried to change can be re-evaluated with gentleness.</div>
       </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>Trine natal Saturn</strong> <span class="exact-date">EXACT Oct 1 - 0.08&deg; orb</span> - Jupiter in Leo trining her natal Saturn. Expansion that LASTS. Growth with structure. The career momentum building in her 10th house now has staying power. Whatever public role is emerging isn't a flash in the pan - it's built on something solid.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Square natal Neptune - holding within 0.10 degree orb ALL MONTH.</strong> The Pluto-Neptune square that peaked at zero orb on September 25 doesn't release in October. It holds. All month, Pluto sits within a tenth of a degree of exact square to her Neptune. The spiritual pressure is constant and inescapable - but by now she knows what it's asking of her.</div>
+      </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> Expansion. Jupiter is in her house of public life. Pluto is moving forward with purpose. Uranus stations and drops one more surprise. October is the month she starts to see the RESULTS of everything 2026 has put her through.</p>
+      <p class="mt-32"><strong>The story this month:</strong> Expansion. Jupiter trines her natal Saturn on October 1 - growth that sticks. Pluto holds its near-zero square to her Neptune all month. Uranus stations and drops one more surprise. October is the month she starts to see the RESULTS of everything 2026 has put her through.</p>
     </div>
 
     <!-- NOVEMBER -->
@@ -2399,14 +2491,14 @@
       </div>
       <div class="transit-hit">
         <div class="transit-hit-planet">Pluto</div>
-        <div class="transit-hit-detail"><strong>At 3 Aquarius</strong> - back to squaring her Neptune (3 Scorpio). EXACT to the degree again. This is the final pass for 2026. The spiritual transformation is completing its cycle. She's not the same person who started this year.</div>
+        <div class="transit-hit-detail"><strong>At 3 Aquarius - square natal Neptune</strong> <span class="exact-date">EXACT Nov 1 - 0.04&deg; orb</span> - back to squaring her Neptune (3 Scorpio). Near-exact again on November 1 at 0.04 degrees - the direct pass. This is the final exact pass for 2026. The spiritual transformation is completing its cycle. She's not the same person who started this year.</div>
       </div>
       <div class="transit-hit">
         <div class="transit-hit-planet">Jupiter</div>
-        <div class="transit-hit-detail"><strong>At 4 Leo - continuing through her 10th house.</strong> The public expansion continues to build. Authority solidifies.</div>
+        <div class="transit-hit-detail"><strong>Square natal Jupiter</strong> <span class="exact-date">EXACT Nov 11 - 0.09&deg; orb</span> - Jupiter squares her natal Jupiter at near-zero orb on November 11. Growth squaring growth - this is the "too much of a good thing" check. The expansion of the 10th house meets her natal faith and abundance. Are you expanding for the right reasons? The answer is already yes - she's earned this.</div>
       </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> November is where the year starts to make sense. Neptune clears, Pluto makes its final exact square, and Jupiter continues to expand her public presence. She can see the full picture now - what the Uranus-Mars conjunction started in April, what the Israel trip catalysed in June, what Pluto has been dismantling and rebuilding all year. The integration is real.</p>
+      <p class="mt-32"><strong>The story this month:</strong> November is where the year starts to make sense. Neptune clears, Pluto makes its final near-exact square to her Neptune on November 1 (0.04 degrees), and Jupiter squares her natal Jupiter on November 11. She can see the full picture now - what the Uranus-Mars conjunction started in April, what the Israel trip catalysed in June, what Pluto has been dismantling and rebuilding all year. The integration is real.</p>
     </div>
 
     <!-- DECEMBER -->
@@ -2431,10 +2523,10 @@
       </div>
       <div class="transit-hit">
         <div class="transit-hit-planet">Uranus</div>
-        <div class="transit-hit-detail"><strong>Retrograde at 0 Gemini</strong> - sliding back toward the Taurus-Gemini cusp. One final echo of the Mars conjunction energy. A memory, a callback, a "remember when everything changed?" moment.</div>
+        <div class="transit-hit-detail"><strong>Square natal Pluto (retrograde)</strong> <span class="exact-date zero-orb">EXACT Dec 15 - 0.03&deg; orb</span> - Uranus squares her natal Pluto with near-zero precision on December 15 (0.03 degrees) and December 17 (0.04 degrees). This is the echo of the June 15 zero-orb hit - but now from retrograde. The power shift that happened in June gets a second look. The liberation meets the transformation one final time. Whatever changed in her power dynamics in June is being confirmed and sealed in December.</div>
       </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> She ends 2026 as a fundamentally different woman. The Uranus-Mars conjunction rewired her body. Pluto square Jupiter-Neptune rewired her soul. Jupiter entering her 10th house rewired her public life. December is standing on the mountain and looking at what she's built - not through willpower, but through surrender.</p>
+      <p class="mt-32"><strong>The story this month:</strong> She ends 2026 as a fundamentally different woman. Uranus squares her natal Pluto at near-zero orb on December 15 - bookending the June 15 exact hit. The Uranus-Mars conjunction rewired her body. Pluto square Jupiter-Neptune rewired her soul. Jupiter entering her 10th house rewired her public life. December is standing on the mountain and looking at what she's built - not through willpower, but through surrender.</p>
     </div>
 
     <div class="verdict-box" data-label="MERLE'S YEAR IN ONE SENTENCE">
@@ -2471,10 +2563,18 @@
       </div>
       <div class="transit-hit">
         <div class="transit-hit-planet">Saturn</div>
-        <div class="transit-hit-detail"><strong>At 0 Aries - in his 9th house.</strong> New structures around beliefs, philosophy, long-distance connections. Saturn in the 9th says: "What do you actually believe about life?" Coming from a man in a war zone, this question has teeth.</div>
+        <div class="transit-hit-detail"><strong>Trine natal Jupiter</strong> <span class="exact-date zero-orb">EXACT Apr 5 - 0.03&deg; orb</span> - Saturn in Aries trines his natal Jupiter with near-zero precision on April 5. His 9th house of beliefs gets structured support. This isn't just "what do you believe about life?" - it's "here's the framework to actually live it." Saturn-Jupiter trines are rare gifts - concrete opportunities that come through faith. Something solid arrives early April.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Uranus</div>
+        <div class="transit-hit-detail"><strong>Trine natal Pluto</strong> <span class="exact-date">EXACT Apr 1 - 0.04&deg; orb</span> - Uranus in late Taurus trining his natal Pluto in Virgo. Effortless transformation. Deep changes that don't feel forced - they feel inevitable. The trine says: the door is already open. You just have to notice it.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Neptune</div>
+        <div class="transit-hit-detail"><strong>Sextile natal Venus and trine natal Neptune</strong> <span class="exact-date">Apr 13 - 0.29&deg; / 0.42&deg; orb</span> - Neptune in early Aries forms flowing aspects to both his Venus and natal Neptune mid-April. His love nature (Venus) and his spiritual depth (Neptune) are being softened, opened, made receptive. The veil around his heart is dissolving. He can FEEL more than usual - and what he's feeling is her.</div>
       </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> Pluto is on his Venus. That's it. That's the whole story. Everything else is background music. The man who called from the bomb shelter is now having his entire value system around love torn apart and rebuilt. He knows who he loves. Pluto is making sure he can't pretend otherwise.</p>
+      <p class="mt-32"><strong>The story this month:</strong> Pluto is on his Venus. That's the headline. But the supporting cast is powerful - Saturn trines his Jupiter at 0.03 degrees on April 5 (solid opportunity), Uranus trines his Pluto on April 1 (effortless transformation), and Neptune opens his heart mid-month. The man who called from the bomb shelter is now having his entire value system around love torn apart and rebuilt. He knows who he loves. Pluto is making sure he can't pretend otherwise.</p>
     </div>
 
     <!-- MAY -->
@@ -2494,7 +2594,12 @@
         <div class="transit-hit-detail"><strong>At 21 Cancer - closing in on his Moon (15 Cancer).</strong> Still building. The emotional expansion is getting louder. Jupiter won't be exact on his Moon until later, but the approach phase is when the WANTING starts. He wants more. He wants deeper. He wants her.</div>
       </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> Pluto stations on his Venus. This is the still-point before the earthquake. He may not act yet - retrograde energy often internalises - but the reckoning is happening inside. His birthday was in March and his solar return chart set the themes. May is when those themes become impossible to deny.</p>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Neptune</div>
+        <div class="transit-hit-detail"><strong>Sextile natal Venus and trine natal Neptune</strong> <span class="exact-date">May 1 - 0.32&deg; / 0.19&deg;</span> - Neptune continues to soften his heart. The trine to his natal Neptune is tighter now (0.19 degrees) - the spiritual dissolving deepens. His dreams are vivid. His intuition about who he really wants is getting harder to argue with.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Pluto stations on his Venus. Neptune trines his natal Neptune at 0.19 degrees - the spiritual bypass is gone. This is the still-point before the earthquake. He may not act yet - retrograde energy often internalises - but the reckoning is happening inside. His birthday was in March and his solar return chart set the themes. May is when those themes become impossible to deny.</p>
     </div>
 
     <!-- JUNE -->
@@ -2513,16 +2618,24 @@
         <div class="transit-hit-planet">Uranus</div>
         <div class="transit-hit-detail"><strong>Enters Gemini - 0 degrees.</strong> Trine his Venus from 0 Gemini to 2 Aquarius - within 2 degrees and tightening. Uranus trine Venus is the "sudden liberation through love" transit. It flows. It doesn't force. The exit door isn't being kicked in - it's standing open, lit up, with her name on it.</div>
       </div>
+      <div class="zero-orb-callout">
+        <div class="callout-label">Critical Exact Date - June 5</div>
+        <p><strong>Saturn opposition natal Uranus - EXACT 0.03 degree orb.</strong> This is THE freedom-versus-duty crisis point. Saturn (obligation, structure, the life he built) in direct opposition to his natal Uranus (liberation, restlessness, the life he actually wants). At 0.03 degrees, there is no ambiguity. The tension between staying and leaving reaches its most precise expression. His 9th house Saturn (beliefs about what's right) opposes his 3rd house Uranus (the mind that already knows). June 5 is when the internal war reaches peak intensity. She arrives into THIS energy.</p>
+      </div>
       <div class="transit-hit">
-        <div class="transit-hit-planet">Saturn</div>
-        <div class="transit-hit-detail"><strong>At 3 Aries - approaching opposition to his natal Uranus (12 Libra).</strong> Still wide, but the tension between duty (Saturn) and freedom (Uranus) is building. His 3rd house Uranus is his restless mind - the part of him that has always known he's living the wrong life.</div>
+        <div class="transit-hit-planet">Uranus</div>
+        <div class="transit-hit-detail"><strong>Trine natal Venus begins</strong> <span class="exact-date">Jun 9-13: 0.41-0.19&deg; orb</span> - Uranus from early Gemini starts forming a trine to his natal Venus. Freedom through love, flowing effortlessly. This builds through the month - by June 13, the orb is just 0.19 degrees. The exit door isn't being kicked in - it's standing open, lit up.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Uranus</div>
+        <div class="transit-hit-detail"><strong>Opposition natal Neptune</strong> <span class="exact-date">Jun 13 - 0.32&deg; orb</span> - Uranus opposes his natal Neptune mid-June. Reality versus dreams. The life he imagined versus the life he's actually living. This opposition cracks open the fantasy and forces him to see what's REAL - including what's real about his feelings for Merle.</div>
       </div>
       <div class="transit-hit">
         <div class="transit-hit-planet">Jupiter</div>
         <div class="transit-hit-detail"><strong>At 24 Cancer.</strong> Moving through his 11th house (community, hopes, dreams, the future he wishes for). Jupiter here expands his vision of what's possible. The life he thought he was locked into starts to look like a choice, not a sentence.</div>
       </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> Merle arrives in Israel and walks into the Pluto-Venus vortex. Uranus trines his Venus from Gemini - freedom flows. The cosmos isn't being subtle. Every major outer planet is pointed at his relationships, his values, and the door marked EXIT. Whether he walks through it in June or later - this month changes everything.</p>
+      <p class="mt-32"><strong>The story this month:</strong> Merle arrives in Israel and walks into a man who hit Saturn-opposite-Uranus at 0.03 degrees on June 5 - the exact crisis point between duty and freedom. Uranus trines his Venus from Gemini (freedom flows through love) while opposing his Neptune (no more fantasies - only truth). The cosmos isn't being subtle. Every major outer planet is pointed at his relationships, his values, and the door marked EXIT. Whether he walks through it in June or later - this month changes everything.</p>
     </div>
 
     <!-- JULY -->
@@ -2541,12 +2654,20 @@
         <div class="transit-hit-planet">Neptune</div>
         <div class="transit-hit-detail"><strong>Stations retrograde at 1 Aries.</strong> In his 9th house. The beliefs he's been living by start to dissolve. What he thought was duty may actually be fear. What he thought was impossible may actually just be unfamiliar.</div>
       </div>
+      <div class="zero-orb-callout">
+        <div class="callout-label">Major Exact Date - July 13</div>
+        <p><strong>Jupiter opposition natal Venus - EXACT 0.16 degree orb.</strong> Jupiter in Cancer (nurturing, home, emotional safety) opposes his natal Venus in Aquarius (love, values, who he wants). This is the love-expansion opposition - everything he feels gets BIGGER, too big to contain, too big to pretend it's manageable. Jupiter opposing Venus from Cancer says: the emotional truth about who you love is now larger than every structure you built to contain it. July 13 is when the feelings become undeniable. Combined with Pluto virtually exact on the same Venus - he is being hit from two directions at once.</p>
+      </div>
       <div class="transit-hit">
         <div class="transit-hit-planet">Jupiter</div>
-        <div class="transit-hit-detail"><strong>At 27 Cancer - getting close to his Moon (15 Cancer).</strong> Still approaching. The emotional tide keeps rising.</div>
+        <div class="transit-hit-detail"><strong>Trine natal Neptune</strong> <span class="exact-date">Jul 13 - 0.29&deg; orb</span> - on the same day as the Venus opposition, Jupiter also trines his natal Neptune. The spiritual dimension of what he's feeling opens up. This isn't just love - it's RECOGNITION. Something beyond the personal, something that touches the soul.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Saturn</div>
+        <div class="transit-hit-detail"><strong>Opposition natal Uranus - second approach</strong> <span class="exact-date">Jul 7 - 0.13&deg; orb</span> - Saturn comes back within tight orb of his natal Uranus on July 7. The duty-versus-freedom tension that peaked June 5 is still holding. He hasn't resolved it - it's holding HIM. Every day is a negotiation between the life he's supposed to live and the life calling him.</div>
       </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> Pluto is EXACT on his Venus. This is the core of the transformation. July is not easy - it's the month where the old love structure is fully demolished. What replaces it depends on his courage. Neptune stationing retrograde adds fog to his beliefs about what's right and wrong. The challenge is real - but so is the opportunity.</p>
+      <p class="mt-32"><strong>The story this month:</strong> Pluto is EXACT on his Venus while Jupiter opposes the same Venus on July 13 at 0.16 degrees. Two planets, one target - his love nature under maximum pressure from maximum expansion. This is the core of the transformation. July is not easy - it's the month where the old love structure is fully demolished. What replaces it depends on his courage. Neptune stationing retrograde adds fog to his beliefs about what's right and wrong. The challenge is real - but so is the opportunity.</p>
     </div>
 
     <!-- AUGUST -->
@@ -2593,8 +2714,20 @@
         <div class="transit-hit-planet">Saturn</div>
         <div class="transit-hit-detail"><strong>Retrograde at 3 Aries.</strong> Saturn backing up in his 9th house gives him a chance to revisit his beliefs. What he decided under pressure, he now gets to reconsider with perspective.</div>
       </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Uranus</div>
+        <div class="transit-hit-detail"><strong>Opposition natal Jupiter tightening</strong> <span class="exact-date">Sep 1-11: 0.36-0.32&deg; orb</span> - Uranus in Gemini tightens its opposition to his natal Jupiter in Sagittarius. Sudden expansion collides with established beliefs. The future he's been building in his mind (Jupiter in the 9th) is being challenged by Uranus saying "not that future - THIS one."</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Approaching conjunction natal Venus (retrograde)</strong> <span class="exact-date">Sep 5-11: 0.43-0.40&deg; orb</span> - Pluto retrograde is closing back in on his Venus. The transformation that eased in August is returning. By mid-September, Pluto stations direct and begins its final approach.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Neptune</div>
+        <div class="transit-hit-detail"><strong>Sextile natal Venus and trine natal Neptune</strong> <span class="exact-date">Sep 9-11: Venus 0.47-0.34&deg;</span> - Neptune continues to dissolve the barriers around his heart. The sextile to Venus and trine to Neptune are holding within half a degree - keeping the spiritual channel to love wide open.</div>
+      </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> Jupiter enters his 12th house - the beginning of a year-long spiritual expansion. Pluto stations direct on his Venus axis. He's no longer in the dark. He can see where the transformation is taking him. September is the month the tide turns from destruction to creation.</p>
+      <p class="mt-32"><strong>The story this month:</strong> Jupiter enters his 12th house - the beginning of a year-long spiritual expansion. Pluto stations direct on his Venus axis and begins its final approach. Uranus opposes his Jupiter, pushing him toward a future he didn't plan. September is the month the tide turns from destruction to creation.</p>
     </div>
 
     <!-- OCTOBER -->
@@ -2609,16 +2742,24 @@
         <div class="transit-hit-planet">Jupiter</div>
         <div class="transit-hit-detail"><strong>At 2 Leo - building toward trine his Sun and Mercury (15 Pisces).</strong> Still 13 degrees from exact, but Jupiter in Leo in his 12th house is already working - expanding his inner life, his spiritual depth, his capacity to feel without drowning. The emotional overflow that began at the bomb shelter call is becoming a resource, not a crisis.</div>
       </div>
+      <div class="zero-orb-callout">
+        <div class="callout-label">THE Moment - October 9</div>
+        <p><strong>Pluto conjunct natal Venus - tightest retrograde pass at 0.14 degree orb.</strong> Pluto has been closing in all month: October 1 at 0.18, October 3 at 0.17, October 5 at 0.16, October 7 at 0.15, and October 9 at 0.14 degrees - the closest approach of the retrograde pass. This is the cosmic pressure point. Pluto sitting within a seventh of a degree of his Venus. The question Pluto has been asking since April reaches its most intimate, most inescapable intensity. On the same day, Pluto sextiles his natal Neptune at 0.01 degrees - near-zero. The love transformation and the spiritual awakening MERGE. What he feels for Merle and what he knows about his soul become the same thing.</p>
+      </div>
       <div class="transit-hit">
         <div class="transit-hit-planet">Pluto</div>
-        <div class="transit-hit-detail"><strong>Direct at 2 Aquarius - re-applying conjunct his Venus (2 Aquarius).</strong> EXACT again. This is the final direct pass for 2026. Pluto sits on his Venus for the third time. The first time (April) was the question. The second time (July retrograde) was the reckoning. This third time is the answer. He knows now. He's known for months. The only question is whether he acts on it.</div>
+        <div class="transit-hit-detail"><strong>Sextile natal Neptune</strong> <span class="exact-date zero-orb">EXACT Oct 9-11 - 0.01-0.00&deg; orb</span> - Pluto sextiles his natal Neptune at absolute zero orb between October 9-11. The love planet (Venus) and the soul planet (Neptune) are both being touched by Pluto simultaneously. Transformation that reaches the deepest level of who he is.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Neptune</div>
+        <div class="transit-hit-detail"><strong>Sextile natal Venus and trine natal Neptune</strong> <span class="exact-date">Oct 1-5: Venus 0.08-0.19&deg;</span> - Neptune holds its sextile to his Venus at 0.08 degrees on October 1 - the closest pass. His heart is completely open. Neptune has dissolved every wall. Combined with Pluto on the same Venus, he is experiencing love at the rawest, most unprotected level of his life.</div>
       </div>
       <div class="transit-hit">
         <div class="transit-hit-planet">Uranus</div>
         <div class="transit-hit-detail"><strong>Stations retrograde at 2 Gemini.</strong> Uranus stationed means another surprise. In trine to his Venus from Gemini to Aquarius - still within orb. The liberation energy holds. Freedom is still on the table.</div>
       </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> Pluto makes its final exact conjunction to his Venus while direct. This is the decisive pass. Jupiter is expanding his 12th house - everything happening inside him is vast and deep and can no longer be contained. October is when the interior transformation becomes an exterior decision.</p>
+      <p class="mt-32"><strong>The story this month:</strong> October 9 is the focal point of Erik's entire year. Pluto sits on his Venus at 0.14 degrees while sextiling his Neptune at zero orb. Neptune holds its own sextile to Venus at 0.08 degrees. Every planet pointed at love, every orb at near-zero. This is when the interior transformation becomes an exterior decision. He can no longer separate what he feels from what he must do about it.</p>
     </div>
 
     <!-- NOVEMBER -->
@@ -2635,14 +2776,18 @@
       </div>
       <div class="transit-hit">
         <div class="transit-hit-planet">Pluto</div>
-        <div class="transit-hit-detail"><strong>At 3 Aquarius - separating from his Venus.</strong> The Pluto-Venus conjunction is winding down. Not ending (it'll echo for years) but the acute phase is complete. The demolition is done. The rebuild is underway.</div>
+        <div class="transit-hit-detail"><strong>Conjunct natal Venus (direct pass)</strong> <span class="exact-date">Nov 1-3: 0.19-0.21&deg; orb</span> - Pluto holds within a quarter degree of his Venus through early November, separating to 0.29 degrees by November 11. The direct pass. The Pluto-Venus conjunction is completing - not ending (it'll echo for years) but the acute demolition phase is done. The rebuild is underway.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Uranus</div>
+        <div class="transit-hit-detail"><strong>Opposition natal Neptune</strong> <span class="exact-date zero-orb">EXACT Nov 11 - 0.02&deg; orb</span> - Uranus opposes his natal Neptune at near-zero orb on November 11. Reality (Uranus) versus illusion (Neptune) at its most precise. Whatever he's been dreaming about, fantasising about, telling himself might not be real - Uranus says: it IS real, and the dream is the old life, not the new one. Simultaneously, Uranus trines his natal Venus at 0.11 degrees - freedom through love still flowing.</div>
       </div>
       <div class="transit-hit">
         <div class="transit-hit-planet">Jupiter</div>
         <div class="transit-hit-detail"><strong>At 4 Leo - continuing through his 12th house.</strong> Spiritual expansion deepens. Hidden blessings continue to reveal themselves. His inner world is rich in a way it hasn't been in decades.</div>
       </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> Neptune clearing plus Pluto separating from Venus creates space. Real, tangible, breathable space. The man who has been under siege since early 2026 gets room to think. Jupiter in his 12th keeps the spiritual channel open. November is the month where the impossible starts to feel possible.</p>
+      <p class="mt-32"><strong>The story this month:</strong> Neptune clearing plus Pluto separating from Venus creates space. Uranus opposes his natal Neptune at 0.02 degrees on November 11 - the final illusion shatters. The man who has been under siege since early 2026 gets room to think, and what he sees when the fog lifts is the truth. Jupiter in his 12th keeps the spiritual channel open. November is the month where the impossible starts to feel possible.</p>
     </div>
 
     <!-- DECEMBER -->
@@ -2663,10 +2808,18 @@
       </div>
       <div class="transit-hit">
         <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>Trine natal Mars</strong> <span class="exact-date">Dec 1 - 0.32&deg; orb</span> - Jupiter in Leo trining his natal Mars. Energy, courage, the physical drive to act on what he knows. This is the transit that turns inner clarity into outer action. December is when he MOVES.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
         <div class="transit-hit-detail"><strong>At 7 Leo - deep in his 12th house.</strong> The spiritual expansion is building toward his next birthday (March 2027) where it will culminate. His inner preparation for the next chapter of his life is well underway.</div>
       </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Uranus</div>
+        <div class="transit-hit-detail"><strong>Trine natal Venus (retrograde) and opposition natal Neptune</strong> <span class="exact-date">Dec 1-7: Venus 0.19-0.27&deg; / Neptune 0.06-0.14&deg;</span> - Uranus holds both aspects through early December. The freedom-through-love channel stays open (trine Venus) while the illusion-shattering energy stays live (opposition Neptune). He can see clearly and love freely - simultaneously. This is where the new Erik lives.</div>
+      </div>
 
-      <p class="mt-32"><strong>The story this month:</strong> Saturn direct in his 9th house means his new philosophy of life is set. Pluto has moved past Venus - the love transformation is no longer acute. Jupiter continues to expand his inner world. He ends 2026 as a man who has been turned inside out by love, shaken by Pluto, liberated by Uranus, and expanded by Jupiter. The old Erik is gone. What emerges is someone who has looked at the truth and chosen it.</p>
+      <p class="mt-32"><strong>The story this month:</strong> Saturn direct in his 9th house means his new philosophy of life is set. Jupiter trines his Mars on December 1 - action energy arrives. Uranus holds its trine to Venus and opposition to Neptune through early December - freedom and clarity persist. He ends 2026 as a man who has been turned inside out by love, shaken by Pluto, liberated by Uranus, and expanded by Jupiter. The old Erik is gone. What emerges is someone who has looked at the truth and chosen it.</p>
     </div>
 
     <div class="verdict-box" data-label="ERIK'S YEAR IN ONE SENTENCE">
@@ -2750,22 +2903,40 @@
     <h3 class="sub-heading"><em>April - May</em></h3>
     <div class="calendar-grid">
       <div class="cal-item major">
-        <div class="cal-date">Mid-April</div>
-        <div class="cal-who">Merle</div>
-        <div class="cal-title">Uranus conjunct Mars - within 1 degree</div>
-        <div class="cal-desc">Physical awakening. The body leads. Liberation energy at full voltage.</div>
+        <div class="cal-date">April 1</div>
+        <div class="cal-who">Erik</div>
+        <div class="cal-title">Uranus trine natal Pluto - 0.04&deg;</div>
+        <div class="cal-desc">Effortless transformation begins. The door opens without being forced.</div>
       </div>
       <div class="cal-item major">
+        <div class="cal-date">April 5</div>
+        <div class="cal-who">Erik</div>
+        <div class="cal-title">Saturn trine natal Jupiter - EXACT 0.03&deg;</div>
+        <div class="cal-desc">Solid opportunity through faith. A concrete gift from structured belief.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">April 21</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Uranus conjunct Mars - EXACT 0.03&deg;</div>
+        <div class="cal-desc">Physical awakening at peak precision. The body decides. Liberation at full voltage.</div>
+      </div>
+      <div class="cal-item">
         <div class="cal-date">All April</div>
         <div class="cal-who">Merle</div>
         <div class="cal-title">Pluto square Neptune - within 1 degree</div>
         <div class="cal-desc">Spiritual veil at its thinnest. Vivid dreams, sudden knowing, deep intuition.</div>
       </div>
       <div class="cal-item">
-        <div class="cal-date">April</div>
+        <div class="cal-date">April 13</div>
         <div class="cal-who">Erik</div>
-        <div class="cal-title">Pluto conjunct Venus - 2 degrees</div>
-        <div class="cal-desc">The love transformation continues. Pressure building but not yet at peak.</div>
+        <div class="cal-title">Neptune sextile Venus / trine Neptune</div>
+        <div class="cal-desc">Heart softens. The barriers around love dissolve. He can feel more than usual.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">May 5</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Saturn trine natal Uranus - 0.31&deg; (first pass)</div>
+        <div class="cal-desc">The revolution gets a framework. Liberation anchored into something sustainable.</div>
       </div>
       <div class="cal-item major">
         <div class="cal-date">Mid-May</div>
@@ -2773,39 +2944,27 @@
         <div class="cal-title">Pluto stations retrograde at 4 Aquarius</div>
         <div class="cal-desc">Pluto parks on the degree. For Erik: the pressure on Venus becomes unbearable. For Merle: the 12th house squeeze deepens.</div>
       </div>
-      <div class="cal-item major">
-        <div class="cal-date">Late May</div>
-        <div class="cal-who">Merle</div>
-        <div class="cal-title">Uranus conjunct Mars - EXACT at 29 Taurus</div>
-        <div class="cal-desc">The peak. The anaretic degree. A decision is made by the body, not the mind. Point of no return.</div>
-      </div>
     </div>
 
     <h3 class="sub-heading"><em>June - The Trip</em></h3>
     <div class="calendar-grid">
       <div class="cal-item major">
-        <div class="cal-date">Early June</div>
-        <div class="cal-who">Both</div>
-        <div class="cal-title">Merle arrives in Israel</div>
-        <div class="cal-desc">Uranus enters Gemini. A generational shift as she lands. She arrives as someone new.</div>
+        <div class="cal-date">June 5</div>
+        <div class="cal-who">Erik</div>
+        <div class="cal-title">Saturn opposition natal Uranus - EXACT 0.03&deg;</div>
+        <div class="cal-desc">THE freedom-versus-duty crisis point. The tension between staying and leaving at maximum precision. She arrives into this energy.</div>
       </div>
       <div class="cal-item major">
-        <div class="cal-date">All June</div>
-        <div class="cal-who">Erik</div>
-        <div class="cal-title">Pluto retrograde conjunct Venus - within 1 degree</div>
-        <div class="cal-desc">She walks into a man with Pluto sitting on his love planet. He can't pretend. He won't pretend.</div>
-      </div>
-      <div class="cal-item">
-        <div class="cal-date">All June</div>
-        <div class="cal-who">Erik</div>
-        <div class="cal-title">Uranus trine Venus from Gemini</div>
-        <div class="cal-desc">Sudden freedom through love. The exit door flows open like water.</div>
-      </div>
-      <div class="cal-item">
-        <div class="cal-date">All June</div>
+        <div class="cal-date">June 15</div>
         <div class="cal-who">Merle</div>
-        <div class="cal-title">Jupiter at 24 Cancer - 9th house peak</div>
-        <div class="cal-desc">Maximum expansion through foreign travel. The trip is cosmically sanctioned.</div>
+        <div class="cal-title">Uranus square natal Pluto - EXACT 0.00&deg;</div>
+        <div class="cal-desc">ZERO ORB. Power shift in partnerships. Something breaks open that cannot be put back together. Same day Jupiter sextiles her Sun at 0.02&deg;.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">June 15</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Jupiter sextile natal Sun - EXACT 0.02&deg;</div>
+        <div class="cal-desc">Expansion meets identity. She IS herself - more than ever. Confidence and visibility peak.</div>
       </div>
       <div class="cal-item major">
         <div class="cal-date">June 16 - 19</div>
@@ -2813,15 +2972,39 @@
         <div class="cal-title">The Departure Window</div>
         <div class="cal-desc">Uranus exactly trine Erik's Venus (June 16). Every planet says GO (June 18). Full detail in the original report.</div>
       </div>
+      <div class="cal-item major">
+        <div class="cal-date">June 29</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Jupiter sextile natal Mars - EXACT 0.01&deg;</div>
+        <div class="cal-desc">Energy, initiative, conviction. The body says YES to the expansion. She moves with total certainty.</div>
+      </div>
+      <div class="cal-item">
+        <div class="cal-date">Jun 9 - 13</div>
+        <div class="cal-who">Erik</div>
+        <div class="cal-title">Uranus trine natal Venus begins (0.41 - 0.19&deg;)</div>
+        <div class="cal-desc">Freedom through love flowing effortlessly. The exit door stands open and lit up.</div>
+      </div>
     </div>
 
     <h3 class="sub-heading"><em>July - August</em></h3>
     <div class="calendar-grid">
       <div class="cal-item major">
-        <div class="cal-date">July</div>
+        <div class="cal-date">July 13</div>
         <div class="cal-who">Erik</div>
-        <div class="cal-title">Pluto retrograde EXACT conjunct Venus</div>
-        <div class="cal-desc">2.06 vs 2.94 Aquarius. The closest pass of the year. The reckoning.</div>
+        <div class="cal-title">Jupiter opposition natal Venus - EXACT 0.16&deg;</div>
+        <div class="cal-desc">Love expansion becomes undeniable. Feelings too big to contain. Combined with Pluto on the same Venus - hit from two directions.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">July 15</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Jupiter square natal Neptune - EXACT 0.05&deg;</div>
+        <div class="cal-desc">Growth meets faith. What she felt in Israel meets what she knows. Productive friction that produces wisdom.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">July 17</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Saturn trine natal Uranus - EXACT 0.01&deg;</div>
+        <div class="cal-desc">The revolution has a container. Whatever she dismantled is being rebuilt with intention and staying power.</div>
       </div>
       <div class="cal-item">
         <div class="cal-date">Mid-July</div>
@@ -2830,10 +3013,10 @@
         <div class="cal-desc">Reality gets foggy. Old beliefs dissolve. Integration needs patience.</div>
       </div>
       <div class="cal-item">
-        <div class="cal-date">July</div>
+        <div class="cal-date">Aug 1 - 5</div>
         <div class="cal-who">Merle</div>
-        <div class="cal-title">Pluto EXACT square Jupiter</div>
-        <div class="cal-desc">2 Aquarius square 2 Scorpio. The hidden faith is tested to its core.</div>
+        <div class="cal-title">Saturn trine natal Uranus (retrograde) - 0.02-0.07&deg;</div>
+        <div class="cal-desc">Third pass. The structures around her new life are stress-tested. What survives is permanent.</div>
       </div>
       <div class="cal-item">
         <div class="cal-date">August</div>
@@ -2846,22 +3029,40 @@
     <h3 class="sub-heading"><em>September - October</em></h3>
     <div class="calendar-grid">
       <div class="cal-item major">
+        <div class="cal-date">September 5</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Jupiter conjunct natal Uranus - 0.11&deg;</div>
+        <div class="cal-desc">Out-of-the-blue recognition. Unexpected opportunities. Something she didn't plan for puts her in the spotlight.</div>
+      </div>
+      <div class="cal-item major">
         <div class="cal-date">September</div>
         <div class="cal-who">Both</div>
         <div class="cal-title">Pluto stations DIRECT at 1 Aquarius</div>
         <div class="cal-desc">The transformation turns forward. For Erik: Venus re-engaged. For Merle: Jupiter squeeze reaches turning point.</div>
       </div>
       <div class="cal-item major">
-        <div class="cal-date">September</div>
+        <div class="cal-date">September 25</div>
         <div class="cal-who">Merle</div>
-        <div class="cal-title">Birthday season + Jupiter enters Leo (10th house)</div>
-        <div class="cal-desc">Her solar return. Jupiter enters her house of public life. The year pivots here.</div>
+        <div class="cal-title">Pluto square natal Neptune - EXACT 0.00&deg;</div>
+        <div class="cal-desc">ZERO ORB. The spiritual transformation perfects. The old way of connecting to the divine is gone. What replaces it is raw, unmediated, and entirely her own.</div>
       </div>
       <div class="cal-item major">
-        <div class="cal-date">October</div>
+        <div class="cal-date">October 1</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Jupiter trine natal Saturn - EXACT 0.08&deg;</div>
+        <div class="cal-desc">Expansion that lasts. Growth with structure. Career momentum with staying power.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">October 9</div>
         <div class="cal-who">Erik</div>
-        <div class="cal-title">Pluto direct EXACT conjunct Venus - final pass</div>
-        <div class="cal-desc">Third and final conjunction for 2026. The question, the reckoning, and now the answer.</div>
+        <div class="cal-title">Pluto conjunct Venus - tightest (0.14&deg;) + sextile Neptune 0.00&deg;</div>
+        <div class="cal-desc">THE moment. Pluto at peak pressure on his Venus while sextiling Neptune at zero orb. Love transformation and spiritual awakening merge into one.</div>
+      </div>
+      <div class="cal-item">
+        <div class="cal-date">Oct 1 - 31</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Pluto square Neptune holds within 0.10&deg; all month</div>
+        <div class="cal-desc">The spiritual pressure is constant and inescapable. She knows what it's asking.</div>
       </div>
       <div class="cal-item">
         <div class="cal-date">October</div>
@@ -2874,16 +3075,40 @@
     <h3 class="sub-heading"><em>November - December</em></h3>
     <div class="calendar-grid">
       <div class="cal-item major">
+        <div class="cal-date">November 1</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Pluto square natal Neptune - 0.04&deg; (direct pass)</div>
+        <div class="cal-desc">The spiritual transformation completes its final near-exact pass. The cycle closes.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">November 11</div>
+        <div class="cal-who">Erik</div>
+        <div class="cal-title">Uranus opposition natal Neptune - EXACT 0.02&deg;</div>
+        <div class="cal-desc">The final illusion shatters. What he's been calling a dream is actually his real life. The old life was the fantasy.</div>
+      </div>
+      <div class="cal-item">
+        <div class="cal-date">November 11</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Jupiter square natal Jupiter - 0.09&deg;</div>
+        <div class="cal-desc">Growth squaring growth. Expansion check - are you expanding for the right reasons? The answer is yes.</div>
+      </div>
+      <div class="cal-item major">
         <div class="cal-date">November 14</div>
         <div class="cal-who">Both</div>
         <div class="cal-title">Neptune stations direct at 27 Pisces</div>
         <div class="cal-desc">The fog lifts. Both of them see clearly for the first time since July. Dreams become plans.</div>
       </div>
-      <div class="cal-item">
-        <div class="cal-date">November</div>
+      <div class="cal-item major">
+        <div class="cal-date">December 1</div>
+        <div class="cal-who">Erik</div>
+        <div class="cal-title">Jupiter trine natal Mars - 0.32&deg;</div>
+        <div class="cal-desc">Energy and courage to act. Inner clarity becomes outer action. He MOVES.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">December 15</div>
         <div class="cal-who">Merle</div>
-        <div class="cal-title">Pluto EXACT square Neptune - final 2026 pass</div>
-        <div class="cal-desc">3 Aquarius square 3 Scorpio. The spiritual transformation completes its cycle.</div>
+        <div class="cal-title">Uranus square natal Pluto - EXACT 0.03&deg; (retrograde)</div>
+        <div class="cal-desc">Echo of the June 15 zero-orb hit. The power shift is confirmed and sealed. Bookend of the year.</div>
       </div>
       <div class="cal-item">
         <div class="cal-date">December</div>
@@ -2891,20 +3116,14 @@
         <div class="cal-title">Saturn stations direct at 1 Aries</div>
         <div class="cal-desc">His new belief system locks in. Saturn turns forward - he knows what he stands for now.</div>
       </div>
-      <div class="cal-item">
-        <div class="cal-date">December</div>
-        <div class="cal-who">Both</div>
-        <div class="cal-title">Jupiter at 7 Leo</div>
-        <div class="cal-desc">Merle: public expansion building. Erik: spiritual depth expanding. Both headed somewhere new.</div>
-      </div>
     </div>
 
     <div class="verdict-box" data-label="THE YEAR AT A GLANCE">
-      <p><strong>April - May:</strong> Uranus electrifies Merle's body. Pluto squeezes Erik's heart. Both being prepared.</p>
-      <p><strong>June:</strong> She goes to him. Every transit converges. The collision point.</p>
-      <p><strong>July - August:</strong> Pluto EXACT on Erik's Venus. Deep processing. The old structures crumble.</p>
-      <p><strong>September - October:</strong> Pluto stations direct. Final pass on his Venus. Jupiter enters new signs for both. The tide turns.</p>
-      <p><strong>November - December:</strong> Neptune clears. Saturn locks in. The new landscape emerges. Neither of them is who they were in January.</p>
+      <p><strong>April - May:</strong> Uranus electrifies Merle's body (Apr 21, 0.03&deg;). Saturn trines Erik's Jupiter (Apr 5, 0.03&deg;). Both being prepared.</p>
+      <p><strong>June:</strong> She goes to him. Jun 5 - Erik's duty/freedom crisis EXACT. Jun 15 - Uranus squares Merle's Pluto at 0.00&deg; while Jupiter sextiles her Sun. Jun 29 - Jupiter sextiles her Mars at 0.01&deg;. The collision point.</p>
+      <p><strong>July - August:</strong> Jul 13 - Jupiter opposes Erik's Venus at 0.16&deg;. Jul 17 - Saturn trines Merle's Uranus at 0.01&deg;. Deep processing. The old structures crumble.</p>
+      <p><strong>September - October:</strong> Sep 25 - Pluto squares Merle's Neptune at 0.00&deg;. Oct 9 - Pluto on Erik's Venus at 0.14&deg; while sextiling his Neptune at 0.00&deg;. THE moment.</p>
+      <p><strong>November - December:</strong> Nov 11 - Uranus opposes Erik's Neptune at 0.02&deg;. Dec 15 - Uranus squares Merle's Pluto at 0.03&deg; (bookend). The new landscape is permanent.</p>
     </div>
 
   </div>
@@ -2918,7 +3137,7 @@
     <div class="footer-by">Kelly Wotherspoon - AI with Soul</div>
     <div class="footer-url">aiwithsoul.com.au</div>
     <div class="footer-ornament"></div>
-    <div class="footer-tech">All natal chart positions provided by client. Transit positions calculated for 2026 using Swiss Ephemeris data. Aspect orbs verified to sub-degree accuracy.</div>
+    <div class="footer-tech">All natal chart positions provided by client. Transit positions calculated for 2026 using Swiss Ephemeris data. Exact dates computed to sub-0.5 degree orb precision. Two zero-orb transits identified: Uranus square Merle's Pluto (Jun 15, 0.00&deg;) and Pluto square Merle's Neptune (Sep 25, 0.00&deg;).</div>
     <p class="footer-closing-quote">"The earth and the water. The healer and the mystic. The woman who makes things real and the man who makes things matter. 2026 is the year the cosmos stops asking and starts insisting."</p>
     <div class="footer-ornament"></div>
   </div>
