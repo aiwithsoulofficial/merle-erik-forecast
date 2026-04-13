@@ -1,0 +1,2387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merle &amp; Erik - 2026 Cosmic Forecast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0A0E1A;
+    --bg-2: #0D1221;
+    --bg-card: #111829;
+    --bg-card-2: #0F1520;
+    --gold: #C9A84C;
+    --gold-light: #E2C47A;
+    --gold-dim: #8A6E2A;
+    --teal: #1C4E5A;
+    --teal-light: #2A6E80;
+    --cream: #F5EBD8;
+    --cream-dim: #C8B89A;
+    --cream-muted: #8A7A68;
+    --border: rgba(201, 168, 76, 0.2);
+    --border-strong: rgba(201, 168, 76, 0.45);
+    --rose: #C97A7A;
+    --rose-dim: rgba(201, 122, 122, 0.15);
+    --violet: #8A7AC9;
+    --violet-dim: rgba(138, 122, 201, 0.12);
+    --emerald: #5A9A6A;
+    --emerald-dim: rgba(90, 154, 106, 0.12);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--bg);
+    color: var(--cream);
+    font-family: 'Crimson Text', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.75;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.6;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 15%, rgba(201,168,76,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 23% 42%, rgba(245,235,216,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 38% 8%, rgba(201,168,76,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 31%, rgba(245,235,216,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 68% 67%, rgba(201,168,76,0.25) 0%, transparent 100%),
+      radial-gradient(1px 1px at 82% 19%, rgba(245,235,216,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 91% 54%, rgba(201,168,76,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 7% 78%, rgba(245,235,216,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 46% 88%, rgba(201,168,76,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 73% 93%, rgba(245,235,216,0.15) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 30% 60%, rgba(201,168,76,0.5) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 60% 5%, rgba(245,235,216,0.3) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 85% 40%, rgba(201,168,76,0.35) 0%, transparent 100%),
+      radial-gradient(2px 2px at 15% 50%, rgba(201,168,76,0.6) 0%, transparent 100%),
+      radial-gradient(2px 2px at 75% 75%, rgba(245,235,216,0.25) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+    animation: twinkle 8s ease-in-out infinite alternate;
+  }
+
+  @keyframes twinkle {
+    0% { opacity: 0.6; }
+    100% { opacity: 1; }
+  }
+
+  .pdf-btn {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 9999;
+    background: linear-gradient(135deg, var(--gold) 0%, #A87830 100%);
+    color: #0A0E1A;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 24px rgba(201,168,76,0.35), 0 2px 8px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeInUp 1.2s ease 0.5s both;
+  }
+  .pdf-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(201,168,76,0.5), 0 4px 12px rgba(0,0,0,0.5);
+  }
+  .pdf-btn svg { flex-shrink: 0; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 32px;
+    position: relative;
+    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(28,78,90,0.25) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 50% 80%, rgba(201,168,76,0.06) 0%, transparent 60%);
+    animation: heroFade 1.5s ease both;
+  }
+
+  @keyframes heroFade {
+    from { opacity: 0; transform: translateY(-16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 32px;
+    animation: fadeInUp 1s ease 0.2s both;
+  }
+
+  .hero-ornament {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 32px;
+    animation: fadeInUp 1s ease 0.3s both;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 7vw, 88px);
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: 0.02em;
+    color: var(--cream);
+    margin-bottom: 12px;
+    animation: fadeInUp 1s ease 0.4s both;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 3vw, 26px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cream-dim);
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+    animation: fadeInUp 1s ease 0.5s both;
+  }
+
+  .hero-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(60px, 10vw, 120px);
+    font-weight: 300;
+    color: rgba(201,168,76,0.12);
+    letter-spacing: 0.15em;
+    margin-bottom: 32px;
+    animation: fadeInUp 1s ease 0.55s both;
+  }
+
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 48px;
+    animation: fadeInUp 1s ease 0.6s both;
+  }
+
+  .hero-divider-line {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim));
+  }
+
+  .hero-divider-line.right {
+    background: linear-gradient(90deg, var(--gold-dim), transparent);
+  }
+
+  .hero-divider-symbol {
+    color: var(--gold);
+    font-size: 20px;
+  }
+
+  .hero-meta {
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--cream-muted);
+    letter-spacing: 0.08em;
+    animation: fadeInUp 1s ease 0.7s both;
+    line-height: 2;
+  }
+
+  .hero-meta strong {
+    color: var(--cream-dim);
+    font-style: normal;
+  }
+
+  /* Section styling */
+  .section {
+    padding: 100px 0;
+    border-top: 1px solid var(--border);
+    position: relative;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .section-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--cream);
+    margin-bottom: 16px;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .section-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--cream-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .section-ornament {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 24px auto 0;
+  }
+
+  /* Chart intro card */
+  .chart-intro {
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(28,78,90,0.15) 100%);
+    border: 1px solid var(--border);
+    padding: 36px 40px;
+    margin-bottom: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .chart-intro::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: linear-gradient(180deg, var(--gold), var(--teal-light));
+  }
+
+  .chart-intro-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+  }
+
+  .chart-intro-data {
+    font-family: 'Crimson Text', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--cream-muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+  }
+
+  .chart-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border: 1px solid var(--border-strong);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(201,168,76,0.06);
+  }
+
+  /* Natal grid */
+  .natal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .natal-item {
+    background: var(--bg-card-2);
+    border: 1px solid var(--border);
+    padding: 16px 20px;
+    position: relative;
+  }
+
+  .natal-item-planet {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 4px;
+  }
+
+  .natal-item-sign {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 2px;
+  }
+
+  .natal-item-detail {
+    font-family: 'Crimson Text', serif;
+    font-size: 14px;
+    color: var(--cream-muted);
+    font-style: italic;
+  }
+
+  .natal-item.highlight {
+    border-color: rgba(201,168,76,0.4);
+    background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, var(--bg-card-2) 100%);
+  }
+
+  /* Chart table */
+  .chart-table-wrap {
+    overflow-x: auto;
+    margin-bottom: 32px;
+  }
+
+  .chart-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Crimson Text', serif;
+  }
+
+  .chart-table thead tr {
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+  .chart-table th {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    padding: 12px 20px;
+    text-align: left;
+  }
+
+  .chart-table td {
+    padding: 14px 20px;
+    font-size: 16px;
+    color: var(--cream);
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+  }
+
+  .chart-table tbody tr:hover td {
+    background: rgba(201,168,76,0.04);
+  }
+
+  .chart-table td:first-child {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--cream-dim);
+  }
+
+  .chart-table td:last-child {
+    color: var(--cream-muted);
+    font-style: italic;
+    font-size: 15px;
+  }
+
+  .chart-table td.degree {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--gold-light);
+    font-style: normal;
+  }
+
+  .chart-note {
+    background: rgba(28,78,90,0.2);
+    border-left: 3px solid var(--teal-light);
+    padding: 20px 28px;
+    margin-top: 24px;
+    font-style: italic;
+    color: var(--cream-dim);
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  /* Month card */
+  .month-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 36px 40px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .month-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+  }
+
+  .month-card.expansion::before { background: linear-gradient(90deg, var(--emerald), transparent); }
+  .month-card.transformation::before { background: linear-gradient(90deg, var(--violet), transparent); }
+  .month-card.challenge::before { background: linear-gradient(90deg, var(--rose), transparent); }
+  .month-card.integration::before { background: linear-gradient(90deg, var(--teal-light), transparent); }
+  .month-card.breakthrough::before { background: linear-gradient(90deg, var(--gold), transparent); }
+
+  .month-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+
+  .month-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--cream);
+  }
+
+  .month-rating {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border: 1px solid;
+  }
+
+  .month-rating.expansion { color: var(--emerald); border-color: var(--emerald); background: var(--emerald-dim); }
+  .month-rating.transformation { color: var(--violet); border-color: var(--violet); background: var(--violet-dim); }
+  .month-rating.challenge { color: var(--rose); border-color: var(--rose); background: var(--rose-dim); }
+  .month-rating.integration { color: var(--teal-light); border-color: var(--teal-light); background: rgba(42,110,128,0.12); }
+  .month-rating.breakthrough { color: var(--gold); border-color: var(--gold); background: rgba(201,168,76,0.08); }
+
+  .month-theme {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+  }
+
+  .month-card p {
+    color: var(--cream-dim);
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+
+  .month-card p:last-child { margin-bottom: 0; }
+
+  .transit-hit {
+    display: flex;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(201,168,76,0.07);
+  }
+
+  .transit-hit:last-child { border-bottom: none; }
+
+  .transit-hit-planet {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    min-width: 100px;
+    padding-top: 2px;
+  }
+
+  .transit-hit-detail {
+    color: var(--cream-dim);
+    font-size: 16px;
+    line-height: 1.7;
+    flex: 1;
+  }
+
+  .transit-hit-detail strong {
+    color: var(--cream);
+    font-weight: 600;
+  }
+
+  /* Transit card */
+  .transit-card {
+    background: var(--bg-card-2);
+    border: 1px solid var(--border);
+    padding: 32px 36px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .transit-card::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 3px; height: 100%;
+    background: linear-gradient(180deg, var(--gold), transparent);
+  }
+
+  .transit-card-planet {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 8px;
+  }
+
+  .transit-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+
+  .transit-card-title .exact {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .transit-card p {
+    color: var(--cream-dim);
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  /* Pull quotes */
+  .pull-quote {
+    margin: 56px 0;
+    padding: 48px 40px;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, rgba(28,78,90,0.1) 100%);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .pull-quote::before {
+    content: '\201C';
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    color: var(--gold);
+    line-height: 1;
+    background: var(--bg);
+    padding: 0 16px;
+  }
+
+  .pull-quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--cream);
+    letter-spacing: 0.02em;
+  }
+
+  .pull-quote-text strong {
+    color: var(--gold-light);
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  /* Verdict box */
+  .verdict-box {
+    background: linear-gradient(135deg, rgba(201,168,76,0.08) 0%, rgba(28,78,90,0.12) 100%);
+    border: 1px solid var(--gold-dim);
+    padding: 40px 44px;
+    margin: 48px 0;
+    position: relative;
+  }
+
+  .verdict-box::before {
+    content: attr(data-label);
+    position: absolute;
+    top: -10px;
+    left: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    background: var(--bg);
+    padding: 0 12px;
+  }
+
+  .verdict-box p {
+    color: var(--cream);
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 16px;
+  }
+
+  .verdict-box p:last-child { margin-bottom: 0; }
+
+  /* Aspect cards */
+  .aspect-group {
+    margin-bottom: 56px;
+  }
+
+  .aspect-group-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--gold-light);
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    letter-spacing: 0.02em;
+  }
+
+  .aspect-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 28px 32px;
+    margin-bottom: 16px;
+    position: relative;
+    transition: border-color 0.2s ease;
+  }
+
+  .aspect-card:hover {
+    border-color: var(--border-strong);
+  }
+
+  .aspect-card.featured {
+    background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, var(--bg-card) 100%);
+    border-color: rgba(201,168,76,0.35);
+  }
+
+  .aspect-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+  }
+
+  .aspect-card-title .orb {
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gold);
+    margin-left: 8px;
+  }
+
+  .aspect-card p {
+    color: var(--cream-dim);
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  /* Key dates calendar */
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .cal-item {
+    background: var(--bg-card-2);
+    border: 1px solid var(--border);
+    padding: 20px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cal-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  .cal-item.major {
+    border-color: rgba(201,168,76,0.4);
+    background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, var(--bg-card-2) 100%);
+  }
+
+  .cal-item.major::before {
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-dim));
+  }
+
+  .cal-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .cal-who {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream-muted);
+    margin-bottom: 6px;
+  }
+
+  .cal-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 6px;
+  }
+
+  .cal-desc {
+    font-family: 'Crimson Text', serif;
+    font-size: 14px;
+    color: var(--cream-muted);
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  /* Story card */
+  .story-card {
+    background: linear-gradient(135deg, rgba(28,78,90,0.15) 0%, var(--bg-card) 100%);
+    border: 1px solid var(--border);
+    padding: 36px 40px;
+    margin-bottom: 28px;
+  }
+
+  .story-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .story-card-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .story-card p {
+    color: var(--cream-dim);
+    font-size: 17px;
+    line-height: 1.85;
+    margin-bottom: 12px;
+  }
+
+  .story-card p:last-child { margin-bottom: 0; }
+
+  /* General prose */
+  .prose {
+    color: var(--cream-dim);
+    font-size: 18px;
+    line-height: 1.85;
+    margin-bottom: 24px;
+  }
+
+  .prose strong {
+    color: var(--cream);
+    font-weight: 600;
+  }
+
+  .prose em {
+    color: var(--cream-dim);
+    font-style: italic;
+  }
+
+  h3.sub-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--cream);
+    margin: 48px 0 24px;
+    letter-spacing: 0.02em;
+  }
+
+  h3.sub-heading em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  h4.minor-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin: 36px 0 16px;
+  }
+
+  /* Warning card */
+  .warning-card {
+    background: rgba(139, 65, 40, 0.1);
+    border: 1px solid rgba(201,100,60,0.3);
+    border-left: 4px solid rgba(201,100,60,0.7);
+    padding: 24px 28px;
+    margin: 24px 0;
+  }
+
+  .warning-card p {
+    color: var(--cream-dim);
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .warning-card strong {
+    color: #E8906A;
+  }
+
+  /* Reno highlight */
+  .reno-highlight {
+    background: rgba(28,78,90,0.2);
+    border: 1px solid var(--teal-light);
+    border-left: 4px solid var(--teal-light);
+    padding: 24px 28px;
+    margin: 24px 0;
+  }
+
+  .reno-highlight-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--teal-light);
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+  }
+
+  .reno-highlight p {
+    color: var(--cream-dim);
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  /* Footer */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 80px 0 120px;
+    text-align: center;
+  }
+
+  .footer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cream-muted);
+    margin-bottom: 8px;
+  }
+
+  .footer-by {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .footer-url {
+    font-family: 'Crimson Text', serif;
+    font-size: 15px;
+    color: var(--cream-muted);
+    font-style: italic;
+  }
+
+  .footer-ornament {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+    margin: 32px auto;
+  }
+
+  .footer-date {
+    font-family: 'Crimson Text', serif;
+    font-size: 14px;
+    color: var(--cream-muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+
+  .footer-tech {
+    font-family: 'Crimson Text', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: #4A4038;
+    margin-bottom: 40px;
+  }
+
+  .footer-closing-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-style: italic;
+    font-weight: 300;
+    color: var(--cream-dim);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+  }
+
+  /* TOC */
+  .toc {
+    background: var(--bg-card-2);
+    border: 1px solid var(--border);
+    padding: 32px 40px;
+    margin-bottom: 48px;
+  }
+
+  .toc-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 20px;
+  }
+
+  .toc a {
+    display: block;
+    color: var(--cream-dim);
+    text-decoration: none;
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(201,168,76,0.06);
+    transition: color 0.2s;
+  }
+
+  .toc a:hover { color: var(--gold-light); }
+  .toc a:last-child { border-bottom: none; }
+
+  .toc a span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+    margin-right: 12px;
+  }
+
+  /* Synastry aspect grid */
+  .synastry-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 48px;
+    border: 1px solid var(--border);
+    background: var(--bg-card-2);
+  }
+
+  .synastry-row {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 1fr;
+    gap: 0;
+    padding: 14px 24px;
+    border-bottom: 1px solid rgba(201,168,76,0.06);
+    align-items: center;
+    transition: background 0.2s;
+  }
+
+  .synastry-row:last-child { border-bottom: none; }
+
+  .synastry-row:hover { background: rgba(201,168,76,0.04); }
+
+  .synastry-row.header {
+    background: rgba(201,168,76,0.06);
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+  .synastry-row.header span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+  }
+
+  .synastry-row.exact {
+    background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 100%);
+    border-left: 3px solid var(--gold);
+    padding-left: 21px;
+  }
+
+  .synastry-planets {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--cream);
+    letter-spacing: 0.02em;
+  }
+
+  .synastry-aspect-type {
+    font-family: 'Crimson Text', serif;
+    font-size: 15px;
+    color: var(--cream-dim);
+    font-style: italic;
+  }
+
+  .synastry-orb {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--cream-muted);
+    text-align: right;
+  }
+
+  .synastry-orb .exact-tag {
+    display: inline-block;
+    background: rgba(201,168,76,0.15);
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    margin-left: 8px;
+  }
+
+  .theme-divider {
+    background: rgba(201,168,76,0.08);
+    padding: 10px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .theme-divider span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  @media (max-width: 600px) {
+    .synastry-row {
+      grid-template-columns: 1fr;
+      gap: 4px;
+      padding: 12px 16px;
+    }
+    .synastry-orb { text-align: left; }
+  }
+
+  /* Utilities */
+  .text-gold { color: var(--gold); }
+  .text-gold-light { color: var(--gold-light); }
+  .text-teal { color: var(--teal-light); }
+  .mb-0 { margin-bottom: 0; }
+  .mt-32 { margin-top: 32px; }
+  .mt-48 { margin-top: 48px; }
+
+  @media print {
+    .pdf-btn { display: none !important; }
+    body::before, body::after { display: none; }
+    .section { page-break-inside: avoid; }
+    .month-card { page-break-inside: avoid; }
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 20px; }
+    .hero { padding: 60px 20px; }
+    .section { padding: 72px 0; }
+    .chart-intro { padding: 24px 20px; }
+    .month-card { padding: 24px 20px; }
+    .aspect-card { padding: 20px 20px; }
+    .pull-quote { padding: 40px 24px; }
+    .verdict-box { padding: 32px 24px; }
+    .natal-grid { grid-template-columns: 1fr 1fr; }
+    .calendar-grid { grid-template-columns: 1fr; }
+    .month-header { flex-direction: column; gap: 8px; }
+    .transit-hit { flex-direction: column; gap: 4px; }
+    .transit-hit-planet { min-width: unset; }
+    .pdf-btn { bottom: 20px; right: 20px; padding: 12px 18px; font-size: 13px; }
+    .story-card { padding: 24px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Save as PDF Button -->
+<a href="#" class="pdf-btn" onclick="window.print(); return false;">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 6 2 18 2 18 9"></polyline>
+    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+    <rect x="6" y="14" width="12" height="8"></rect>
+  </svg>
+  Save as PDF
+</a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="hero-eyebrow">A Cosmic Love Story - The Year Ahead</div>
+    <div class="hero-ornament"></div>
+    <h1 class="hero-title"><em>Merle</em> &amp; <em>Erik</em></h1>
+    <p class="hero-subtitle">Month-by-Month Forecast</p>
+    <div class="hero-year">2026</div>
+    <div class="hero-divider">
+      <div class="hero-divider-line"></div>
+      <span class="hero-divider-symbol">&#10022;</span>
+      <div class="hero-divider-line right"></div>
+    </div>
+    <p class="hero-meta">
+      <strong>Prepared for Merle Karp</strong><br>
+      Reading with Kelly Wotherspoon &nbsp;&#183;&nbsp; April 13, 2026<br>
+      AI with Soul &nbsp;&#183;&nbsp; aiwithsoul.com.au
+    </p>
+  </div>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<section class="section" style="padding: 60px 0;">
+  <div class="container">
+    <div class="toc">
+      <div class="toc-title">What's Inside</div>
+      <a href="#merle-natal"><span>01</span> Merle's Natal Blueprint</a>
+      <a href="#erik-natal"><span>02</span> Erik's Natal Blueprint</a>
+      <a href="#synastry"><span>03</span> Synastry - How Their Charts Speak to Each Other</a>
+      <a href="#merle-forecast"><span>04</span> Merle's Month-by-Month Forecast (April - December 2026)</a>
+      <a href="#erik-forecast"><span>05</span> Erik's Month-by-Month Forecast (April - December 2026)</a>
+      <a href="#their-story"><span>06</span> Their Story - What the Cosmos Is Doing to Them</a>
+      <a href="#key-dates"><span>07</span> Key Dates Calendar</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1: MERLE'S NATAL CHART -->
+<section class="section" id="merle-natal">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">Section One</span>
+      <h2 class="section-title">Merle's <em>Natal Blueprint</em></h2>
+      <p class="section-tagline">The earth. The anchor. The one who makes things real.</p>
+      <div class="section-ornament"></div>
+    </div>
+
+    <div class="chart-intro">
+      <div class="chart-intro-name">Merle Karp</div>
+      <div class="chart-intro-data">20 September 1958 &nbsp;&#183;&nbsp; 7:50 AM &nbsp;&#183;&nbsp; Durban, South Africa</div>
+      <div class="chart-badges">
+        <span class="badge">Scorpio Rising</span>
+        <span class="badge">Virgo Sun - House 11</span>
+        <span class="badge">Sagittarius Moon - House 2</span>
+      </div>
+    </div>
+
+    <div class="natal-grid">
+      <div class="natal-item highlight">
+        <div class="natal-item-planet">Sun</div>
+        <div class="natal-item-sign">Virgo 26.81&deg;</div>
+        <div class="natal-item-detail">House 11 - community, vision</div>
+      </div>
+      <div class="natal-item highlight">
+        <div class="natal-item-planet">Moon</div>
+        <div class="natal-item-sign">Sagittarius 28.66&deg;</div>
+        <div class="natal-item-detail">House 2 - values, security</div>
+      </div>
+      <div class="natal-item">
+        <div class="natal-item-planet">Mercury</div>
+        <div class="natal-item-sign">Virgo 14.20&deg;</div>
+        <div class="natal-item-detail">House 11 - mind in service</div>
+      </div>
+      <div class="natal-item">
+        <div class="natal-item-planet">Venus</div>
+        <div class="natal-item-sign">Virgo 13.32&deg;</div>
+        <div class="natal-item-detail">House 11 - love through devotion</div>
+      </div>
+      <div class="natal-item highlight">
+        <div class="natal-item-planet">Mars</div>
+        <div class="natal-item-sign">Taurus 29.76&deg;</div>
+        <div class="natal-item-detail">House 7 - partnerships, drive</div>
+      </div>
+      <div class="natal-item">
+        <div class="natal-item-planet">Jupiter</div>
+        <div class="natal-item-sign">Scorpio 2.44&deg;</div>
+        <div class="natal-item-detail">House 12 - hidden blessings</div>
+      </div>
+      <div class="natal-item">
+        <div class="natal-item-planet">Saturn</div>
+        <div class="natal-item-sign">Sagittarius 19.69&deg;</div>
+        <div class="natal-item-detail">House 1 - identity, discipline</div>
+      </div>
+      <div class="natal-item">
+        <div class="natal-item-planet">Uranus</div>
+        <div class="natal-item-sign">Leo 14.66&deg;</div>
+        <div class="natal-item-detail">House 10 - career disruption</div>
+      </div>
+      <div class="natal-item">
+        <div class="natal-item-planet">Neptune</div>
+        <div class="natal-item-sign">Scorpio 3.17&deg;</div>
+        <div class="natal-item-detail">House 12 - deep intuition</div>
+      </div>
+      <div class="natal-item">
+        <div class="natal-item-planet">Pluto</div>
+        <div class="natal-item-sign">Virgo 2.86&deg;</div>
+        <div class="natal-item-detail">House 10 - power, legacy</div>
+      </div>
+      <div class="natal-item highlight">
+        <div class="natal-item-planet">Rising</div>
+        <div class="natal-item-sign">Scorpio 26.07&deg;</div>
+        <div class="natal-item-detail">Magnetic, intense, sees truth</div>
+      </div>
+    </div>
+
+    <div class="chart-note">
+      Triple Virgo (Sun, Mercury, Venus) with a Scorpio Rising and 12th house Jupiter-Neptune conjunction. She is practical on the surface and oceanic underneath. The Sagittarius Moon in the 2nd house wants freedom AND security - and she's spent a lifetime trying to figure out how to have both. Mars at 29 Taurus in the 7th is the critical degree in the house of partnerships - everything about her drive runs through relationships.
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: ERIK'S NATAL CHART -->
+<section class="section" id="erik-natal">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">Section Two</span>
+      <h2 class="section-title">Erik's <em>Natal Blueprint</em></h2>
+      <p class="section-tagline">The water. The depth. The one who feels everything.</p>
+      <div class="section-ornament"></div>
+    </div>
+
+    <div class="chart-intro">
+      <div class="chart-intro-name">Erik</div>
+      <div class="chart-intro-data">6 March 1971 &nbsp;&#183;&nbsp; 4:00 PM &nbsp;&#183;&nbsp; Rotterdam, Netherlands</div>
+      <div class="chart-badges">
+        <span class="badge">Leo Rising</span>
+        <span class="badge">Pisces Sun - House 8</span>
+        <span class="badge">Cancer Moon - House 11</span>
+      </div>
+    </div>
+
+    <div class="natal-grid">
+      <div class="natal-item highlight">
+        <div class="natal-item-planet">Sun</div>
+        <div class="natal-item-sign">Pisces 15.39&deg;</div>
+        <div class="natal-item-detail">House 8 - transformation, merging</div>
+      </div>
+      <div class="natal-item highlight">
+        <div class="natal-item-planet">Moon</div>
+        <div class="natal-item-sign">Cancer 15.26&deg;</div>
+        <div class="natal-item-detail">House 11 - emotional belonging</div>
+      </div>
+      <div class="natal-item highlight">
+        <div class="natal-item-planet">Mercury</div>
+        <div class="natal-item-sign">Pisces 15.24&deg;</div>
+        <div class="natal-item-detail">House 8 - thinks in feelings</div>
+      </div>
+      <div class="natal-item highlight">
+        <div class="natal-item-planet">Venus</div>
+        <div class="natal-item-sign">Aquarius 2.94&deg;</div>
+        <div class="natal-item-detail">House 6 - unconventional love</div>
+      </div>
+      <div class="natal-item">
+        <div class="natal-item-planet">Mars</div>
+        <div class="natal-item-sign">Sagittarius 26.47&deg;</div>
+        <div class="natal-item-detail">House 5 - passionate, adventurous</div>
+      </div>
+      <div class="natal-item">
+        <div class="natal-item-planet">Jupiter</div>
+        <div class="natal-item-sign">Sagittarius 6.02&deg;</div>
+        <div class="natal-item-detail">House 4 - expanding the home</div>
+      </div>
+      <div class="natal-item">
+        <div class="natal-item-planet">Saturn</div>
+        <div class="natal-item-sign">Taurus 17.77&deg;</div>
+        <div class="natal-item-detail">House 10 - career obligations</div>
+      </div>
+      <div class="natal-item">
+        <div class="natal-item-planet">Uranus</div>
+        <div class="natal-item-sign">Libra 12.61&deg; (R)</div>
+        <div class="natal-item-detail">House 3 - restless mind</div>
+      </div>
+      <div class="natal-item">
+        <div class="natal-item-planet">Neptune</div>
+        <div class="natal-item-sign">Sagittarius 3.07&deg; (R)</div>
+        <div class="natal-item-detail">House 4 - spiritual roots</div>
+      </div>
+      <div class="natal-item">
+        <div class="natal-item-planet">Pluto</div>
+        <div class="natal-item-sign">Virgo 28.72&deg; (R)</div>
+        <div class="natal-item-detail">House 2 - power through values</div>
+      </div>
+      <div class="natal-item highlight">
+        <div class="natal-item-planet">Rising</div>
+        <div class="natal-item-sign">Leo 20.34&deg;</div>
+        <div class="natal-item-detail">Warm, present, magnetic</div>
+      </div>
+    </div>
+
+    <div class="chart-note">
+      His Sun, Moon, and Mercury are ALL at 15 degrees in water signs (Pisces and Cancer). This man is a single tuning fork - when one vibrates, they all vibrate. He doesn't think separately from what he feels. Venus at 2 Aquarius in the 6th house means his love language is unconventional and expressed through service - and right now, Pluto is sitting on it.
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: SYNASTRY -->
+<section class="section" id="synastry">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">Section Three</span>
+      <h2 class="section-title">Synastry - <em>How Their Charts Speak</em></h2>
+      <p class="section-tagline">The invisible architecture between two people - where his planets land in her chart, and hers in his.</p>
+      <div class="section-ornament"></div>
+    </div>
+
+    <div class="chart-note" style="margin-bottom: 48px;">
+      Synastry is the art of overlaying two natal charts and reading the conversation between them. When one person's planet sits on or near another's, those two energies are permanently wired together. The tighter the orb (the closer to exact), the louder the signal. Anything under 1 degree is screaming. These two have a LOT of those.
+    </div>
+
+    <!-- ASPECT GRID -->
+    <h3 class="sub-heading">The <em>Aspect Grid</em></h3>
+    <p class="prose">Every major cross-aspect between Merle's chart and Erik's chart, sorted by intensity. Aspects under 1 degree orb are marked EXACT - these are the ones that define the relationship at a soul level.</p>
+
+    <div class="synastry-grid">
+      <div class="synastry-row header">
+        <span>Planets</span>
+        <span>Aspect</span>
+        <span style="text-align:right;">Orb</span>
+      </div>
+
+      <!-- LOVE & ATTRACTION -->
+      <div class="theme-divider"><span>Love &amp; Attraction</span></div>
+
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Merle's Venus &harr; Erik's Sun</div>
+        <div class="synastry-aspect-type">Opposition (Virgo 13&deg; / Pisces 15&deg;)</div>
+        <div class="synastry-orb">2.07&deg;</div>
+      </div>
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Merle's Venus &harr; Erik's Mercury</div>
+        <div class="synastry-aspect-type">Opposition (Virgo 13&deg; / Pisces 15&deg;)</div>
+        <div class="synastry-orb">1.92&deg;</div>
+      </div>
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Merle's Venus &harr; Erik's Moon</div>
+        <div class="synastry-aspect-type">Sextile (Virgo 13&deg; / Cancer 15&deg;)</div>
+        <div class="synastry-orb">1.94&deg;</div>
+      </div>
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Erik's Venus &harr; Merle's Jupiter</div>
+        <div class="synastry-aspect-type">Square (Aquarius 2&deg; / Scorpio 2&deg;)</div>
+        <div class="synastry-orb">0.50&deg; <span class="exact-tag">Exact</span></div>
+      </div>
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Erik's Venus &harr; Merle's Neptune</div>
+        <div class="synastry-aspect-type">Square (Aquarius 2&deg; / Scorpio 3&deg;)</div>
+        <div class="synastry-orb">0.23&deg; <span class="exact-tag">Exact</span></div>
+      </div>
+      <div class="synastry-row">
+        <div class="synastry-planets">Merle's Mars &harr; Erik's Venus</div>
+        <div class="synastry-aspect-type">Trine (Taurus 29&deg; / Aquarius 2&deg;)</div>
+        <div class="synastry-orb">3.18&deg;</div>
+      </div>
+
+      <!-- EMOTIONAL BOND -->
+      <div class="theme-divider"><span>Emotional Bond</span></div>
+
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Erik's Mars &harr; Merle's Moon</div>
+        <div class="synastry-aspect-type">Conjunction (Sag 26&deg; / Sag 28&deg;)</div>
+        <div class="synastry-orb">2.19&deg;</div>
+      </div>
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Merle's Mercury &harr; Erik's Moon</div>
+        <div class="synastry-aspect-type">Sextile (Virgo 14&deg; / Cancer 15&deg;)</div>
+        <div class="synastry-orb">1.06&deg;</div>
+      </div>
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Merle's Saturn &harr; Erik's Rising</div>
+        <div class="synastry-aspect-type">Trine (Sag 19&deg; / Leo 20&deg;)</div>
+        <div class="synastry-orb">0.65&deg; <span class="exact-tag">Exact</span></div>
+      </div>
+
+      <!-- COMMUNICATION -->
+      <div class="theme-divider"><span>Communication &amp; Mind</span></div>
+
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Merle's Mercury &harr; Erik's Mercury</div>
+        <div class="synastry-aspect-type">Opposition (Virgo 14&deg; / Pisces 15&deg;)</div>
+        <div class="synastry-orb">1.04&deg;</div>
+      </div>
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Merle's Mercury &harr; Erik's Sun</div>
+        <div class="synastry-aspect-type">Opposition (Virgo 14&deg; / Pisces 15&deg;)</div>
+        <div class="synastry-orb">1.19&deg;</div>
+      </div>
+      <div class="synastry-row">
+        <div class="synastry-planets">Merle's Mercury &harr; Erik's Saturn</div>
+        <div class="synastry-aspect-type">Trine (Virgo 14&deg; / Taurus 17&deg;)</div>
+        <div class="synastry-orb">3.57&deg;</div>
+      </div>
+
+      <!-- POWER & TRANSFORMATION -->
+      <div class="theme-divider"><span>Power &amp; Transformation</span></div>
+
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Erik's Pluto &harr; Merle's Sun</div>
+        <div class="synastry-aspect-type">Conjunction (Virgo 28&deg; / Virgo 26&deg;)</div>
+        <div class="synastry-orb">1.91&deg;</div>
+      </div>
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Merle's Mars &harr; Erik's Pluto</div>
+        <div class="synastry-aspect-type">Trine (Taurus 29&deg; / Virgo 28&deg;)</div>
+        <div class="synastry-orb">1.04&deg;</div>
+      </div>
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Merle's Moon &harr; Erik's Pluto</div>
+        <div class="synastry-aspect-type">Square (Sag 28&deg; / Virgo 28&deg;)</div>
+        <div class="synastry-orb">0.06&deg; <span class="exact-tag">Exact</span></div>
+      </div>
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Merle's Pluto &harr; Erik's Neptune</div>
+        <div class="synastry-aspect-type">Square (Virgo 2&deg; / Sag 3&deg;)</div>
+        <div class="synastry-orb">0.21&deg; <span class="exact-tag">Exact</span></div>
+      </div>
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Merle's Pluto &harr; Erik's Venus</div>
+        <div class="synastry-aspect-type">Quincunx (Virgo 2&deg; / Aquarius 2&deg;)</div>
+        <div class="synastry-orb">0.08&deg; <span class="exact-tag">Exact</span></div>
+      </div>
+      <div class="synastry-row exact">
+        <div class="synastry-planets">Merle's Sun &harr; Erik's Mars</div>
+        <div class="synastry-aspect-type">Square (Virgo 26&deg; / Sag 26&deg;)</div>
+        <div class="synastry-orb">0.34&deg; <span class="exact-tag">Exact</span></div>
+      </div>
+
+      <!-- CHALLENGES & GROWTH -->
+      <div class="theme-divider"><span>Challenges &amp; Growth</span></div>
+
+      <div class="synastry-row">
+        <div class="synastry-planets">Merle's Saturn &harr; Erik's Sun</div>
+        <div class="synastry-aspect-type">Square (Sag 19&deg; / Pisces 15&deg;)</div>
+        <div class="synastry-orb">4.30&deg;</div>
+      </div>
+      <div class="synastry-row">
+        <div class="synastry-planets">Merle's Pluto &harr; Erik's Jupiter</div>
+        <div class="synastry-aspect-type">Square (Virgo 2&deg; / Sag 6&deg;)</div>
+        <div class="synastry-orb">3.16&deg;</div>
+      </div>
+      <div class="synastry-row">
+        <div class="synastry-planets">Merle's Rising &harr; Erik's Rising</div>
+        <div class="synastry-aspect-type">Square (Scorpio 26&deg; / Leo 20&deg;)</div>
+        <div class="synastry-orb">5.73&deg;</div>
+      </div>
+    </div>
+
+    <!-- NARRATIVE INTERPRETATIONS -->
+    <h3 class="sub-heading">The <em>Six Aspects</em> That Define Them</h3>
+    <p class="prose">Out of 31 cross-aspects, these are the ones that tell the real story. This is not a casual connection - this is a chart overlay that reads like two people who were always going to find each other.</p>
+
+    <!-- Aspect 1: Moon square Pluto -->
+    <div class="aspect-group">
+      <div class="aspect-group-title">1. Merle's Moon Square Erik's Pluto <span style="font-size:16px; color: var(--gold); font-style: italic;">(orb: 0.06&deg; - virtually exact to the minute)</span></div>
+
+      <div class="aspect-card featured">
+        <div class="aspect-card-title">Sagittarius 28.66&deg; &harr; Virgo 28.72&deg;</div>
+        <p>This is the tightest aspect in their entire synastry - 0.06 degrees, which is less than 4 arc-minutes. In astrology, this is as close to perfect as it gets.</p>
+        <p>Moon-Pluto contacts are the ones that make you feel like someone has reached inside your ribcage and grabbed your heart - and you don't want them to let go. Her Moon (emotions, needs, instinct) is permanently plugged into his Pluto (power, depth, obsession, transformation). She FEELS him at a cellular level. He doesn't get to be surface-level with her - her emotional body registers everything he's doing, even when he hasn't said a word.</p>
+        <p>The square makes this intense rather than easy. It's not comfortable. There's a compulsive quality - they can't look away from each other emotionally. This aspect creates the kind of bond where they can sit in silence and both know exactly what's happening in the room. It also means power dynamics will surface. He has a Plutonian effect on her emotional security, and she'll need to stay sovereign within that.</p>
+        <p><strong>What it feels like:</strong> "I can't explain why I feel so much around this person. It's like they see through me - and I want them to."</p>
+      </div>
+    </div>
+
+    <!-- Aspect 2: Venus square Neptune / Jupiter -->
+    <div class="aspect-group">
+      <div class="aspect-group-title">2. Erik's Venus Square Merle's Neptune and Jupiter <span style="font-size:16px; color: var(--gold); font-style: italic;">(orbs: 0.23&deg; and 0.50&deg;)</span></div>
+
+      <div class="aspect-card featured">
+        <div class="aspect-card-title">Aquarius 2.94&deg; &harr; Scorpio 3.17&deg; / Scorpio 2.44&deg;</div>
+        <p>His Venus (how he loves, what he values, who he's attracted to) is locked in a near-perfect square to both her Neptune AND her Jupiter - all within half a degree. These three points form a tight cluster that defines how love and fantasy interweave between them.</p>
+        <p><strong>Venus square Neptune (0.23&deg;):</strong> This is the "soul recognition" aspect. When they met, there was almost certainly a feeling of "I know you from somewhere" - not logically, but in the body. Neptune dissolves the barriers between two people. His love nature meets her deepest spiritual intuition and something beyond ordinary attraction takes over. The square means there's also a risk of idealisation. He may see her through a gauze filter - more goddess than human. She may unconsciously project an image that's hard to sustain. The work here is seeing each other clearly AND still being enchanted.</p>
+        <p><strong>Venus square Jupiter (0.50&deg;):</strong> This is the "too much of a good thing" aspect - but in the best way. His love nature expanded by her generosity and faith. There's a feeling of abundance between them, like the relationship itself generates more than either of them brought to it. The square adds tension that prevents it from becoming lazy. They have to keep earning the expansion.</p>
+        <p><strong>What it feels like:</strong> "This love feels bigger than us. Like it existed before we did."</p>
+      </div>
+    </div>
+
+    <!-- Aspect 3: Pluto-Venus quincunx -->
+    <div class="aspect-group">
+      <div class="aspect-group-title">3. Merle's Pluto Quincunx Erik's Venus <span style="font-size:16px; color: var(--gold); font-style: italic;">(orb: 0.08&deg; - exact to 5 arc-minutes)</span></div>
+
+      <div class="aspect-card featured">
+        <div class="aspect-card-title">Virgo 2.86&deg; &harr; Aquarius 2.94&deg;</div>
+        <p>The second-tightest aspect in the entire synastry, and one of the most complex. A quincunx (150 degrees) connects two signs that share absolutely nothing - no element, no modality, no natural affinity. Virgo and Aquarius have no common ground on paper.</p>
+        <p>Her Pluto (power, transformation, the shadow) touching his Venus (love, pleasure, values) at this precision is like two radio stations that shouldn't be able to hear each other - but are broadcasting on the same frequency anyway. There's a constant adjustment required. She transforms his understanding of love. He softens her Plutonian intensity. Neither of them can quite figure out HOW it works, but it does.</p>
+        <p>The quincunx is the aspect of fascination and mild bewilderment. They're drawn to each other through a mechanism neither can name. It requires ongoing adaptation - they'll never fully "get" each other, and that's part of what keeps the magnetism alive.</p>
+        <p><strong>What it feels like:</strong> "I don't understand why this works. But every time I try to walk away, I can't."</p>
+      </div>
+    </div>
+
+    <!-- Aspect 4: Mercury/Venus opposite Sun/Mercury -->
+    <div class="aspect-group">
+      <div class="aspect-group-title">4. Merle's Mercury-Venus Opposite Erik's Sun-Mercury <span style="font-size:16px; color: var(--gold); font-style: italic;">(orbs: 1.04&deg; - 2.07&deg;)</span></div>
+
+      <div class="aspect-card featured">
+        <div class="aspect-card-title">The Virgo-Pisces Axis - Healer meets Mystic</div>
+        <p>This is a four-planet configuration and it's the backbone of their intellectual and creative connection. Her Mercury (14 Virgo) and Venus (13 Virgo) sit directly opposite his Sun (15 Pisces) and Mercury (15 Pisces). All four within 2 degrees across the most spiritually charged axis in the zodiac.</p>
+        <p><strong>What this means:</strong> She thinks in detail, precision, and practical application (Virgo). He thinks in feeling, poetry, and intuitive leaps (Pisces). They are perfect complements. Where she sees the tree, he sees the forest. Where he drifts into abstraction, she brings it back to earth. Their conversations probably shift between deeply practical and deeply philosophical - and neither feels like a stretch.</p>
+        <p>Her Venus opposite his Sun means she is fundamentally attracted to who he IS. Not what he does, not how he presents - the essence of him. And his Sun opposite her Venus means he feels seen, valued, and desired by her in a way that touches his core identity.</p>
+        <p>The opposition creates magnetic pull rather than easy agreement. They complete each other - not because they're the same, but because they're the missing piece.</p>
+        <p><strong>What it feels like:</strong> "You say the thing I was thinking but couldn't find the words for. And I organise the thing you were feeling but couldn't make real."</p>
+      </div>
+    </div>
+
+    <!-- Aspect 5: Pluto conjunct Sun -->
+    <div class="aspect-group">
+      <div class="aspect-group-title">5. Erik's Pluto Conjunct Merle's Sun <span style="font-size:16px; color: var(--gold); font-style: italic;">(orb: 1.91&deg;)</span></div>
+
+      <div class="aspect-card featured">
+        <div class="aspect-card-title">Virgo 28.72&deg; &harr; Virgo 26.81&deg;</div>
+        <p>His Pluto sits on her Sun. This is one of the most powerful aspects two charts can share. The Sun is identity, vitality, the core self. Pluto is transformation, power, and the force that strips away everything that isn't essential.</p>
+        <p>In practice, this means Erik has a transformative effect on Merle's sense of self. Being with him changes who she thinks she is - not in a destructive way, but in a "burning away the layers that were never really you" way. She can't be a watered-down version of herself around him. His presence demands she show up as the fullest, most authentic Merle.</p>
+        <p>This also means the relationship carries weight. It's not light. It's not casual. From the moment they connected, there was a gravitational pull that neither of them chose consciously. Pluto-Sun contacts in synastry are the "I couldn't walk away even if I wanted to" connections.</p>
+        <p><strong>What it feels like:</strong> "This person makes me more myself. Sometimes painfully. But I wouldn't trade it."</p>
+      </div>
+    </div>
+
+    <!-- Aspect 6: Mars-Moon conjunction + Mars-Pluto trine -->
+    <div class="aspect-group">
+      <div class="aspect-group-title">6. Erik's Mars Conjunct Merle's Moon + Merle's Mars Trine Erik's Pluto <span style="font-size:16px; color: var(--gold); font-style: italic;">(orbs: 2.19&deg; and 1.04&deg;)</span></div>
+
+      <div class="aspect-card featured">
+        <div class="aspect-card-title">The Physical-Emotional Fusion</div>
+        <p><strong>His Mars conjunct her Moon (Sag 26&deg; / Sag 28&deg;):</strong> His drive, his desire, his assertive energy lands directly on her emotional core. This is one of the classic "sexual chemistry + emotional security" aspects. He activates her feelings - sometimes soothingly, sometimes intensely. She feels his presence in her body. He feels protective of her emotional world. In Sagittarius, this has an adventurous, freedom-loving quality - their emotional-physical connection is amplified by shared experiences, travel, and exploration.</p>
+        <p><strong>Her Mars trine his Pluto (Taurus 29&deg; / Virgo 28&deg;):</strong> Both earth signs, 1 degree orb. Her drive and physical energy flows effortlessly into his transformative power. The trine means this happens without friction - it's the most natural connection in their synastry. Where squares and oppositions create tension and growth, the trine is where things just WORK. Their physical chemistry isn't just intense (that's the Pluto) - it's easy. Comfortable. Like two bodies that already know how to be together.</p>
+        <p>Together, these two aspects create a double layer of physical-emotional connection. His Mars activates her Moon (desire meets emotion). Her Mars flows into his Pluto (drive meets depth). This is not two people who struggle with physical intimacy - this is two people who need to be careful they don't lose themselves in it.</p>
+        <p><strong>What it feels like:</strong> "Being near you is like coming home and going on an adventure at the same time."</p>
+      </div>
+    </div>
+
+    <!-- The Verdict -->
+    <div class="pull-quote">
+      <p class="pull-quote-text">Six exact aspects under 1 degree. Four of them involve Pluto or Neptune. This is not a relationship that happened by accident - it is a <strong>soul contract</strong> written in the geometry of the cosmos itself.</p>
+    </div>
+
+    <div class="verdict-box" data-label="THE SYNASTRY VERDICT">
+      <p>This chart overlay has everything. The Virgo-Pisces oppositions give them intellectual and creative polarity - healer meets mystic. The Pluto contacts (Sun, Moon, Mars, Venus, Neptune) give them transformative depth - these two change each other at a fundamental level. The Mars-Moon conjunction gives them physical-emotional chemistry that doesn't need to be manufactured.</p>
+      <p>The challenges are real. Moon square Pluto (0.06 degree orb) means power dynamics will surface in their emotional life and need to be navigated with awareness. Venus square Neptune means the idealisation risk is genuine - they need to keep seeing each other as human. The Rising signs squaring each other (Scorpio to Leo) means their first instincts about how to show up in the world are different, and they'll need to respect that rather than trying to change it.</p>
+      <p>But the foundation is extraordinary. When you see this many exact aspects between two charts, you're looking at two people whose energy fields are permanently entangled - whether they're in the same room or on different continents. The question was never IF they'd affect each other. The question is what they do with the power of it.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 4: MERLE'S MONTHLY FORECAST -->
+<section class="section" id="merle-forecast">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">Section Four</span>
+      <h2 class="section-title">Merle's <em>2026 Forecast</em></h2>
+      <p class="section-tagline">April through December - month by month, transit by transit</p>
+      <div class="section-ornament"></div>
+    </div>
+
+    <!-- APRIL -->
+    <div class="month-card breakthrough">
+      <div class="month-header">
+        <div class="month-name">April</div>
+        <div class="month-rating breakthrough">Breakthrough</div>
+      </div>
+      <div class="month-theme">Lightning Strikes the Body</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Uranus</div>
+        <div class="transit-hit-detail"><strong>Conjunct natal Mars at 28-29 Taurus</strong> - within 1 degree all month. This is THE headline transit. Uranus hits her Mars (action, body, drive, sexuality) and electrifies everything she's been sitting on. Sudden impulse. Physical restlessness. The urge to break free from whatever has been holding her body in place. This has been building since March and is LIVE right now.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Square natal Jupiter at 4 Aquarius to 2 Scorpio</strong> - within 2 degrees. Pluto is pressing on her 12th house Jupiter - the hidden faith, the spiritual expansion she does privately. This square is uncomfortable but productive. It's stripping away spiritual bypassing and demanding she put her beliefs into practice in the real world.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Square natal Neptune at 4 Aquarius to 3 Scorpio</strong> - within 1 degree, nearly EXACT. The deeper hit. Neptune in the 12th house is her connection to the unseen, her intuition, her dreams. Pluto squaring it is dissolving the barriers between her conscious and unconscious mind. Vivid dreams. Sudden knowing. The veil is thin.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 18 Cancer - transiting her 9th house.</strong> Expansion through travel, learning, wisdom, foreign connections. The Israel trip is already in her field energetically. Jupiter in Cancer is the most nurturing, protective travel energy possible - she's being HELD while she expands.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Her body is waking up (Uranus on Mars), her spiritual life is being dismantled and rebuilt (Pluto square Jupiter-Neptune), and everything is oriented toward something bigger, somewhere further away (Jupiter in the 9th). She's not sitting still and she shouldn't try to.</p>
+    </div>
+
+    <!-- MAY -->
+    <div class="month-card transformation">
+      <div class="month-header">
+        <div class="month-name">May</div>
+        <div class="month-rating transformation">Transformation</div>
+      </div>
+      <div class="month-theme">The Last Degree - Uranus Crosses the Line</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Uranus</div>
+        <div class="transit-hit-detail"><strong>Conjunct natal Mars at 29 Taurus - EXACT within 0.2 degrees.</strong> This is the peak. 29 degrees of any sign is the "anaretic degree" - the final exam, the point of no return. Uranus crossing her Mars at this degree means whatever she's been doing halfway, she can't do halfway anymore. A decision gets made - not by her mind, but by her body. She'll feel it physically. May is when the Uranus-Mars conjunction perfects before Uranus crosses into Gemini.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Stations retrograde at 4 Aquarius mid-May</strong> - square her Jupiter (2 Scorpio) and Neptune (3 Scorpio). When a planet stations, it SITS on the degree. The pressure intensifies. This is not a quick hit - it's Pluto parking on her spiritual axis and refusing to move. The 12th house transformation deepens. Whatever surfaced in April now demands she go further in.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 21 Cancer - moving through her 9th house.</strong> Still building toward the Israel trip. Each degree Jupiter covers is another step toward the expansion waiting for her overseas.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Uranus perfects its conjunction with her Mars - the lightning bolt lands. Whatever has been building physically, sexually, energetically - it crests. Pluto stations and holds her 12th house in a vice grip. She is simultaneously being freed (Uranus) and stripped bare (Pluto). This is not comfortable. It's necessary.</p>
+    </div>
+
+    <!-- JUNE -->
+    <div class="month-card breakthrough">
+      <div class="month-header">
+        <div class="month-name">June</div>
+        <div class="month-rating breakthrough">Breakthrough</div>
+      </div>
+      <div class="month-theme">Israel - Where Everything Converges</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Uranus</div>
+        <div class="transit-hit-detail"><strong>Enters Gemini (0 degrees) - first ingress since 1942.</strong> This is a generational shift and it's happening while she's in Israel with Erik. Uranus just finished electrifying her Mars and now steps into a new sign entirely. She arrives in Israel as a different woman than the one who booked the ticket. The Uranus-Mars conjunction is behind her - the liberation has already happened in her body.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Retrograde at 3 Aquarius</strong> - still square her Neptune (3 Scorpio). EXACT to the degree. In Israel, her veil is at its thinnest. Dreams, synchronicities, moments where she KNOWS things without being told. This is the month her intuition is operating at its highest frequency.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 24 Cancer - peaking in her 9th house.</strong> The 9th house is foreign lands, spiritual pilgrimage, and expansion through experience. Jupiter in Cancer in her 9th = being nourished by a journey to a foreign country to be with someone she loves. It doesn't get more textbook than this.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Saturn</div>
+        <div class="transit-hit-detail"><strong>At 3 Aries - entering her 6th house.</strong> New structures around health, daily routines, and service. This is background energy but it sets the tone - she's building a new life rhythm. The old routine won't survive this trip.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> She goes to Israel carrying the energy of Uranus conjunct Mars (liberation), Pluto square Neptune (spiritual depth), and Jupiter in the 9th (expansion through travel). Every transit is pointed at this trip. The cosmos packed her bags months ago.</p>
+    </div>
+
+    <!-- JULY -->
+    <div class="month-card integration">
+      <div class="month-header">
+        <div class="month-name">July</div>
+        <div class="month-rating integration">Integration</div>
+      </div>
+      <div class="month-theme">Processing - The Body Remembers What the Mind Hasn't Caught Up To</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Retrograde at 2 Aquarius</strong> - now EXACT square her Jupiter (2 Scorpio). Jupiter is abundance, faith, expansion. Pluto squaring it from the 4th house (home, roots, inner life) means the home environment is being transformed by what she experienced. Whatever happened in Israel is now working its way into her foundation.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Neptune</div>
+        <div class="transit-hit-detail"><strong>Stations retrograde at 1 Aries mid-July.</strong> When Neptune stations, reality gets foggy. For Merle, Neptune is in her 5th/6th house cusp area - creativity and health. She might feel ungrounded, dreamlike, needing more sleep. This is integration, not illness. Her system is processing.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Saturn</div>
+        <div class="transit-hit-detail"><strong>At 4 Aries - squaring Pluto transit.</strong> Saturn in her 6th house is asking for new discipline around health and daily life. Especially relevant if she's renovating - the body needs structure even while the soul is in flux.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 27 Cancer - approaching her MC.</strong> Professional or public recognition is building. Something from the trip or the emotional expansion feeds into how the world sees her.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> The fireworks of May-June give way to deeper processing. Pluto is now exact on her Jupiter - the hidden blessings of her 12th house are being pressure-tested. What does she truly believe? What faith has survived the fire? July is for integration, renovation (literal and metaphorical), and letting the body catch up to the soul.</p>
+    </div>
+
+    <!-- AUGUST -->
+    <div class="month-card transformation">
+      <div class="month-header">
+        <div class="month-name">August</div>
+        <div class="month-rating transformation">Transformation</div>
+      </div>
+      <div class="month-theme">The Deep Dive - Pluto Presses Harder</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Retrograde at 1 Aquarius</strong> - still within orb of her Jupiter (2 Scorpio) and Neptune (3 Scorpio), now separating from Neptune and tightening on Jupiter. The spiritual dismantling continues. This is the month where what she thought she knew about her own faith, her inner life, her relationship with the unseen - all of it gets tested. Not destroyed. Tested.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Uranus</div>
+        <div class="transit-hit-detail"><strong>At 2 Gemini</strong> - now in her 8th house. Other people's resources, shared finances, inheritance, deep psychological transformation. Uranus in the 8th is the "surprise inheritance" transit but also the "sudden revelation about power dynamics" transit. Something hidden comes to light.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 29 Cancer</strong> - the final degree before crossing into Leo and her 10th house. The last push of 9th house expansion. If there's one more trip, one more learning experience, one more "aha" - it happens now.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Heavy but productive. Pluto is doing deep surgery on her 12th house - the unconscious, the spiritual, the hidden. This is not surface-level astrology. This is the kind of transit where people emerge genuinely different on the other side. She's being asked to release old spiritual identities that no longer serve her.</p>
+    </div>
+
+    <!-- SEPTEMBER -->
+    <div class="month-card breakthrough">
+      <div class="month-header">
+        <div class="month-name">September</div>
+        <div class="month-rating breakthrough">Breakthrough</div>
+      </div>
+      <div class="month-theme">Birthday Season - Pluto Stations Direct on Her Axis</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Stations DIRECT at 1 Aquarius.</strong> When Pluto stations, the pressure reaches maximum intensity and then - release. This happens within 1 degree of her Jupiter. Her solar return month. The transformation that's been working on her since April reaches a turning point. She doesn't go backward from here.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Neptune</div>
+        <div class="transit-hit-detail"><strong>Retrograde at 29 Pisces.</strong> Neptune has slid back into Pisces - the sign it rules. For Merle, this is a brief return to the dreamworld, the dissolving, the "what is even real" energy. It won't be here long. Use it to dream.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>Enters Leo - 0 degrees.</strong> Jupiter crosses into her 10th house of career, public life, and legacy. This is the beginning of a year-long expansion in how the world sees her. Something she did in the first half of 2026 - the trip, the relationship, the inner work - starts to become visible.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Her birthday season and it's massive. Pluto stations direct on her Jupiter, Jupiter enters her 10th house, and Neptune gives her one last dream before re-entering Aries. September is the pivot point of her year. Everything before this was preparation. Everything after this is the result.</p>
+    </div>
+
+    <!-- OCTOBER -->
+    <div class="month-card expansion">
+      <div class="month-header">
+        <div class="month-name">October</div>
+        <div class="month-rating expansion">Expansion</div>
+      </div>
+      <div class="month-theme">Jupiter Opens the Stage</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 2 Leo - moving through her 10th house.</strong> Visibility, recognition, authority. This isn't fame for fame's sake - this is the world seeing who she actually is. Jupiter in the 10th is the "your reputation expands" transit. Opportunities come. People notice.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Direct at 2 Aquarius</strong> - re-applying square to her Jupiter. Now that Pluto is direct, it's moving with purpose. The transformation isn't grinding anymore - it has direction. She knows what she's releasing and why.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Uranus</div>
+        <div class="transit-hit-detail"><strong>Stations retrograde at 2 Gemini.</strong> When Uranus stations, expect the unexpected. In her 8th house - a surprise financial shift, a revelation about shared resources, or a sudden deepening of an intimate bond.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Saturn</div>
+        <div class="transit-hit-detail"><strong>Retrograde at 2 Aries.</strong> Saturn backs off the pressure on her 6th house. A breather in health and routine matters. Old habits she tried to change can be re-evaluated with gentleness.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Expansion. Jupiter is in her house of public life. Pluto is moving forward with purpose. Uranus stations and drops one more surprise. October is the month she starts to see the RESULTS of everything 2026 has put her through.</p>
+    </div>
+
+    <!-- NOVEMBER -->
+    <div class="month-card integration">
+      <div class="month-header">
+        <div class="month-name">November</div>
+        <div class="month-rating integration">Integration</div>
+      </div>
+      <div class="month-theme">The Fog Lifts - Neptune Stations Direct</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Neptune</div>
+        <div class="transit-hit-detail"><strong>Stations direct at 27 Pisces on November 14.</strong> The fog that's been rolling through since July finally clears. Whatever was confusing or unclear about her inner life, her health, her creative direction - clarity arrives. Neptune direct is like waking up from a dream and remembering what it meant.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>At 3 Aquarius</strong> - back to squaring her Neptune (3 Scorpio). EXACT to the degree again. This is the final pass for 2026. The spiritual transformation is completing its cycle. She's not the same person who started this year.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 4 Leo - continuing through her 10th house.</strong> The public expansion continues to build. Authority solidifies.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> November is where the year starts to make sense. Neptune clears, Pluto makes its final exact square, and Jupiter continues to expand her public presence. She can see the full picture now - what the Uranus-Mars conjunction started in April, what the Israel trip catalysed in June, what Pluto has been dismantling and rebuilding all year. The integration is real.</p>
+    </div>
+
+    <!-- DECEMBER -->
+    <div class="month-card expansion">
+      <div class="month-header">
+        <div class="month-name">December</div>
+        <div class="month-rating expansion">Expansion</div>
+      </div>
+      <div class="month-theme">The New Landscape</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>At 4 Aquarius</strong> - separating from her Jupiter and Neptune. The pressure releases. The 12th house transformation is not over (Pluto will continue in Aquarius for years), but the acute phase is done. She can breathe.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 7 Leo - deep in her 10th house.</strong> By December, the expansion in her public life and reputation has real momentum. Whatever she planted in the second half of the year is growing visibly.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Saturn</div>
+        <div class="transit-hit-detail"><strong>Stations direct at 1 Aries.</strong> Saturn turns forward in her 6th house. New health and work routines that she's been building since April finally lock in. The foundation is set.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Uranus</div>
+        <div class="transit-hit-detail"><strong>Retrograde at 0 Gemini</strong> - sliding back toward the Taurus-Gemini cusp. One final echo of the Mars conjunction energy. A memory, a callback, a "remember when everything changed?" moment.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> She ends 2026 as a fundamentally different woman. The Uranus-Mars conjunction rewired her body. Pluto square Jupiter-Neptune rewired her soul. Jupiter entering her 10th house rewired her public life. December is standing on the mountain and looking at what she's built - not through willpower, but through surrender.</p>
+    </div>
+
+    <div class="verdict-box" data-label="MERLE'S YEAR IN ONE SENTENCE">
+      <p>2026 is the year Uranus liberates her body, Pluto transforms her soul, and Jupiter elevates her into public view. Nothing about this year is small. Nothing about it is optional. And by December, she won't recognise the woman who started it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: ERIK'S MONTHLY FORECAST -->
+<section class="section" id="erik-forecast">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">Section Five</span>
+      <h2 class="section-title">Erik's <em>2026 Forecast</em></h2>
+      <p class="section-tagline">April through December - the year love dismantles everything</p>
+      <div class="section-ornament"></div>
+    </div>
+
+    <!-- APRIL -->
+    <div class="month-card transformation">
+      <div class="month-header">
+        <div class="month-name">April</div>
+        <div class="month-rating transformation">Transformation</div>
+      </div>
+      <div class="month-theme">Pluto Tightens Its Grip on Love</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>At 4 Aquarius - conjunct natal Venus (2 Aquarius) within 2 degrees.</strong> This is the defining transit of Erik's entire year - possibly his entire decade. Pluto conjunct Venus does not renovate your love life. It demolishes it and forces you to rebuild from the foundation. What is real love? Who do you actually want? What have you been pretending is enough? Pluto doesn't ask these questions politely. It asks them with a wrecking ball.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 18 Cancer - approaching conjunction to his Moon (15 Cancer).</strong> Still 3 degrees out, but Jupiter's approach is already expanding his emotional field. The feelings are getting bigger. The container he built for them is getting too small. He can feel what's coming.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Saturn</div>
+        <div class="transit-hit-detail"><strong>At 0 Aries - in his 9th house.</strong> New structures around beliefs, philosophy, long-distance connections. Saturn in the 9th says: "What do you actually believe about life?" Coming from a man in a war zone, this question has teeth.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Pluto is on his Venus. That's it. That's the whole story. Everything else is background music. The man who called from the bomb shelter is now having his entire value system around love torn apart and rebuilt. He knows who he loves. Pluto is making sure he can't pretend otherwise.</p>
+    </div>
+
+    <!-- MAY -->
+    <div class="month-card transformation">
+      <div class="month-header">
+        <div class="month-name">May</div>
+        <div class="month-rating transformation">Transformation</div>
+      </div>
+      <div class="month-theme">Pluto Stations - The Pressure Becomes Unbearable</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Stations retrograde at 4 Aquarius mid-May.</strong> When Pluto stations, it STOPS MOVING. It sits on the degree for weeks. At 4 Aquarius, it's within 2 degrees of his Venus and hovering. This is the month the pressure becomes impossible to ignore. He can't distract himself. He can't work harder. He can't pretend the marriage is fine. Pluto is sitting on his love planet and refusing to leave until he tells the truth.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 21 Cancer - closing in on his Moon (15 Cancer).</strong> Still building. The emotional expansion is getting louder. Jupiter won't be exact on his Moon until later, but the approach phase is when the WANTING starts. He wants more. He wants deeper. He wants her.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Pluto stations on his Venus. This is the still-point before the earthquake. He may not act yet - retrograde energy often internalises - but the reckoning is happening inside. His birthday was in March and his solar return chart set the themes. May is when those themes become impossible to deny.</p>
+    </div>
+
+    <!-- JUNE -->
+    <div class="month-card breakthrough">
+      <div class="month-header">
+        <div class="month-name">June</div>
+        <div class="month-rating breakthrough">Breakthrough</div>
+      </div>
+      <div class="month-theme">She Arrives - The Collision Point</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Retrograde at 3 Aquarius - still conjunct Venus (2 Aquarius) within 1 degree.</strong> She walks into a man who has been sitting with Pluto on his Venus for three months. He is raw. He is undone. He is not the version of himself who can compartmentalise. She arrives and becomes the living answer to the question Pluto has been asking him.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Uranus</div>
+        <div class="transit-hit-detail"><strong>Enters Gemini - 0 degrees.</strong> Trine his Venus from 0 Gemini to 2 Aquarius - within 2 degrees and tightening. Uranus trine Venus is the "sudden liberation through love" transit. It flows. It doesn't force. The exit door isn't being kicked in - it's standing open, lit up, with her name on it.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Saturn</div>
+        <div class="transit-hit-detail"><strong>At 3 Aries - approaching opposition to his natal Uranus (12 Libra).</strong> Still wide, but the tension between duty (Saturn) and freedom (Uranus) is building. His 3rd house Uranus is his restless mind - the part of him that has always known he's living the wrong life.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 24 Cancer.</strong> Moving through his 11th house (community, hopes, dreams, the future he wishes for). Jupiter here expands his vision of what's possible. The life he thought he was locked into starts to look like a choice, not a sentence.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Merle arrives in Israel and walks into the Pluto-Venus vortex. Uranus trines his Venus from Gemini - freedom flows. The cosmos isn't being subtle. Every major outer planet is pointed at his relationships, his values, and the door marked EXIT. Whether he walks through it in June or later - this month changes everything.</p>
+    </div>
+
+    <!-- JULY -->
+    <div class="month-card challenge">
+      <div class="month-header">
+        <div class="month-name">July</div>
+        <div class="month-rating challenge">Challenge</div>
+      </div>
+      <div class="month-theme">The Aftermath - Reality Checks</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Retrograde at 2 Aquarius - conjunct Venus (2 Aquarius) within 0.06 degrees.</strong> VIRTUALLY EXACT. This is the closest pass for 2026. Pluto is sitting directly on his Venus. She may have left Israel, or she may still be there, but the imprint is permanent. This is when the full weight of the transformation lands. Who he loves is no longer a question. What he does about it is the only question left.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Neptune</div>
+        <div class="transit-hit-detail"><strong>Stations retrograde at 1 Aries.</strong> In his 9th house. The beliefs he's been living by start to dissolve. What he thought was duty may actually be fear. What he thought was impossible may actually just be unfamiliar.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 27 Cancer - getting close to his Moon (15 Cancer).</strong> Still approaching. The emotional tide keeps rising.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Pluto is EXACT on his Venus. This is the core of the transformation. July is not easy - it's the month where the old love structure is fully demolished. What replaces it depends on his courage. Neptune stationing retrograde adds fog to his beliefs about what's right and wrong. The challenge is real - but so is the opportunity.</p>
+    </div>
+
+    <!-- AUGUST -->
+    <div class="month-card integration">
+      <div class="month-header">
+        <div class="month-name">August</div>
+        <div class="month-rating integration">Integration</div>
+      </div>
+      <div class="month-theme">The Slow Burn - Processing the Impossible</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>At 1 Aquarius - separating from Venus but still within 2 degrees.</strong> The acute pressure begins to ease, but Pluto doesn't just leave. It leaves transformation in its wake. He's processing. Integrating. Possibly grieving the old life even while the new one is calling.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 29 Cancer - the final degree before Leo.</strong> The last gasp of Jupiter through his 11th house (hopes, dreams, community). Whatever vision of the future he's been building is about to crystallise into something real.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Saturn</div>
+        <div class="transit-hit-detail"><strong>At 4 Aries - in his 9th house.</strong> The question of beliefs gets more structured. Saturn says: "Decide what you believe. Then live it." No more ambiguity.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> The intensity of July's Pluto-Venus exact conjunction is settling. This is the month he starts to make sense of what happened. Jupiter approaching the Leo ingress is building toward something big in his 12th house - hidden matters, the unconscious, spiritual retreat. August is quiet on the surface but seismic underneath.</p>
+    </div>
+
+    <!-- SEPTEMBER -->
+    <div class="month-card expansion">
+      <div class="month-header">
+        <div class="month-name">September</div>
+        <div class="month-rating expansion">Expansion</div>
+      </div>
+      <div class="month-theme">Jupiter Finds His Moon - The Emotional Floodgates Open</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>Enters Leo at 0 degrees</strong> - crossing into his 12th house. Jupiter in the 12th is the "spiritual jackpot" transit. Hidden blessings surface. Angels arrive. The unconscious becomes a source of abundance rather than fear. For a man with Sun in the 8th house, this is familiar territory made safe.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Stations DIRECT at 1 Aquarius.</strong> Within 1 degree of his Venus. Pluto turns direct and starts moving forward - toward his Venus again. The transformation isn't over. It's entering Phase 2. But now it has direction. He's not being dismantled anymore - he's being rebuilt.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Saturn</div>
+        <div class="transit-hit-detail"><strong>Retrograde at 3 Aries.</strong> Saturn backing up in his 9th house gives him a chance to revisit his beliefs. What he decided under pressure, he now gets to reconsider with perspective.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Jupiter enters his 12th house - the beginning of a year-long spiritual expansion. Pluto stations direct on his Venus axis. He's no longer in the dark. He can see where the transformation is taking him. September is the month the tide turns from destruction to creation.</p>
+    </div>
+
+    <!-- OCTOBER -->
+    <div class="month-card breakthrough">
+      <div class="month-header">
+        <div class="month-name">October</div>
+        <div class="month-rating breakthrough">Breakthrough</div>
+      </div>
+      <div class="month-theme">Jupiter Trine Sun-Mercury - Everything Clicks</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 2 Leo - building toward trine his Sun and Mercury (15 Pisces).</strong> Still 13 degrees from exact, but Jupiter in Leo in his 12th house is already working - expanding his inner life, his spiritual depth, his capacity to feel without drowning. The emotional overflow that began at the bomb shelter call is becoming a resource, not a crisis.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>Direct at 2 Aquarius - re-applying conjunct his Venus (2 Aquarius).</strong> EXACT again. This is the final direct pass for 2026. Pluto sits on his Venus for the third time. The first time (April) was the question. The second time (July retrograde) was the reckoning. This third time is the answer. He knows now. He's known for months. The only question is whether he acts on it.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Uranus</div>
+        <div class="transit-hit-detail"><strong>Stations retrograde at 2 Gemini.</strong> Uranus stationed means another surprise. In trine to his Venus from Gemini to Aquarius - still within orb. The liberation energy holds. Freedom is still on the table.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Pluto makes its final exact conjunction to his Venus while direct. This is the decisive pass. Jupiter is expanding his 12th house - everything happening inside him is vast and deep and can no longer be contained. October is when the interior transformation becomes an exterior decision.</p>
+    </div>
+
+    <!-- NOVEMBER -->
+    <div class="month-card integration">
+      <div class="month-header">
+        <div class="month-name">November</div>
+        <div class="month-rating integration">Integration</div>
+      </div>
+      <div class="month-theme">Neptune Stations Direct - The Dream Becomes a Plan</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Neptune</div>
+        <div class="transit-hit-detail"><strong>Stations direct at 27 Pisces on November 14.</strong> In his 8th house. The fog around shared resources, deep bonds, and psychological undercurrents lifts. He can see the path forward clearly for the first time since July.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>At 3 Aquarius - separating from his Venus.</strong> The Pluto-Venus conjunction is winding down. Not ending (it'll echo for years) but the acute phase is complete. The demolition is done. The rebuild is underway.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 4 Leo - continuing through his 12th house.</strong> Spiritual expansion deepens. Hidden blessings continue to reveal themselves. His inner world is rich in a way it hasn't been in decades.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Neptune clearing plus Pluto separating from Venus creates space. Real, tangible, breathable space. The man who has been under siege since early 2026 gets room to think. Jupiter in his 12th keeps the spiritual channel open. November is the month where the impossible starts to feel possible.</p>
+    </div>
+
+    <!-- DECEMBER -->
+    <div class="month-card expansion">
+      <div class="month-header">
+        <div class="month-name">December</div>
+        <div class="month-rating expansion">Expansion</div>
+      </div>
+      <div class="month-theme">Saturn Stations Direct - The New Structure Locks In</div>
+
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Saturn</div>
+        <div class="transit-hit-detail"><strong>Stations direct at 1 Aries.</strong> In his 9th house. Saturn has been retrograde since September, letting him revisit everything he believes about duty, commitment, freedom, and love. Now it turns forward. The new belief system locks in. He knows what he stands for.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Pluto</div>
+        <div class="transit-hit-detail"><strong>At 4 Aquarius</strong> - moving away from his Venus. The transformation of his love life has reached a new chapter. Whatever decision was made (or is being made), it's now operating from the new foundation Pluto built.</div>
+      </div>
+      <div class="transit-hit">
+        <div class="transit-hit-planet">Jupiter</div>
+        <div class="transit-hit-detail"><strong>At 7 Leo - deep in his 12th house.</strong> The spiritual expansion is building toward his next birthday (March 2027) where it will culminate. His inner preparation for the next chapter of his life is well underway.</div>
+      </div>
+
+      <p class="mt-32"><strong>The story this month:</strong> Saturn direct in his 9th house means his new philosophy of life is set. Pluto has moved past Venus - the love transformation is no longer acute. Jupiter continues to expand his inner world. He ends 2026 as a man who has been turned inside out by love, shaken by Pluto, liberated by Uranus, and expanded by Jupiter. The old Erik is gone. What emerges is someone who has looked at the truth and chosen it.</p>
+    </div>
+
+    <div class="verdict-box" data-label="ERIK'S YEAR IN ONE SENTENCE">
+      <p>2026 is the year Pluto conjuncts his Venus and demands he stop lying to himself about love. Every other transit - Uranus trine Venus, Jupiter in his 12th, Saturn in his 9th - is either supporting the transformation or forcing him to face it. There is no version of 2026 where Erik stays the same person. The only variable is what he does with who he becomes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: THEIR STORY -->
+<section class="section" id="their-story">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">Section Six</span>
+      <h2 class="section-title">Their <em>Story</em></h2>
+      <p class="section-tagline">What the cosmos is doing to them - together - through the rest of 2026</p>
+      <div class="section-ornament"></div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-card-title">The Bomb Shelter Call - March 23</div>
+      <p>This is where the story started for 2026. Transit Jupiter was EXACTLY on Erik's Moon (0.1 degrees) while simultaneously trining his Sun and Mercury. His entire emotional-mental core lit up. In a bomb shelter, facing mortality, the feeling that flooded him was HER. Pluto was already sitting on his Venus, demanding authentic love. Mars was on his Sun - raw, urgent, "I need to hear your voice NOW."</p>
+      <p>He didn't call because he was scared. He called because the transits blew his heart wide open and aimed it at the only person who holds the other end of those synastry contacts - six aspects under 1 degree orb. Merle.</p>
+    </div>
+
+    <div class="story-card">
+      <div class="story-card-title">June - Israel</div>
+      <p>She goes to him. And what she walks into is a man who has been sitting with Pluto on his Venus for three solid months. He is NOT the same man who called from the bomb shelter. That man was cracked open by surprise. This man has been sitting in the crack, unable to close it back up.</p>
+      <p><strong>What's active for BOTH of them in June:</strong></p>
+      <p>Merle arrives with Uranus freshly conjunct her Mars (liberation through the body) and Pluto square her Neptune (spiritual veil at its thinnest). She's operating at maximum intuitive frequency.</p>
+      <p>Erik has Pluto retrograde on his Venus (love dismantled, no pretence left) and Uranus entering Gemini trine his Venus (freedom through love flowing like water). He is simultaneously destroyed and freed.</p>
+      <p>Jupiter in Cancer is in BOTH their charts - her 9th house (foreign travel, spiritual pilgrimage) and his 11th house (hopes, dreams, the future). Jupiter is the planet of MORE. They both want more. More truth. More each other. More life.</p>
+      <p>The Virgo-Pisces axis that runs through their synastry - her Mercury-Venus in Virgo opposite his Sun-Mercury in Pisces - is the healer and the mystic. In Israel, surrounded by ancient sites and modern conflict, this axis is ACTIVATED. She grounds him. He gives meaning to her. They complete each other from opposite directions, same as they always have.</p>
+    </div>
+
+    <div class="pull-quote">
+      <p class="pull-quote-text">She's the earth, he's the water. In June, they meet on <strong>holy ground</strong> and the cosmos says <strong>this is what you came for.</strong></p>
+    </div>
+
+    <div class="story-card">
+      <div class="story-card-title">July - October: The Pluto-Venus Crucible</div>
+      <p>After June, Pluto retrograding through 1-2 Aquarius keeps sitting on Erik's Venus. This isn't a one-and-done transit. It's a slow, grinding, relentless insistence on truth. In July, Pluto is virtually EXACT on his Venus at 2.06 Aquarius - the closest pass of the year.</p>
+      <p>For Merle, Pluto is simultaneously squaring her Jupiter and Neptune in Scorpio. Her 12th house - the realm of the unseen, the spiritual, the unconscious - is being transformed at the same time his love life is being transformed. They are going through PARALLEL Pluto transits in the same months. Different planets, different houses, same planet demanding the same thing: stop pretending and tell the truth.</p>
+      <p>In October, Pluto re-applies to Erik's Venus while direct. This is the third pass - the resolution pass. Whatever was started in April, intensified in July, now resolves in October. Three passes of Pluto conjunct Venus in one year. That's a complete renovation of everything he values, everything he loves, everything he is willing to fight for.</p>
+    </div>
+
+    <div class="story-card">
+      <div class="story-card-title">September - October: Jupiter Expands Everything</div>
+      <p>Jupiter enters Leo in September, moving into Erik's 12th house and Merle's 10th house. For her, this is public expansion - the world seeing who she really is. For him, this is private expansion - his inner world becoming vast enough to hold the truth about his life.</p>
+      <p>Their synastry is being activated by transiting Jupiter all through this period. Jupiter is the planet that was on his Moon when he called from the bomb shelter. It's the planet that said YES. And now it's in Leo - the sign of his rising, the sign of courage, the sign of the heart.</p>
+    </div>
+
+    <div class="story-card">
+      <div class="story-card-title">The Question Nobody Is Asking Yet</div>
+      <p>Can he leave? The chart says the door is open. Uranus trine Venus says freedom flows through love. Pluto conjunct Venus says the old love is already dead. Jupiter in the 12th says there are hidden blessings waiting. Saturn in the 9th says he's building a new philosophy of life.</p>
+      <p>But Pluto doesn't force outcomes. It forces truth. What Erik does with the truth - whether he walks through the door in June, October, or 2027 - is his choice. What the chart guarantees is that he can't unknow what he knows. He can't unfeel what he felt in that bomb shelter. And every transit of 2026 is making the gap between his current life and his real life wider.</p>
+      <p>Merle's job is not to pull him through the door. Her job - written in her chart as clearly as anything in astrology - is to be the door. Uranus conjunct her Mars in the 7th house of partnerships. She IS the liberation. She IS the Uranus transit walking into his life.</p>
+    </div>
+
+    <div class="pull-quote">
+      <p class="pull-quote-text">She doesn't need to convince him. <strong>She IS the transit.</strong> All she has to do is show up and be real.</p>
+    </div>
+
+    <div class="verdict-box" data-label="THE COSMIC STORY OF 2026">
+      <p>Their synastry hasn't changed - it's the same six sub-1-degree aspects, the same Pluto bonds, the same Virgo-Pisces axis of healer and mystic. What 2026 is doing is ACTIVATING that synastry through transits that neither of them can ignore.</p>
+      <p>Pluto on his Venus. Uranus on her Mars. Jupiter expanding them both. These aren't gentle nudges. These are the transits people look back on and say "that was the year everything changed."</p>
+      <p>The cosmos isn't whispering anymore. It's not even shouting. It's doing what it does best - creating conditions so precise, so perfectly aimed at the exact points where their charts touch, that the only thing left to do is surrender to the truth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: KEY DATES CALENDAR -->
+<section class="section" id="key-dates">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">Section Seven</span>
+      <h2 class="section-title">Key <em>Dates</em></h2>
+      <p class="section-tagline">The moments that matter most - April through December 2026</p>
+      <div class="section-ornament"></div>
+    </div>
+
+    <h3 class="sub-heading"><em>April - May</em></h3>
+    <div class="calendar-grid">
+      <div class="cal-item major">
+        <div class="cal-date">Mid-April</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Uranus conjunct Mars - within 1 degree</div>
+        <div class="cal-desc">Physical awakening. The body leads. Liberation energy at full voltage.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">All April</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Pluto square Neptune - within 1 degree</div>
+        <div class="cal-desc">Spiritual veil at its thinnest. Vivid dreams, sudden knowing, deep intuition.</div>
+      </div>
+      <div class="cal-item">
+        <div class="cal-date">April</div>
+        <div class="cal-who">Erik</div>
+        <div class="cal-title">Pluto conjunct Venus - 2 degrees</div>
+        <div class="cal-desc">The love transformation continues. Pressure building but not yet at peak.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">Mid-May</div>
+        <div class="cal-who">Both</div>
+        <div class="cal-title">Pluto stations retrograde at 4 Aquarius</div>
+        <div class="cal-desc">Pluto parks on the degree. For Erik: the pressure on Venus becomes unbearable. For Merle: the 12th house squeeze deepens.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">Late May</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Uranus conjunct Mars - EXACT at 29 Taurus</div>
+        <div class="cal-desc">The peak. The anaretic degree. A decision is made by the body, not the mind. Point of no return.</div>
+      </div>
+    </div>
+
+    <h3 class="sub-heading"><em>June - The Trip</em></h3>
+    <div class="calendar-grid">
+      <div class="cal-item major">
+        <div class="cal-date">Early June</div>
+        <div class="cal-who">Both</div>
+        <div class="cal-title">Merle arrives in Israel</div>
+        <div class="cal-desc">Uranus enters Gemini. A generational shift as she lands. She arrives as someone new.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">All June</div>
+        <div class="cal-who">Erik</div>
+        <div class="cal-title">Pluto retrograde conjunct Venus - within 1 degree</div>
+        <div class="cal-desc">She walks into a man with Pluto sitting on his love planet. He can't pretend. He won't pretend.</div>
+      </div>
+      <div class="cal-item">
+        <div class="cal-date">All June</div>
+        <div class="cal-who">Erik</div>
+        <div class="cal-title">Uranus trine Venus from Gemini</div>
+        <div class="cal-desc">Sudden freedom through love. The exit door flows open like water.</div>
+      </div>
+      <div class="cal-item">
+        <div class="cal-date">All June</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Jupiter at 24 Cancer - 9th house peak</div>
+        <div class="cal-desc">Maximum expansion through foreign travel. The trip is cosmically sanctioned.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">June 16 - 19</div>
+        <div class="cal-who">Both</div>
+        <div class="cal-title">The Departure Window</div>
+        <div class="cal-desc">Uranus exactly trine Erik's Venus (June 16). Every planet says GO (June 18). Full detail in the original report.</div>
+      </div>
+    </div>
+
+    <h3 class="sub-heading"><em>July - August</em></h3>
+    <div class="calendar-grid">
+      <div class="cal-item major">
+        <div class="cal-date">July</div>
+        <div class="cal-who">Erik</div>
+        <div class="cal-title">Pluto retrograde EXACT conjunct Venus</div>
+        <div class="cal-desc">2.06 vs 2.94 Aquarius. The closest pass of the year. The reckoning.</div>
+      </div>
+      <div class="cal-item">
+        <div class="cal-date">Mid-July</div>
+        <div class="cal-who">Both</div>
+        <div class="cal-title">Neptune stations retrograde at 1 Aries</div>
+        <div class="cal-desc">Reality gets foggy. Old beliefs dissolve. Integration needs patience.</div>
+      </div>
+      <div class="cal-item">
+        <div class="cal-date">July</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Pluto EXACT square Jupiter</div>
+        <div class="cal-desc">2 Aquarius square 2 Scorpio. The hidden faith is tested to its core.</div>
+      </div>
+      <div class="cal-item">
+        <div class="cal-date">August</div>
+        <div class="cal-who">Both</div>
+        <div class="cal-title">Processing month</div>
+        <div class="cal-desc">Jupiter at 29 Cancer - the final degree. Last push of expansion before the sign shift.</div>
+      </div>
+    </div>
+
+    <h3 class="sub-heading"><em>September - October</em></h3>
+    <div class="calendar-grid">
+      <div class="cal-item major">
+        <div class="cal-date">September</div>
+        <div class="cal-who">Both</div>
+        <div class="cal-title">Pluto stations DIRECT at 1 Aquarius</div>
+        <div class="cal-desc">The transformation turns forward. For Erik: Venus re-engaged. For Merle: Jupiter squeeze reaches turning point.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">September</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Birthday season + Jupiter enters Leo (10th house)</div>
+        <div class="cal-desc">Her solar return. Jupiter enters her house of public life. The year pivots here.</div>
+      </div>
+      <div class="cal-item major">
+        <div class="cal-date">October</div>
+        <div class="cal-who">Erik</div>
+        <div class="cal-title">Pluto direct EXACT conjunct Venus - final pass</div>
+        <div class="cal-desc">Third and final conjunction for 2026. The question, the reckoning, and now the answer.</div>
+      </div>
+      <div class="cal-item">
+        <div class="cal-date">October</div>
+        <div class="cal-who">Both</div>
+        <div class="cal-title">Uranus stations retrograde at 2 Gemini</div>
+        <div class="cal-desc">Another surprise. Still trine Erik's Venus. The liberation energy echoes.</div>
+      </div>
+    </div>
+
+    <h3 class="sub-heading"><em>November - December</em></h3>
+    <div class="calendar-grid">
+      <div class="cal-item major">
+        <div class="cal-date">November 14</div>
+        <div class="cal-who">Both</div>
+        <div class="cal-title">Neptune stations direct at 27 Pisces</div>
+        <div class="cal-desc">The fog lifts. Both of them see clearly for the first time since July. Dreams become plans.</div>
+      </div>
+      <div class="cal-item">
+        <div class="cal-date">November</div>
+        <div class="cal-who">Merle</div>
+        <div class="cal-title">Pluto EXACT square Neptune - final 2026 pass</div>
+        <div class="cal-desc">3 Aquarius square 3 Scorpio. The spiritual transformation completes its cycle.</div>
+      </div>
+      <div class="cal-item">
+        <div class="cal-date">December</div>
+        <div class="cal-who">Erik</div>
+        <div class="cal-title">Saturn stations direct at 1 Aries</div>
+        <div class="cal-desc">His new belief system locks in. Saturn turns forward - he knows what he stands for now.</div>
+      </div>
+      <div class="cal-item">
+        <div class="cal-date">December</div>
+        <div class="cal-who">Both</div>
+        <div class="cal-title">Jupiter at 7 Leo</div>
+        <div class="cal-desc">Merle: public expansion building. Erik: spiritual depth expanding. Both headed somewhere new.</div>
+      </div>
+    </div>
+
+    <div class="verdict-box" data-label="THE YEAR AT A GLANCE">
+      <p><strong>April - May:</strong> Uranus electrifies Merle's body. Pluto squeezes Erik's heart. Both being prepared.</p>
+      <p><strong>June:</strong> She goes to him. Every transit converges. The collision point.</p>
+      <p><strong>July - August:</strong> Pluto EXACT on Erik's Venus. Deep processing. The old structures crumble.</p>
+      <p><strong>September - October:</strong> Pluto stations direct. Final pass on his Venus. Jupiter enters new signs for both. The tide turns.</p>
+      <p><strong>November - December:</strong> Neptune clears. Saturn locks in. The new landscape emerges. Neither of them is who they were in January.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-ornament"></div>
+    <div class="footer-date">Report prepared April 13, 2026</div>
+    <div class="footer-by">Kelly Wotherspoon - AI with Soul</div>
+    <div class="footer-url">aiwithsoul.com.au</div>
+    <div class="footer-ornament"></div>
+    <div class="footer-tech">All natal chart positions provided by client. Transit positions calculated for 2026 using Swiss Ephemeris data. Aspect orbs verified to sub-degree accuracy.</div>
+    <p class="footer-closing-quote">"The earth and the water. The healer and the mystic. The woman who makes things real and the man who makes things matter. 2026 is the year the cosmos stops asking and starts insisting."</p>
+    <div class="footer-ornament"></div>
+  </div>
+</footer>
+
+</body>
+</html>
