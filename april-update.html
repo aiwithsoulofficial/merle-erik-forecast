@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Merle Karp - April 2026 Transit Update</title>
+<title>Merle Karp - Your Sky Right Now</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
@@ -12,9 +12,7 @@
 
   :root {
     --bg: #0A0E1A;
-    --bg-2: #0D1221;
     --bg-card: #111829;
-    --bg-card-2: #0F1520;
     --gold: #C9A84C;
     --gold-light: #E2C47A;
     --gold-dim: #8A6E2A;
@@ -26,13 +24,11 @@
     --border: rgba(201, 168, 76, 0.2);
     --border-strong: rgba(201, 168, 76, 0.45);
     --rose: #C97A7A;
-    --rose-dim: rgba(201, 122, 122, 0.15);
+    --rose-dim: rgba(201, 122, 122, 0.12);
     --violet: #8A7AC9;
     --violet-dim: rgba(138, 122, 201, 0.12);
     --emerald: #5A9A6A;
     --emerald-dim: rgba(90, 154, 106, 0.12);
-    --amber: #D4A24C;
-    --amber-dim: rgba(212, 162, 76, 0.12);
   }
 
   html { scroll-behavior: smooth; }
@@ -44,7 +40,6 @@
     font-size: 18px;
     line-height: 1.75;
     overflow-x: hidden;
-    position: relative;
   }
 
   body::before {
@@ -69,8 +64,6 @@
       radial-gradient(1px 1px at 68% 67%, rgba(201,168,76,0.25) 0%, transparent 100%),
       radial-gradient(1px 1px at 82% 19%, rgba(245,235,216,0.2) 0%, transparent 100%),
       radial-gradient(1px 1px at 91% 54%, rgba(201,168,76,0.3) 0%, transparent 100%),
-      radial-gradient(1px 1px at 7% 78%, rgba(245,235,216,0.15) 0%, transparent 100%),
-      radial-gradient(1px 1px at 46% 88%, rgba(201,168,76,0.2) 0%, transparent 100%),
       radial-gradient(1.5px 1.5px at 30% 60%, rgba(201,168,76,0.5) 0%, transparent 100%),
       radial-gradient(1.5px 1.5px at 60% 5%, rgba(245,235,216,0.3) 0%, transparent 100%),
       radial-gradient(2px 2px at 15% 50%, rgba(201,168,76,0.6) 0%, transparent 100%),
@@ -80,408 +73,166 @@
     animation: twinkle 8s ease-in-out infinite alternate;
   }
 
-  @keyframes twinkle {
-    0% { opacity: 0.6; }
-    100% { opacity: 1; }
-  }
+  @keyframes twinkle { 0% { opacity: 0.6; } 100% { opacity: 1; } }
 
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 24px;
-    position: relative;
-    z-index: 1;
-  }
+  .container { max-width: 800px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
 
-  /* HEADER */
-  .hero {
-    padding: 80px 0 60px;
-    text-align: center;
-  }
-
-  .hero-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 16px;
-  }
-
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(36px, 6vw, 52px);
-    font-weight: 300;
-    color: var(--cream);
-    line-height: 1.2;
-    margin-bottom: 12px;
-  }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--gold-light);
-  }
-
-  .hero-date {
-    font-size: 15px;
-    color: var(--cream-muted);
-    letter-spacing: 0.05em;
-  }
-
-  .hero-ornament {
-    width: 60px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    margin: 32px auto 0;
-  }
-
-  /* SECTIONS */
-  .section {
-    padding: 48px 0;
-  }
-
-  .section-label {
+  /* NAV */
+  .nav { padding: 20px 0; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .nav a {
     font-family: 'Cormorant Garamond', serif;
     font-size: 12px;
     font-weight: 600;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--gold-dim);
-    margin-bottom: 8px;
+    text-decoration: none;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: all 0.2s;
   }
+  .nav a:hover { color: var(--gold); border-color: var(--gold-dim); }
 
+  /* HERO */
+  .hero { padding: 60px 0 50px; text-align: center; }
+  .hero-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.25em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 6vw, 52px); font-weight: 300;
+    color: var(--cream); line-height: 1.2; margin-bottom: 12px;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold-light); }
+  .hero-sub { font-size: 15px; color: var(--cream-muted); letter-spacing: 0.05em; }
+  .hero-ornament { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 28px auto 0; }
+
+  /* SECTIONS */
+  .section { padding: 44px 0; }
+  .section-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold-dim); margin-bottom: 8px;
+  }
   .section-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(28px, 4vw, 38px);
-    font-weight: 400;
-    color: var(--cream);
-    margin-bottom: 8px;
-    line-height: 1.25;
+    font-size: clamp(26px, 4vw, 36px); font-weight: 400;
+    color: var(--cream); margin-bottom: 8px; line-height: 1.25;
   }
+  .section-title em { font-style: italic; color: var(--gold-light); }
+  .section-divider { width: 40px; height: 1px; background: var(--gold-dim); margin: 20px 0 28px; }
 
-  .section-title em {
-    font-style: italic;
-    color: var(--gold-light);
+  /* CARDS */
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 28px; margin-bottom: 20px;
+    position: relative; overflow: hidden;
   }
+  .card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; }
+  .card.gold::before { background: var(--gold); }
+  .card.teal::before { background: var(--teal-light); }
+  .card.violet::before { background: var(--violet); }
+  .card.emerald::before { background: var(--emerald); }
+  .card.rose::before { background: var(--rose); }
 
-  .section-divider {
-    width: 40px;
-    height: 1px;
-    background: var(--gold-dim);
-    margin: 20px 0 32px;
-  }
-
-  /* TRANSIT CARDS */
-  .transit-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 28px 28px 24px;
-    margin-bottom: 20px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .transit-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px;
-    height: 100%;
-  }
-
-  .transit-card.exact::before { background: var(--gold); }
-  .transit-card.building::before { background: var(--teal-light); }
-  .transit-card.fog::before { background: var(--violet); }
-  .transit-card.flowing::before { background: var(--emerald); }
-  .transit-card.pressure::before { background: var(--rose); }
-
-  .transit-planet {
+  .card-label {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    margin-bottom: 4px;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; margin-bottom: 4px;
   }
+  .card.gold .card-label { color: var(--gold); }
+  .card.teal .card-label { color: var(--teal-light); }
+  .card.violet .card-label { color: var(--violet); }
+  .card.emerald .card-label { color: var(--emerald); }
+  .card.rose .card-label { color: var(--rose); }
 
-  .transit-card.exact .transit-planet { color: var(--gold); }
-  .transit-card.building .transit-planet { color: var(--teal-light); }
-  .transit-card.fog .transit-planet { color: var(--violet); }
-  .transit-card.flowing .transit-planet { color: var(--emerald); }
-  .transit-card.pressure .transit-planet { color: var(--rose); }
-
-  .transit-title {
+  .card-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--cream);
-    margin-bottom: 10px;
-    line-height: 1.3;
+    font-size: 22px; font-weight: 500; color: var(--cream);
+    margin-bottom: 10px; line-height: 1.3;
   }
-
-  .transit-orb {
-    display: inline-block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    padding: 3px 10px;
-    border-radius: 3px;
-    margin-bottom: 12px;
+  .card-orb {
+    display: inline-block; font-family: 'Cormorant Garamond', serif;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.1em;
+    padding: 3px 10px; border-radius: 3px; margin-bottom: 12px;
   }
+  .card.gold .card-orb { background: rgba(201,168,76,0.15); color: var(--gold-light); }
+  .card.teal .card-orb { background: rgba(42,110,128,0.15); color: var(--teal-light); }
+  .card.violet .card-orb { background: var(--violet-dim); color: var(--violet); }
+  .card.emerald .card-orb { background: var(--emerald-dim); color: var(--emerald); }
+  .card.rose .card-orb { background: var(--rose-dim); color: var(--rose); }
 
-  .transit-card.exact .transit-orb { background: rgba(201,168,76,0.15); color: var(--gold-light); }
-  .transit-card.building .transit-orb { background: rgba(42,110,128,0.15); color: var(--teal-light); }
-  .transit-card.fog .transit-orb { background: var(--violet-dim); color: var(--violet); }
-  .transit-card.flowing .transit-orb { background: var(--emerald-dim); color: var(--emerald); }
-  .transit-card.pressure .transit-orb { background: var(--rose-dim); color: var(--rose); }
+  .card p { color: var(--cream-dim); font-size: 17px; line-height: 1.7; margin-bottom: 12px; }
+  .card p:last-child { margin-bottom: 0; }
+  .card p strong { color: var(--cream); }
 
-  .transit-desc {
-    color: var(--cream-dim);
-    font-size: 17px;
-    line-height: 1.7;
-  }
-
-  .transit-desc strong { color: var(--cream); }
-
-  /* CALLOUT BOX */
+  /* CALLOUT */
   .callout {
-    border: 1px solid var(--border-strong);
-    border-radius: 8px;
-    padding: 28px;
-    margin: 32px 0;
+    border: 1px solid var(--border-strong); border-radius: 8px;
+    padding: 28px; margin: 28px 0;
     background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, rgba(10,14,26,0.95) 100%);
   }
-
-  .callout-gold {
-    border-color: var(--gold-dim);
-  }
-
-  .callout-violet {
+  .callout.violet-bg {
     border-color: rgba(138, 122, 201, 0.35);
     background: linear-gradient(135deg, rgba(138,122,201,0.06) 0%, rgba(10,14,26,0.95) 100%);
   }
-
-  .callout-rose {
-    border-color: rgba(201, 122, 122, 0.35);
-    background: linear-gradient(135deg, rgba(201,122,122,0.06) 0%, rgba(10,14,26,0.95) 100%);
-  }
-
   .callout-label {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 12px;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
   }
-
-  .callout-gold .callout-label { color: var(--gold); }
-  .callout-violet .callout-label { color: var(--violet); }
-  .callout-rose .callout-label { color: var(--rose); }
-
-  .callout p {
-    color: var(--cream-dim);
-    line-height: 1.75;
-  }
-
+  .callout.violet-bg .callout-label { color: var(--violet); }
+  .callout p { color: var(--cream-dim); line-height: 1.75; margin-bottom: 12px; }
+  .callout p:last-child { margin-bottom: 0; }
   .callout p strong { color: var(--cream); }
 
   /* PULL QUOTE */
   .pull-quote {
-    text-align: center;
-    padding: 40px 20px;
-    margin: 36px 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    text-align: center; padding: 36px 20px; margin: 32px 0;
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
   }
-
   .pull-quote p {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(22px, 3.5vw, 28px);
-    font-weight: 300;
-    font-style: italic;
-    color: var(--gold-light);
-    line-height: 1.5;
+    font-size: clamp(22px, 3.5vw, 28px); font-weight: 300;
+    font-style: italic; color: var(--gold-light); line-height: 1.5;
   }
+  .pull-quote p strong { font-weight: 600; color: var(--cream); }
 
-  .pull-quote p strong {
-    font-weight: 600;
-    color: var(--cream);
+  /* KEY DATES */
+  .dates-grid { display: grid; gap: 12px; margin: 20px 0; }
+  .date-item {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 6px; padding: 16px 20px;
+    display: grid; grid-template-columns: 90px 1fr; gap: 16px; align-items: start;
   }
-
-  /* TIMELINE */
-  .timeline {
-    position: relative;
-    padding-left: 28px;
-    margin: 28px 0;
-  }
-
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 8px;
-    bottom: 8px;
-    width: 1px;
-    background: linear-gradient(to bottom, var(--gold-dim), var(--border), var(--gold-dim));
-  }
-
-  .timeline-item {
-    position: relative;
-    margin-bottom: 28px;
-    padding-left: 20px;
-  }
-
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -32px;
-    top: 10px;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--gold);
-    box-shadow: 0 0 8px rgba(201,168,76,0.4);
-  }
-
-  .timeline-item.active::before {
-    width: 9px;
-    height: 9px;
-    left: -33px;
-    background: var(--gold-light);
-    box-shadow: 0 0 14px rgba(201,168,76,0.6);
-  }
-
-  .timeline-date {
+  .date-when {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 2px;
+    font-size: 14px; font-weight: 600; letter-spacing: 0.1em;
+    color: var(--gold-light); padding-top: 2px;
   }
-
-  .timeline-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 19px;
-    font-weight: 500;
-    color: var(--cream);
-    margin-bottom: 6px;
-  }
-
-  .timeline-desc {
-    color: var(--cream-dim);
-    font-size: 16px;
-    line-height: 1.65;
-  }
-
-  /* DATE TABLE */
-  .date-table {
-    width: 100%;
-    margin: 24px 0;
-    border-collapse: separate;
-    border-spacing: 0 6px;
-  }
-
-  .date-table th {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold-dim);
-    text-align: left;
-    padding: 8px 12px;
-  }
-
-  .date-table td {
-    background: var(--bg-card);
-    padding: 12px;
-    font-size: 16px;
-    color: var(--cream-dim);
-    border: 1px solid var(--border);
-  }
-
-  .date-table td:first-child {
-    border-radius: 6px 0 0 6px;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    color: var(--gold-light);
-    white-space: nowrap;
-  }
-
-  .date-table td:last-child {
-    border-radius: 0 6px 6px 0;
-  }
-
-  .date-table td strong { color: var(--cream); }
-
-  /* STORY CARD */
-  .story-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 32px;
-    margin: 24px 0;
-  }
-
-  .story-card-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    font-weight: 500;
-    color: var(--gold-light);
-    margin-bottom: 16px;
-    line-height: 1.3;
-  }
-
-  .story-card p {
-    color: var(--cream-dim);
-    margin-bottom: 14px;
-    line-height: 1.75;
-  }
-
-  .story-card p:last-child { margin-bottom: 0; }
-  .story-card p strong { color: var(--cream); }
+  .date-what { color: var(--cream-dim); font-size: 16px; line-height: 1.6; }
+  .date-what strong { color: var(--cream); }
 
   /* FOOTER */
   .footer {
-    text-align: center;
-    padding: 60px 0 40px;
-    border-top: 1px solid var(--border);
-    margin-top: 40px;
+    text-align: center; padding: 60px 0 40px;
+    border-top: 1px solid var(--border); margin-top: 40px;
   }
-
   .footer-brand {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold-dim);
-    margin-bottom: 8px;
+    font-size: 14px; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold-dim); margin-bottom: 8px;
   }
+  .footer-note { font-size: 14px; color: var(--cream-muted); max-width: 500px; margin: 0 auto; line-height: 1.6; }
 
-  .footer-note {
-    font-size: 14px;
-    color: var(--cream-muted);
-    max-width: 500px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-
-  /* RESPONSIVE */
   @media (max-width: 600px) {
     .container { padding: 0 16px; }
-    .hero { padding: 60px 0 40px; }
-    .transit-card { padding: 20px; }
-    .callout { padding: 20px; }
-    .story-card { padding: 24px; }
-    .date-table { font-size: 14px; }
-    .date-table td { padding: 10px 8px; }
+    .hero { padding: 48px 0 36px; }
+    .card, .callout { padding: 20px; }
+    .date-item { grid-template-columns: 1fr; gap: 4px; }
   }
 </style>
 </head>
@@ -489,216 +240,302 @@
 
 <div class="container">
 
+  <div class="nav">
+    <a href="#headline">The Headline</a>
+    <a href="#money">Money</a>
+    <a href="#career">Career</a>
+    <a href="#travel">Travel</a>
+    <a href="#family">Family &amp; Home</a>
+    <a href="#health">Health</a>
+    <a href="#spirit">Inner Life</a>
+    <a href="#love">Love</a>
+    <a href="#dates">Key Dates</a>
+  </div>
+
   <!-- HERO -->
   <div class="hero">
-    <div class="hero-label">Transit Update</div>
-    <h1>Merle - <em>April 2026</em></h1>
-    <div class="hero-date">Your sky right now &nbsp;&#183;&nbsp; 20 April 2026</div>
+    <div class="hero-label">Your Personal Transit Reading</div>
+    <h1>Merle - <em>Your Sky Right Now</em></h1>
+    <div class="hero-sub">April 2026 &nbsp;&#183;&nbsp; A full-life reading of where you are and what's coming</div>
     <div class="hero-ornament"></div>
   </div>
 
-  <!-- SECTION 1: RIGHT NOW -->
-  <div class="section">
-    <div class="section-label">Section One</div>
-    <h2 class="section-title">What's <em>Happening Right Now</em></h2>
+  <!-- THE HEADLINE -->
+  <div class="section" id="headline">
+    <div class="section-label">The Big Picture</div>
+    <h2 class="section-title">What's <em>Happening to You</em></h2>
     <div class="section-divider"></div>
 
-    <div class="transit-card exact">
-      <div class="transit-planet">Uranus</div>
-      <div class="transit-title">Conjunct Your Natal Mars</div>
-      <div class="transit-orb">0.07&deg; ORB &nbsp;&#183;&nbsp; EXACT APRIL 21</div>
-      <div class="transit-desc">
-        This is peaking <strong>right now</strong>. Uranus is sitting on your Mars at 29&deg; Taurus - the anaretic degree, the final exam - in your 7th house of partnerships. Tomorrow it perfects to 0.03&deg;.
-        <br><br>
-        Your body already knows what your mind hasn't caught up to. The urge to break free from old patterns of action, old ways of giving your power away in relationships. This isn't about any one person. This is about <strong>how you show up</strong> - in all partnerships, all connections, all the places where you've been putting someone else's comfort before your own truth.
-        <br><br>
-        Whatever you've been doing halfway, you can't do halfway anymore. A decision gets made - not by your mind, but by your body. You'll feel it physically.
-      </div>
+    <div class="card gold">
+      <div class="card-label">The Transit of Your Year</div>
+      <div class="card-title">Uranus Conjunct Your Mars</div>
+      <div class="card-orb">0.07&deg; ORB TODAY &nbsp;&#183;&nbsp; EXACT APRIL 21 AT 0.03&deg;</div>
+      <p>Uranus is sitting on your Mars at 29&deg; Taurus - the anaretic degree, the point of no return - in your <strong>7th house of partnerships</strong>. This is peaking right now. Tomorrow it's virtually exact.</p>
+      <p>This transit rewires how you act, how you assert yourself, and how you show up in every one-on-one relationship in your life. Business partnerships. Friendships. Family dynamics. Romance. <strong>Everywhere you've been accommodating when you should have been honest, Uranus is pulling the handbrake.</strong></p>
+      <p>Your body already knows what your mind hasn't caught up to yet. You may feel physically restless, impulsive, electric. That's not anxiety - that's liberation finding its way out. Whatever you've been doing halfway, you can't do halfway anymore. A decision gets made - not by your mind, but by your body.</p>
     </div>
 
-    <div class="transit-card pressure">
-      <div class="transit-planet">Pluto</div>
-      <div class="transit-title">Square Your Neptune - 12th House Dismantling</div>
-      <div class="transit-orb">2.28&deg; ORB &nbsp;&#183;&nbsp; BUILDING TOWARD EXACT SEP 25</div>
-      <div class="transit-desc">
-        Pluto at 5&deg; Aquarius is pressing on your Neptune at 3&deg; Scorpio in the 12th house - the realm of the unseen, your intuition, your connection to something bigger. The barriers between your conscious and unconscious mind are dissolving.
-        <br><br>
-        <strong>Vivid dreams. Sudden knowing. Moments where you just KNOW something without being told.</strong> The veil is genuinely thin right now. Trust what comes through - but also know that this transit strips away spiritual bypassing. It demands you put your beliefs into practice in the real world, not just hold them privately.
-      </div>
+    <p style="color: var(--cream-dim);">This Uranus-Mars conjunction is the ignition switch for everything that follows in 2026. It touches every area of your life - money, career, travel, relationships, health, your inner world. Each section below shows you where this energy is landing and what it means.</p>
+  </div>
+
+  <!-- MONEY & SECURITY -->
+  <div class="section" id="money">
+    <div class="section-label">House 2</div>
+    <h2 class="section-title">Money &amp; <em>Security</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="card emerald">
+      <div class="card-label">Your Natal Setup</div>
+      <div class="card-title">Sagittarius Moon in the 2nd House</div>
+      <p>Your Moon sits in the house of money, values, and material security. You don't just want financial stability - you need it to feel emotionally safe. But the Sagittarius Moon wants freedom at the same time. You've spent a lifetime trying to figure out how to have both. <strong>Security AND adventure. Stability AND expansion.</strong></p>
     </div>
 
-    <div class="transit-card pressure">
-      <div class="transit-planet">Pluto</div>
-      <div class="transit-title">Square Your Jupiter - Faith Under Pressure</div>
-      <div class="transit-orb">3.01&deg; ORB &nbsp;&#183;&nbsp; EXACT IN JULY</div>
-      <div class="transit-desc">
-        Your 12th house Jupiter - hidden blessings, private faith, the spiritual expansion you do quietly - is getting squeezed by Pluto. This isn't comfortable. It's productive. Every belief that's real will survive this. The ones that were just comforting stories will fall away. <strong>What remains is what's actually true.</strong>
-      </div>
+    <div class="card teal">
+      <div class="card-label">What's Active Now</div>
+      <div class="card-title">Sun Trine Your Moon - Clarity About What You Value</div>
+      <div class="card-orb">1.75&deg; ORB &nbsp;&#183;&nbsp; FLOWING</div>
+      <p>Right now, the Sun is in a harmonious trine to your Moon. Fire meeting fire. This gives you a <strong>window of emotional clarity</strong> about what truly matters to you - not what you've been told should matter, but what actually does. Your relationship with money and security is being illuminated. Pay attention to what feels true today.</p>
     </div>
 
-    <div class="transit-card flowing">
-      <div class="transit-planet">Venus + Sun</div>
-      <div class="transit-title">Flowing Energy Today</div>
-      <div class="transit-orb">VENUS TRINE SUN 1.95&deg; &nbsp;&#183;&nbsp; SUN TRINE MOON 1.75&deg;</div>
-      <div class="transit-desc">
-        Venus is trining your Sun while the Sun trines your Moon. Fire flowing to earth flowing to fire. You feel good today - emotionally clear, attractive energy, confident in your skin. A window of clarity before the deeper transits ask more of you.
-      </div>
+    <div class="card emerald">
+      <div class="card-label">June Opportunity</div>
+      <div class="card-title">Mars Transiting Your 2nd House</div>
+      <p>By June, Mars moves through your money house. Energy, initiative, and drive applied directly to your financial life. This is action energy - not planning energy. If there's a business opportunity, an investment decision, or a financial move you've been sitting on, <strong>June is when you'll feel the push to act on it.</strong></p>
     </div>
 
-    <div class="transit-card fog">
-      <div class="transit-planet">Neptune</div>
-      <div class="transit-title">Square Your Moon - Approaching</div>
-      <div class="transit-orb">4.79&deg; ORB &nbsp;&#183;&nbsp; TIGHTENING THROUGH MAY-JUNE</div>
-      <div class="transit-desc">
-        Neptune in Aries is building a square to your Sagittarius Moon. This will thicken over the coming weeks. Emotional fog. Seeing what you want to see rather than what's there. The combination of Uranus (electric excitement) and Neptune (fog) can feel like absolute certainty when it's actually hope.
-        <br><br>
-        <strong>Ground yourself in your Virgo Sun.</strong> What do the facts say? Not the feelings - the facts. Your triple Virgo is your anchor right now. Use it.
-      </div>
+    <div class="card teal">
+      <div class="card-label">September Expansion</div>
+      <div class="card-title">Jupiter Conjunct Your Uranus - Unexpected Abundance</div>
+      <div class="card-orb">EXACT SEP 5 - 0.14&deg; ORB</div>
+      <p>Jupiter meets your natal Uranus in your <strong>10th house of career</strong> on September 5 at near-zero orb. This is the "out of the blue" transit. Unexpected opportunities, sudden recognition, things arriving from directions you didn't anticipate. When career expands, money follows. <strong>Something you didn't plan for could change your financial picture entirely.</strong></p>
+    </div>
+
+    <div class="callout violet-bg">
+      <div class="callout-label">Watch For</div>
+      <p><strong>Neptune is building a square to your Moon (4.79&deg;, tightening through May-June).</strong> Neptune on your money Moon can create fog around financial decisions. The temptation is to make emotional money choices rather than practical ones. Merle - you are a triple Virgo. Your superpower is discernment. Use it. Don't sign anything or commit to big financial moves when things feel unclear. Wait for the fog to pass, then act.</p>
     </div>
   </div>
 
-  <!-- SECTION 2: DATE CLARIFICATION -->
-  <div class="section">
-    <div class="section-label">Section Two</div>
-    <h2 class="section-title">June vs July - <em>Clearing the Confusion</em></h2>
+  <!-- CAREER & PUBLIC LIFE -->
+  <div class="section" id="career">
+    <div class="section-label">House 10</div>
+    <h2 class="section-title">Career &amp; <em>Public Life</em></h2>
     <div class="section-divider"></div>
 
-    <p style="color: var(--cream-dim); margin-bottom: 24px;">Two separate readings were done - one before the Florida trip and one after. They cover different ground but the same year. The June and July dates are <strong style="color: var(--cream);">not contradicting each other</strong> - they're sequential chapters of the same story.</p>
+    <div class="card gold">
+      <div class="card-label">The Headline Transit</div>
+      <div class="card-title">Jupiter Enters Your 10th House - September 2026</div>
+      <p>Jupiter crosses into Leo and your 10th house of career, reputation, and legacy in September. This is the beginning of a <strong>year-long expansion in how the world sees you</strong>. Something you did in the first half of 2026 - the travel, the inner work, the decisions you're making right now - starts to become visible to others.</p>
+      <p>Your natal Uranus sits in this house at 14&deg; Leo. It's been waiting. When Jupiter arrives, it activates the part of you that was always meant to do something unconventional, something that surprises people, something they don't expect from you.</p>
+    </div>
 
-    <table class="date-table">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Transit</th>
-          <th>Whose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Jun 15</td>
-          <td><strong>Uranus square your Pluto</strong> at 0.00&deg; + <strong>Jupiter sextile your Sun</strong> at 0.02&deg;</td>
-          <td>Merle</td>
-        </tr>
-        <tr>
-          <td>Jun 29</td>
-          <td><strong>Jupiter sextile your Mars</strong> at 0.01&deg;</td>
-          <td>Merle</td>
-        </tr>
-        <tr>
-          <td>Jul 13</td>
-          <td>Jupiter opposes Erik's Venus at 0.16&deg;</td>
-          <td>Erik</td>
-        </tr>
-        <tr>
-          <td>Jul 15</td>
-          <td><strong>Jupiter square your Neptune</strong> at 0.05&deg;</td>
-          <td>Merle</td>
-        </tr>
-        <tr>
-          <td>Jul 17</td>
-          <td><strong>Saturn trine your Uranus</strong> at 0.01&deg;</td>
-          <td>Merle</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="card gold">
+      <div class="card-label">The Exact Hit</div>
+      <div class="card-title">Jupiter Conjunct Natal Uranus</div>
+      <div class="card-orb">EXACT SEP 5 - 0.14&deg; ORB</div>
+      <p>This is one of the tightest aspects of your entire year. Jupiter and Uranus together in your career house is the <strong>unexpected recognition transit</strong>. An opportunity you didn't apply for. A door you didn't know existed. Someone sees what you're capable of and puts you in the spotlight.</p>
+      <p>On the same day, the Sun is conjunct your natal Mercury and Venus in Virgo - your birthday season, your intellectual and creative core, all lit up at once. September 5 is a day to circle. <strong>Whatever landed in your lap that day - take it seriously.</strong></p>
+    </div>
 
-    <div class="callout callout-gold">
-      <div class="callout-label">The Simple Version</div>
-      <p><strong>June is the convergence.</strong> Everything points at the Israel trip. Uranus squares your Pluto at zero degrees on June 15 while Jupiter flows to your Sun. Something breaks open that cannot be put back together. Power shift. Identity shift. Life shift.</p>
-      <p style="margin-top: 12px;"><strong>July is the integration.</strong> Saturn anchors the revolution (trine your Uranus at 0.01&deg;). Jupiter challenges your beliefs (square Neptune at 0.05&deg;). Pluto goes exact on your Jupiter. What you experienced gets processed, tested, and built into something that lasts. The fireworks give way to deeper work.</p>
-      <p style="margin-top: 12px;">These are two different phases. Both are real. Both are yours.</p>
+    <div class="card teal">
+      <div class="card-label">All Year</div>
+      <div class="card-title">Saturn Trine Your Uranus - The Revolution Has Structure</div>
+      <div class="card-orb">ACTIVE ALL YEAR &nbsp;&#183;&nbsp; EXACT JUL 17 AT 0.01&deg;</div>
+      <p>Saturn is forming a trine to your natal Uranus all year long, perfecting to 0.01&deg; on July 17. This is the transit that says <strong>the changes you're making aren't reckless - they're being built to last.</strong> Whatever new direction you take in your career or public life has Saturn's stamp of approval. Structure meets innovation. Freedom meets responsibility. The revolution has a container.</p>
     </div>
   </div>
 
-  <!-- SECTION 3: ERIK - HONEST -->
-  <div class="section">
-    <div class="section-label">Section Three</div>
-    <h2 class="section-title">Erik - <em>What the Chart Actually Says</em></h2>
+  <!-- TRAVEL -->
+  <div class="section" id="travel">
+    <div class="section-label">House 9</div>
+    <h2 class="section-title">Travel &amp; <em>Expansion</em></h2>
     <div class="section-divider"></div>
 
-    <p style="color: var(--cream-dim); margin-bottom: 28px;">Pluto is conjunct Erik's Venus. This is the transit that renovates everything a person values, everything they love, everything they're willing to fight for. It has <strong style="color: var(--cream);">three passes</strong> this year. Three chances for truth to do its work.</p>
-
-    <div class="timeline">
-      <div class="timeline-item active">
-        <div class="timeline-date">Pass One - April (Now)</div>
-        <div class="timeline-title">The Crack Opens</div>
-        <div class="timeline-desc">Pluto at 2.51&deg; from his Venus, separating. The bomb shelter call in March. Neptune sextile his Venus today at 0.04&deg; - he's dreaming, feeling, idealising. Jupiter on his Moon (2.25&deg;) - emotional flood he can't contain. <strong>The question has been asked.</strong></div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">Pass Two - July</div>
-        <div class="timeline-title">Maximum Pressure</div>
-        <div class="timeline-desc">Pluto retrograde virtually exact on his Venus at 2.06&deg; Aquarius. The closest pass of the year. The truth he's been sitting with since March becomes impossible to ignore. This isn't a quick hit - Pluto parks here and refuses to move.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">Pass Three - October</div>
-        <div class="timeline-title">The Resolution</div>
-        <div class="timeline-desc">Pluto re-applies to his Venus while moving direct. The third pass is always the resolution. Whatever started in April, intensified in July, resolves here. Three passes of Pluto conjunct Venus in one year. Complete renovation.</div>
-      </div>
+    <div class="card emerald">
+      <div class="card-label">Now Through August</div>
+      <div class="card-title">Jupiter in Cancer in Your 9th House</div>
+      <p>Jupiter - the planet of expansion, abundance, and MORE - is transiting your 9th house of foreign travel, higher learning, philosophy, and spiritual pilgrimage. Jupiter in Cancer is the most nurturing, protective travel energy possible. <strong>You are being held while you expand.</strong></p>
+      <p>This is peak travel energy. If you're going somewhere foreign, meaningful, or spiritually significant - the cosmos is behind it. Not just endorsing it - actively supporting it. Jupiter in the 9th says: go further than you think you should. See more. Learn more. Let yourself be changed by what you encounter.</p>
     </div>
 
-    <div class="callout callout-rose">
-      <div class="callout-label">The Honest Truth</div>
-      <p><strong>Pluto forces truth. It does not force outcomes.</strong></p>
-      <p style="margin-top: 12px;">The chart guarantees that Erik can't unknow what he knows. He can't unfeel what he felt. Every transit of 2026 is making the gap between his current life and his real life wider.</p>
-      <p style="margin-top: 12px;">But Pluto conjunct Venus could also mean falling back into his marriage at a depth neither of them has accessed before. The cosmos forces the question. <strong>It doesn't dictate the answer.</strong></p>
-      <p style="margin-top: 12px;">If truth hasn't produced action by the third pass in October - that IS the answer. Not the one anyone wants. But Pluto doesn't deal in what we want. It deals in what's real.</p>
+    <div class="card emerald">
+      <div class="card-label">June 15</div>
+      <div class="card-title">Jupiter Sextile Your Sun</div>
+      <div class="card-orb">0.03&deg; ORB - NEAR EXACT</div>
+      <p>On June 15, Jupiter flows to your Sun with near-perfect precision. Expansion meets identity. You feel like <strong>more of yourself, not less</strong>. If you're travelling in June, this transit says: you are exactly where you're supposed to be. Confidence, generosity, and being seen for who you really are.</p>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">Safety Note</div>
+      <p>Jupiter in Cancer is protective energy - it nurtures and holds. Saturn trine your Uranus all year means the changes are structured, not chaotic. <strong>The astrology supports safe, protected travel.</strong> The one thing to watch is Neptune squaring your Moon - trust your gut about people and places, but double-check practical details (documents, timings, logistics). Neptune can make you overlook the obvious. Your Virgo Sun is your safety net - let it do its job.</p>
+    </div>
+  </div>
+
+  <!-- FAMILY & HOME -->
+  <div class="section" id="family">
+    <div class="section-label">House 4</div>
+    <h2 class="section-title">Family &amp; <em>Home</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="card teal">
+      <div class="card-label">Deep Shift</div>
+      <div class="card-title">Pluto in Aquarius Transforming Your Foundations</div>
+      <p>Pluto at 5&deg; Aquarius is working on your 4th house - the house of home, roots, family, and your inner foundation. This is a slow, deep transit. It's not dramatic on the surface. Underneath, <strong>the very foundation of your life is being rebuilt.</strong></p>
+      <p>This could manifest as changes to your living situation, shifts in family dynamics, a new understanding of where you come from, or simply a deep inner knowing that the ground beneath your feet is different than it was a year ago. Pluto doesn't do surface renovations. It goes to the foundations and rebuilds from there.</p>
+    </div>
+
+    <div class="card teal">
+      <div class="card-label">June</div>
+      <div class="card-title">Mercury Transiting Your 4th House</div>
+      <p>Mercury moves through your home and family house in June. Conversations about living arrangements, family matters, property, inheritance. If there are practical decisions to be made about where you live or family logistics, <strong>June is when the thinking gets done</strong>. Mercury in Cancer here is emotionally intelligent - you'll think with your heart as much as your head, and for family matters, that's exactly right.</p>
+    </div>
+
+    <div class="card violet">
+      <div class="card-label">Your Children</div>
+      <div class="card-title">Venus in Your 5th House - June</div>
+      <p>Venus enters Leo and your 5th house - the house of children, creativity, joy, and self-expression - in June. This is warm, generous, loving energy in the area of your life connected to your kids. <strong>Quality time, creative expression, moments of genuine pleasure and connection.</strong> If there's a child or grandchild in your life who needs your presence, this is when it matters most.</p>
+    </div>
+  </div>
+
+  <!-- HEALTH -->
+  <div class="section" id="health">
+    <div class="section-label">House 6</div>
+    <h2 class="section-title">Health &amp; <em>Body</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="card gold">
+      <div class="card-label">Right Now</div>
+      <div class="card-title">Uranus on Mars - Your Body Is Waking Up</div>
+      <p>Uranus conjunct your Mars is a <strong>physical transit</strong>. Mars rules the body, energy, drive, physical vitality. Uranus electrifies everything it touches. You may be feeling restless, buzzing, unable to sit still. Sleep might be disrupted. Energy comes in surges rather than steady streams.</p>
+      <p><strong>This is not illness. This is activation.</strong> Your body is recalibrating. It's shedding old patterns of holding tension, old ways of suppressing energy. Let it move. Walk, stretch, swim, dance - whatever lets the electricity flow through rather than getting stuck. The worst thing you can do with Uranus on Mars is try to sit still.</p>
+    </div>
+
+    <div class="card teal">
+      <div class="card-label">New Structures</div>
+      <div class="card-title">Saturn Moving Through Your 6th House</div>
+      <p>Saturn is building new structures around your health, daily routines, and self-care. This is the transit that says <strong>the old routine won't survive this year - and that's a good thing.</strong> Saturn asks you to get serious about what your body actually needs. Not what's convenient. Not what you've always done. What works now, for the woman you're becoming.</p>
+    </div>
+
+    <div class="card violet">
+      <div class="card-label">July - Rest</div>
+      <div class="card-title">Neptune Stations Retrograde - Integration Period</div>
+      <p>When Neptune stations retrograde in mid-July, reality gets dreamy. For you, this lands near your 5th/6th house cusp - creativity and health. You might feel ungrounded, need more sleep, feel like you're processing something you can't name. <strong>This is integration, not illness.</strong> Your system is catching up to everything that happened in April through June. Give it time. Give it rest.</p>
+    </div>
+  </div>
+
+  <!-- INNER LIFE -->
+  <div class="section" id="spirit">
+    <div class="section-label">House 12</div>
+    <h2 class="section-title">Your <em>Inner World</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="card violet">
+      <div class="card-label">The Deep Work</div>
+      <div class="card-title">Pluto Square Your Jupiter-Neptune Conjunction</div>
+      <div class="card-orb">NEPTUNE: 2.28&deg; &nbsp;&#183;&nbsp; JUPITER: 3.01&deg; &nbsp;&#183;&nbsp; BUILDING ALL YEAR</div>
+      <p>Your natal Jupiter and Neptune sit together in Scorpio in your 12th house - the house of the unseen, the unconscious, dreams, and your connection to something bigger than yourself. This conjunction is the deep well of your spiritual life. It's where you access intuition, faith, knowing.</p>
+      <p>Pluto is squaring this conjunction all year. This is <strong>not a gentle transit</strong>. It's stripping away every belief that isn't actually true. Every spiritual comfort that was just a comfort. Every faith that was borrowed rather than earned. What survives this year is genuinely yours.</p>
+      <p><strong>Vivid dreams. Sudden knowing. Moments where the veil between this world and something else gets very thin.</strong> Trust what comes through - but test it against reality. Pluto demands that your spiritual life be real, not performative. Not just something you feel privately. Something you live publicly.</p>
+    </div>
+
+    <div class="card violet">
+      <div class="card-label">September 25</div>
+      <div class="card-title">Pluto Square Neptune - Exact at 0.00&deg;</div>
+      <p>This is the precision point. Pluto perfects its square to your natal Neptune at zero degrees - as exact as it gets. Near your birthday. This is the moment the 12th house transformation reaches its peak. <strong>Whatever has been dissolving in your inner world all year crystallises into clarity.</strong> The spiritual dismantling becomes spiritual rebuilding. You don't go backward from here.</p>
     </div>
 
     <div class="pull-quote">
-      <p>Your job is not to pull him through the door. <strong>Your job is to be the door.</strong></p>
+      <p>The beliefs that survive Pluto are the ones <strong>worth keeping</strong>.</p>
     </div>
   </div>
 
-  <!-- SECTION 4: YOUR YEAR BEYOND ERIK -->
-  <div class="section">
-    <div class="section-label">Section Four</div>
-    <h2 class="section-title">Your Year - <em>Beyond Anyone Else</em></h2>
+  <!-- LOVE & RELATIONSHIPS -->
+  <div class="section" id="love">
+    <div class="section-label">House 7</div>
+    <h2 class="section-title">Love &amp; <em>Relationships</em></h2>
     <div class="section-divider"></div>
 
-    <p style="color: var(--cream-dim); margin-bottom: 28px;">Your transits in 2026 are massive <strong style="color: var(--cream);">independent of Erik</strong>. This is a year of deep personal transformation - spiritual, physical, and public. Here's what's coming for <em>you</em>.</p>
-
-    <div class="story-card">
-      <div class="story-card-title">May - The Last Degree</div>
-      <p>Uranus perfects its conjunction with your Mars at the anaretic degree then crosses into Gemini - the first ingress since 1942. Whatever liberation started this month reaches its peak. Pluto stations retrograde at 4&deg; Aquarius, parking on your Jupiter-Neptune conjunction. The spiritual dismantling deepens. Whatever surfaced in April now demands you go further in.</p>
+    <div class="card gold">
+      <div class="card-label">The Liberation</div>
+      <div class="card-title">Uranus on Mars in Your 7th House</div>
+      <p>The headline transit of your year lands in your house of partnerships. Uranus conjunct Mars at 29&deg; Taurus - the degree of completion. This rewires how you relate to every significant person in your life. <strong>Old patterns of over-giving, accommodating, putting yourself second - Uranus says that's done.</strong></p>
+      <p>This isn't about blowing up your relationships. It's about being honest within them. The people who can handle the real you will stay. The dynamics that only worked because you were shrinking yourself will shift. That's not loss. That's making room.</p>
     </div>
 
-    <div class="story-card">
-      <div class="story-card-title">June - Where Everything Converges</div>
-      <p><strong>June 15 is the cosmic detonation point.</strong> Uranus squares your Pluto at 0.00&deg; while Jupiter sextiles your Sun at 0.02&deg;. Something breaks open that cannot be put back together. A power shift in how you relate, who you allow in, and what you're willing to claim publicly. By June 29, Jupiter sextiles your Mars at 0.01&deg; - your body says YES to the expansion.</p>
+    <div class="card teal">
+      <div class="card-label">June 15</div>
+      <div class="card-title">Uranus Square Your Pluto - Power Shift</div>
+      <div class="card-orb">EXACT 0.00&deg; - ZERO ORB</div>
+      <p>On June 15, Uranus exactly squares your natal Pluto. Zero degrees. As precise as transits get. This is a <strong>power shift in how you relate, who you allow in, and what you're willing to claim</strong>. Your natal Pluto sits in your 11th house - community, networks, the people around you. Something breaks open in the dynamic between your one-on-one relationships (7th house) and your wider world (11th house). What's been private may become visible. What's been held back may be spoken.</p>
     </div>
 
-    <div class="story-card">
-      <div class="story-card-title">July - August: Integration</div>
-      <p>Saturn trines your natal Uranus at 0.01&deg; on July 17. The revolution gets a container. Whatever you dismantled in June is being rebuilt with intention and staying power. Pluto goes exact on your Jupiter - the hidden blessings of your 12th house get pressure-tested. Neptune stations retrograde mid-July. Reality gets foggy. This is processing, not crisis. Your system is catching up to what happened.</p>
+    <div class="card rose">
+      <div class="card-label">Erik - The Honest Picture</div>
+      <div class="card-title">What His Chart Says</div>
+      <p>Pluto is conjunct Erik's Venus this year - three passes. April (opening), July (maximum pressure), October (resolution). This transit forces truth about what he loves and values. He can't unknow what he knows. He can't unfeel what he felt.</p>
+      <p><strong>But Pluto forces truth - it doesn't force outcomes.</strong> The chart guarantees the question gets asked. It doesn't dictate the answer. If truth hasn't produced action by the third pass in October, that IS the answer.</p>
+      <p>Your job is not to wait. Your job is not to convince. Your job is to live your own massive year - the career expansion, the travel, the spiritual transformation, the physical liberation - and let the truth do what truth does.</p>
     </div>
 
-    <div class="story-card">
-      <div class="story-card-title">September - Birthday Season Breakthrough</div>
-      <p><strong>Jupiter enters your 10th house.</strong> Career, public life, legacy. The world starts to see who you really are. Jupiter conjuncts your natal Uranus on September 5 at 0.11&deg; - sudden expansion, unexpected recognition, opportunities arriving out of nowhere. Something you did in the first half of the year becomes visible. Pluto stations direct within 1&deg; of your Jupiter. The transformation reaches its turning point. You don't go backward from here.</p>
-    </div>
-
-    <div class="story-card">
-      <div class="story-card-title">November - December: Clarity</div>
-      <p>Neptune goes direct on November 14. The fog that's been rolling through since July finally clears. Whatever was confusing or unclear about your inner life, your health, your creative direction - clarity arrives. December 15, Uranus squares your Pluto at near-zero orb again - bookending the June 15 hit. <strong>You end 2026 as a fundamentally different woman.</strong> Not through willpower. Through surrender.</p>
-    </div>
-  </div>
-
-  <!-- SECTION 5: GROUND YOURSELF -->
-  <div class="section">
-    <div class="section-label">A Note</div>
-    <h2 class="section-title">Ground <em>Yourself</em></h2>
-    <div class="section-divider"></div>
-
-    <div class="callout callout-violet">
+    <div class="callout violet-bg">
       <div class="callout-label">Neptune Warning</div>
-      <p>Neptune is building a square to your Moon. You also have Pluto thinning your veil through the Neptune-12th house square. This combination means your intuition is turned up to maximum - but so is the risk of seeing what you want to see.</p>
-      <p style="margin-top: 12px;">Uranus plus Neptune can feel like <strong>absolute certainty</strong> when it's actually hope dressed up as knowing. The electric excitement of Uranus conjunct Mars makes everything feel like a sign. Sometimes it is. Sometimes it's just adrenaline.</p>
-      <p style="margin-top: 12px;"><strong>You are a triple Virgo with a Scorpio Rising.</strong> You are built for discernment. You see through things - that's your design. Use it now. Ask yourself the hard questions. What do the facts say? Not the feelings. The feelings are real, but they're running through a Neptune filter right now. Ground in the Virgo. Trust the Scorpio.</p>
+      <p>Neptune squaring your Moon means your emotional vision has a filter on it right now. The combination of Uranus (electric excitement) and Neptune (fog) can feel like <strong>absolute certainty when it's actually hope</strong>. You are a triple Virgo with a Scorpio Rising. You are built for seeing through things. <strong>Use that now.</strong> Ask yourself the hard questions. What do the facts say? Not the feelings - the facts. Ground in the Virgo. Trust the Scorpio. The feelings are real, but they're running through a Neptune filter.</p>
     </div>
+  </div>
 
-    <div class="pull-quote">
-      <p>The transits say <strong>truth will surface</strong>. Your job is to make sure <strong>you can see it clearly</strong> when it does.</p>
+  <!-- KEY DATES -->
+  <div class="section" id="dates">
+    <div class="section-label">Your Calendar</div>
+    <h2 class="section-title">Key <em>Dates</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="dates-grid">
+      <div class="date-item">
+        <div class="date-when">Apr 21</div>
+        <div class="date-what"><strong>Uranus conjunct Mars - EXACT 0.03&deg;.</strong> Physical awakening at peak precision. The body decides. Liberation at full voltage.</div>
+      </div>
+      <div class="date-item">
+        <div class="date-when">May 5</div>
+        <div class="date-what"><strong>Saturn trine Uranus - first exact pass.</strong> The new structures start holding. Changes become real.</div>
+      </div>
+      <div class="date-item">
+        <div class="date-when">Mid-May</div>
+        <div class="date-what"><strong>Pluto stations retrograde at 4&deg; Aquarius.</strong> Parks on your Jupiter-Neptune. Spiritual pressure intensifies. Go inward.</div>
+      </div>
+      <div class="date-item">
+        <div class="date-when">Jun 15</div>
+        <div class="date-what"><strong>Double exact hit.</strong> Uranus square Pluto at 0.00&deg; + Jupiter sextile Sun at 0.03&deg;. Power shift. Identity expansion. Something breaks open.</div>
+      </div>
+      <div class="date-item">
+        <div class="date-when">Jun 29</div>
+        <div class="date-what"><strong>Jupiter sextile Mars - 0.01&deg;.</strong> Physical drive meets expansion. The body says YES. Act on what you've been feeling.</div>
+      </div>
+      <div class="date-item">
+        <div class="date-when">Jul 15-17</div>
+        <div class="date-what"><strong>Jupiter square Neptune (0.05&deg;) + Saturn trine Uranus (0.01&deg;).</strong> Beliefs challenged while the revolution gets anchored. Integration week.</div>
+      </div>
+      <div class="date-item">
+        <div class="date-when">Sep 5</div>
+        <div class="date-what"><strong>Jupiter conjunct Uranus - 0.14&deg;.</strong> Unexpected career recognition. Sun on your Mercury-Venus. Birthday season breakthrough.</div>
+      </div>
+      <div class="date-item">
+        <div class="date-when">Sep 25</div>
+        <div class="date-what"><strong>Pluto square Neptune - EXACT 0.00&deg;.</strong> Spiritual transformation reaches its peak. What was dissolving crystallises into clarity.</div>
+      </div>
+      <div class="date-item">
+        <div class="date-when">Nov 14</div>
+        <div class="date-what"><strong>Neptune stations direct.</strong> The fog lifts. Whatever was confusing since July becomes clear. You can see the full picture.</div>
+      </div>
+      <div class="date-item">
+        <div class="date-when">Dec 15</div>
+        <div class="date-what"><strong>Uranus square Pluto - near zero orb again.</strong> Bookends the June 15 hit. The power shift is confirmed and sealed.</div>
+      </div>
     </div>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="pull-quote">
+    <p>2026 is not happening <strong>to</strong> you. It's happening <strong>for</strong> you. Every transit is a tool. <strong>Use them.</strong></p>
   </div>
 
   <!-- FOOTER -->
